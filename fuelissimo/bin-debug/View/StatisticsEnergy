@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function loginHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+	</fx:Declarations>
+	<s:Label x="0" y="0" width="320" height="460"/>
+	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
+			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
+			 verticalAlign="middle"/>
+	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
+			 text="Manage your fuel !"/>
+	<s:Button x="10" y="318" width="300" height="60" label="Login"
+			  click="loginHandler(event)"/>
+	<s:TextInput x="11" y="134" text="Email"/>
+	<s:TextInput x="10" y="190" text="Password"/>
+	<s:CheckBox x="10" y="246" height="30" label="Remember login informations" fontSize="10"/>
+	<s:CheckBox x="10" y="280" height="30" label="Stay connected" fontSize="10"/>
+	<s:Label x="99" y="399" fontSize="15" text="Create an account" textDecoration="underline"/>
+	<s:Label x="92" y="436" fontSize="15" text="Forgotten password ?" textDecoration="underline"/>
+</s:View>

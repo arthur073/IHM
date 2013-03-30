@@ -1,0 +1,11 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+
+
+global
+{
+	selection-color: #889786;
+	symbol-color: #0D9C22;
+	backgroundColor: #00FF00;
+}
+	
