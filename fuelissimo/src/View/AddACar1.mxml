@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
-	
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login" >
+	<fx:Style source="fuelissimo.css"/>
+
 	<fx:Script>
 		<![CDATA[
 			protected function loginHandler(event:MouseEvent):void
@@ -15,18 +16,18 @@
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
-	<s:Label x="0" y="0" width="320" height="460"/>
 	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
 			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>
 	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/>
-	<s:Button x="10" y="318" width="300" height="60" label="Login"
-			  click="loginHandler(event)"/>
-	<s:TextInput x="11" y="134" text="Email"/>
-	<s:TextInput x="10" y="190" text="Password"/>
-	<s:CheckBox x="10" y="246" height="30" label="Remember login informations" fontSize="10"/>
-	<s:CheckBox x="10" y="280" height="30" label="Stay connected" fontSize="10"/>
-	<s:Label x="99" y="399" fontSize="15" text="Create an account" textDecoration="underline"/>
-	<s:Label x="92" y="436" fontSize="15" text="Forgotten password ?" textDecoration="underline"/>
+	<s:TextInput x="46" y="213" width="227"/>
+	<s:TextInput x="79" y="297" width="194"/>
+	<s:Button x="167" y="362" width="136" label="Validate" fontSize="18"/>
+	<s:Button x="18" y="361" width="136" label="Manual input" fontSize="18"/>
+	<s:Button x="19" y="416" width="282" height="34.151455" label="Cancel" fontSize="18"/>
+	<s:Image x="278" y="214" width="32" height="32" scaleMode="letterbox" smooth="true"
+			 source="assets/iphone-appareil-photo-icone1.png"/>
+	<s:Label x="10" y="181" fontSize="16" text="Plate number :"/>
+	<s:Label x="10" y="265" fontSize="16" text="3 first letters of your name :"/>
 </s:View>

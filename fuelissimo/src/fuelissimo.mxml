@@ -4,6 +4,7 @@
 			   xmlns:views="View.*"
 			   width="320" height="444" applicationDPI="160"
 			   creationComplete="initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
@@ -29,6 +30,48 @@
 				this.removeAllElements();
 				this.addElement(settingsView);			
 			}
+			public function showAccountCreation():void {
+				var accountCreationView:AccountCreation = new AccountCreation();
+				this.removeAllElements();
+				this.addElement(accountCreationView);			
+			}
+			public function showForgottenPassword():void {
+				var forgottenPasswordView:ForgottenPassword = new ForgottenPassword();
+				this.removeAllElements();
+				this.addElement(forgottenPasswordView);			
+			}
+			public function showAddACar1():void {
+				var addCar1View:AddACar1 = new AddACar1();
+				this.removeAllElements();
+				this.addElement(addCar1View);			
+			}
+			public function showAddACar2():void {
+				var addCar2View:AddACar2 = new AddACar2();
+				this.removeAllElements();
+				this.addElement(addCar2View);			
+			}
+			public function showFillUp():void {
+				var fillUpView:FillUp = new FillUp();
+				this.removeAllElements();
+				this.addElement(fillUpView);			
+			}
+			public function showStatisticsCost():void {
+				var statisticsCostView:StatisticsCost = new StatisticsCost();
+				this.removeAllElements();
+				this.addElement(statisticsCostView);			
+			}
+			public function showStatisticsEnergy():void {
+				var statisticsEnergyView:StatisticsEnergy = new StatisticsEnergy();
+				this.removeAllElements();
+				this.addElement(statisticsEnergyView);			
+			}
+			public function showStatisticsDriveAnalysis():void {
+				var statisticsDriveAnalysisView:StatisticsDriveAnalysis = new StatisticsDriveAnalysis();
+				this.removeAllElements();
+				this.addElement(statisticsDriveAnalysisView);			
+			}
+			
+			
 		]]>
 	</fx:Script>
 	
