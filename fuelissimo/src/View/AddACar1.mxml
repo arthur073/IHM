@@ -10,6 +10,12 @@
 				// TODO Auto-generated method stub
 				this.parentApplication.showMain();
 			}
+			
+			protected function takePicture(event:MouseEvent):void
+			{
+				this.parentApplication.takePicture();
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -27,7 +33,9 @@
 	<s:Button x="18" y="361" width="136" label="Manual input" fontSize="18"/>
 	<s:Button x="19" y="416" width="282" height="34.151455" label="Cancel" fontSize="18"/>
 	<s:Image x="278" y="214" width="32" height="32" scaleMode="letterbox" smooth="true"
-			 source="assets/iphone-appareil-photo-icone1.png"/>
+			 source="assets/iphone-appareil-photo-icone1.png" click="takePicture(event)"/>
 	<s:Label x="10" y="181" fontSize="16" text="Plate number :"/>
 	<s:Label x="10" y="265" fontSize="16" text="3 first letters of your name :"/>
+	<s:Label x="6" y="112" width="269" height="61" fontSize="14"
+			 text="Entering your plate number and the beginning of your nameallows us to fill in your car informations automatically"/>
 </s:View>

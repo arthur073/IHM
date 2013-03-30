@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login" xmlns:mx="library://ns.adobe.com/flex/mx" 
+		creationComplete="onCamera()">
+	<fx:Style source="fuelissimo.css"/>
+	
+	<fx:Declarations>
+		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+	</fx:Declarations>
+
+<fx:Script>
+	import mx.utils.ObjectUtil;
+	
+	import spark.events.ViewNavigatorEvent;
+	protected var cam:Camera;
+	
+	[Bindable]
+	protected var numCams:int;
+	[Bindable]
+	protected var vid:Video;
+	
+	protected var array:Array;
+	
+	protected function view1_viewActivateHandler(event:ViewNavigatorEvent):void
+	{
+	if (Camera.isSupported)
+	{
+	var name1:String;
+	var name2:String;
+	array = Camera.names;
+	numCams = array.length;
+	}
+	else 
+		//retour ecran
+		null;
+	}
+	
+	
+	protected function onCamera():void
+	{
+		if (numCams == 2)
+		{
+			cam = Camera.getCamera("1");
+		}
+		else
+		{
+			cam = Camera.getCamera("0");
+		}
+	cam.setMode(width, height, 10);
+	vid = new Video(this.parent.width,this.parent.height);
+	vid.attachCamera(cam);
+	uic.addChild(vid);
+	}
+	
+	
+	protected function removingView():void
+	{
+		vid.attachCamera(null);
+		vid=null;
+		cam=null;
+		this.parentApplication.removeElement(this);
+	}
+	
+</fx:Script>
+	<!-- Note: ensure you have the Camera permission in the app-descriptor XML for Android devices -->
+		
+	<mx:UIComponent id="uic" width="100%" height="300" y="0"/>        
+	<s:Button visible="{Camera.isSupported}" x="102" y="395" label="Take picture"
+			  click="removingView()" />
+
+</s:View>

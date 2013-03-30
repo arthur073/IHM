@@ -70,6 +70,10 @@
 				this.removeAllElements();
 				this.addElement(statisticsDriveAnalysisView);			
 			}
+			public function takePicture():void {
+				var takePictureView:TakePicture = new TakePicture();
+				this.addElement(takePictureView);	
+			}
 			
 			
 		]]>
