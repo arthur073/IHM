@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:views="View.*"
 			   width="320" height="444" applicationDPI="160"
-			   >
+			   creationComplete="initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
-
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import View.*;
+			
+			public function initApp():void {
+				var loginView:Login = new Login();
+				this.removeAllElements();
+				this.addElement(loginView);
+			}
+			public function showMain():void {
+				var mainView:Main = new Main();
+				this.removeAllElements();
+				this.addElement(mainView);
+			}
+			public function showSettings():void {
+				var settingsView:Settings = new Settings();
+				this.removeAllElements();
+				this.addElement(settingsView);			
+			}
+		]]>
+	</fx:Script>
+	
 </s:Application>

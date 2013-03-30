@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="Main">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function disconnectHandler(event:MouseEvent):void
+			{
+				this.parentApplication.initApp();
+			}
+		]]>
+	</fx:Script>
+	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 	
-	<s:Button y="376" width="310" height="80" label="Manage your account" fontSize="25"
+	<s:Button id="manage" y="385" width="310" height="71" label="Manage your account" fontSize="25"
 			  horizontalCenter="0"/>
-	<s:Label y="16" width="328" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="-4" text="Fuelissimo" textAlign="center"
+	<s:Label y="6" width="312" height="69" color="#000000" fontFamily="Arial" fontSize="50"
+			 fontWeight="bold" horizontalCenter="0" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>
 	<s:Label y="68" right="18" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/>
-	<s:Button x="6" y="114" width="150" height="82" label="Fill up"
-			  click="button1_clickHandler(event)" fontSize="25"/>
-	<s:Button x="164" y="114" width="150" height="82" label="Statistics" fontSize="25"/>
-	<s:Label x="7" y="356" fontFamily="Arial" fontSize="15" fontWeight="bold"
-			 text="You are logged as Michel Khum."/>
-	<s:HSlider x="11" y="215"/>
-	<s:TextArea x="10" y="252" height="55" fontWeight="bold" text="Daily advice&#xd;To be completed...&#xd;&#xd;"/>
+	<s:Button id="fillUp" x="5" y="135" width="150" height="109" label="Fill up"
+			   fontSize="26"/>
+	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics" fontSize="26"/>
+	<s:Label x="133" y="90" fontFamily="Arial" fontSize="12" fontWeight="bold"
+			 text="Logged as Michel Kuhm"/>
+	<s:TextArea x="10" y="288" height="89" editable="false" selectable="false" fontSize="16"
+				text="Reducing you speed by 10% &#xd;could let you save up to 15% of fuel."/>
+	<s:Label x="14" y="252" text="Daily advice :"/>
+	<s:Image x="280" y="83" width="30" height="30"
+			 source="assets/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"
+			 click="disconnectHandler(event)"/>
 </s:View>
