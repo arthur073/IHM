@@ -16,12 +16,31 @@
 				this.parentApplication.takePicture();
 			}
 			
+			protected function cancelHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+			
+			protected function manualInputHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showAddACar2();
+			}
+			
+			protected function validateHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showAddACar2();
+			}
+			
 		]]>
 	</fx:Script>
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
+	<s:Label x="0" y="0" width="320" height="460"/>
 	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
 			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>
@@ -29,9 +48,12 @@
 			 text="Manage your fuel !"/>
 	<s:TextInput x="46" y="213" width="227"/>
 	<s:TextInput x="79" y="297" width="194"/>
-	<s:Button x="167" y="362" width="136" label="Validate" fontSize="18"/>
-	<s:Button x="18" y="361" width="136" label="Manual input" fontSize="18"/>
-	<s:Button x="19" y="416" width="282" height="34.151455" label="Cancel" fontSize="18"/>
+	<s:Button x="167" y="362" width="136" label="Validate" click="validateHandler(event)"
+			  fontSize="18"/>
+	<s:Button x="18" y="361" width="136" label="Manual input" click="manualInputHandler(event)"
+			  fontSize="18"/>
+	<s:Button x="19" y="416" width="282" height="34.151455" label="Cancel"
+			  click="cancelHandler(event)" fontSize="18"/>
 	<s:Image x="278" y="214" width="32" height="32" scaleMode="letterbox" smooth="true"
 			 source="assets/iphone-appareil-photo-icone1.png" click="takePicture(event)"/>
 	<s:Label x="10" y="181" fontSize="16" text="Plate number :"/>

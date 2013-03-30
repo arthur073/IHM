@@ -8,6 +8,19 @@
 			{
 				this.parentApplication.initApp();
 			}
+			
+			protected function statisticsHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showStatisticsEnergy();
+			}
+			
+			protected function fillUpHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showFillUp();
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -24,8 +37,9 @@
 	<s:Label y="68" right="18" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/>
 	<s:Button id="fillUp" x="5" y="135" width="150" height="109" label="Fill up"
-			   fontSize="26"/>
-	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics" fontSize="26"/>
+			  click="fillUpHandler(event)" fontSize="26"/>
+	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics"
+			  click="statisticsHandler(event)" fontSize="26"/>
 	<s:Label x="133" y="90" fontFamily="Arial" fontSize="12" fontWeight="bold"
 			 text="Logged as Michel Kuhm"/>
 	<s:Label x="14" y="252" text="Daily advice :"/>
