@@ -4,7 +4,6 @@
 			   xmlns:views="View.*"
 			   width="320" height="444" applicationDPI="160"
 			   creationComplete="initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
-	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
