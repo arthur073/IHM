@@ -35,3 +35,8 @@ s|Button.button
 	textShadowAlpha : 0;
 	fontWeight: normal;
 }
+
+s|VGroup s|TextInput
+{	
+	color : gray;
+}
