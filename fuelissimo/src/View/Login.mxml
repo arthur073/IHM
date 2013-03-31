@@ -28,16 +28,23 @@
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
+	
 	<s:Label x="0" y="0" width="320" height="460"/>
 	<!--<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
 			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>
 	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/> -->
-	<s:Button x="10" y="329" width="300" height="49" label="Sign in"
-			  click="loginHandler(event)"/>
+	<s:Button x="10" y="329" width="300" height="49" label="Sign in" click="loginHandler(event)"
+			  styleName="login"/>
+	<s:Button x="10" y="399" width="300" height="49" label="Create an account"
+			  click="createAccountHandler(event)" color="#FFFFFF"/>
+	<!--
 	<s:Label x="99" y="399" fontSize="15" text="Create an account" textDecoration="underline" mouseEnabled="true" click="createAccountHandler(event)"/>
+	-->
+	<!-- mise en attente mdp oublie
 	<s:Label x="92" y="436" fontSize="15" text="Forgotten password ?" textDecoration="underline" click="forgottenPasswordHandler(event)"/>
+-->
 	<s:Group x="14" y="215" width="291" height="93">
 		<s:Rect width="100%" height="100%" 
 				topLeftRadiusX="10" topLeftRadiusY="10"

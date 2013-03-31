@@ -40,7 +40,7 @@
 				
 				var generalSettingsButton:Button = new Button();
 				generalSettingsButton.label = "General settings";
-				generalSettingsButton.addEventListener(MouseEvent.CLICK, this.parentApplication.showSettings());
+				//generalSettingsButton.addEventListener(MouseEvent.CLICK, this.parentApplication.showSettings());
 				ttlWndw.addElement(generalSettingsButton);
 				
 				var addACarButton:Button = new Button();
@@ -72,16 +72,16 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 	
-	<s:Button id="manage" y="385" width="310" height="71" label="Manage your account"
+	<s:Button id="manage" y="385" width="310" height="71" label="Manage your account" color="#FFFFFF"
 			  click="settingsChoiceHandler(event)" fontSize="25" horizontalCenter="0"/>
 	<s:Label y="6" width="312" height="69" color="#000000" fontFamily="Arial" fontSize="50"
 			 fontWeight="bold" horizontalCenter="0" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>
 	<s:Label y="68" right="18" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/>
-	<s:Button id="fillUp" x="5" y="135" width="150" height="109" label="Fill up"
-			  click="fillUpHandler(event)" fontSize="26"/>
-	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics"
+	<s:Button id="fillUp" x="5" y="135" width="150" height="109" label="Fill up" color="#FFFFFF"
+			  click="fillUpHandler(event)" fontSize="26"/> 
+	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics" color="#FFFFFF"
 			  click="statisticsHandler(event)" fontSize="26"/>
 	<s:Label x="150" y="105" color="#626262" fontFamily="Arial" fontSize="12" fontStyle="italic"
 			  fontWeight="bold" text="Logged as Michel Kuhm"/>
