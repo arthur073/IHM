@@ -83,12 +83,16 @@
 			  click="fillUpHandler(event)" fontSize="26"/>
 	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics"
 			  click="statisticsHandler(event)" fontSize="26"/>
-	<s:Label x="133" y="90" fontFamily="Arial" fontSize="12" fontWeight="bold"
-			 text="Logged as Michel Kuhm"/>
-	<s:Label x="14" y="252" text="Daily advice :"/>
-	<s:Image x="280" y="83" width="30" height="30"
-			 source="assets/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"
-			 click="disconnectHandler(event)"/>
-	<s:Label x="29" y="280" width="262" height="53"
-			 text="Reducing you speed by 10% &#xd;could let you save up to 15% of fuel."/>
+	<s:Label x="150" y="105" color="#979292" fontFamily="Arial" fontSize="12" fontStyle="italic"
+			  fontWeight="bold" text="Logged as Michel Kuhm"/>
+	<s:Label x="15" y="261" text="Daily advice :"/>
+	<s:Image x="292" y="99" width="20" height="20"
+			  source="assets/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"
+			 	click="disconnectHandler(event)"/>
+	<s:Label x="29" y="283" width="262" height="81" backgroundAlpha="0.7"
+			  backgroundColor="#FFFFFF"
+			  text="Reducing you speed by 10% &#xd;could let you save up to 15% of fuel."
+			  verticalAlign="middle" />
+	
+	
 </s:View>
