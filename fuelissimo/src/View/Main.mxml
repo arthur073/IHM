@@ -4,11 +4,23 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import components.PopupHelpCar1;
+			import components.PopupSettingsChooser;
+			
 			import mx.core.IFlexDisplayObject;
 			import mx.events.CloseEvent;
 			import mx.managers.PopUpManager;
 			
+			import spark.components.SkinnablePopUpContainer;
 			import spark.components.TitleWindow;
+			import spark.events.ViewNavigatorEvent;
+			var popup:PopupSettingsChooser = new PopupSettingsChooser();
+			public function initPopup():void
+			{
+				popup.addView(this);
+			}
+			// FIN code de la popup
+			
 			protected function disconnectHandler(event:MouseEvent):void
 			{
 				this.parentApplication.initApp();
@@ -26,44 +38,6 @@
 				this.parentApplication.showFillUp();
 			}
 			
-			protected var ttlWndw:TitleWindow;
-			
-			protected function settingsChoiceHandler(event:MouseEvent):void
-			{
-				event.stopPropagation();
-				event.stopImmediatePropagation();
-				// TODO Auto-generated method stub
-				ttlWndw = new TitleWindow();
-				ttlWndw.title = "Email has been sent.";
-				ttlWndw.width = this.parentApplication.width * 0.5;
-				ttlWndw.height = 0;
-				
-				var generalSettingsButton:Button = new Button();
-				generalSettingsButton.label = "General settings";
-				generalSettingsButton.addEventListener(MouseEvent.CLICK, this.parentApplication.showSettings());
-				ttlWndw.addElement(generalSettingsButton);
-				
-				var addACarButton:Button = new Button();
-				addACarButton.label = "Add a car";
-				//addACarButton.addEventListener(MouseEvent.CLICK, this.parentApplication.showAddACar1());
-				ttlWndw.addElement(addACarButton);
-				
-				//	var popupMessage:Label = new Label();
-				//popupMessage.text = "An email has been sent to the specified address.";
-				//	popupMessage.
-				//	ttlWndw.addElement(popupMessage);
-				ttlWndw.addEventListener(CloseEvent.CLOSE, ttlWndw_close);
-				ttlWndw.isPopUp = true;
-				
-				PopUpManager.addPopUp(ttlWndw, this, true);
-				PopUpManager.centerPopUp(ttlWndw);
-			}
-			
-			protected function ttlWndw_close(evt:CloseEvent):void {
-				PopUpManager.removePopUp(evt.currentTarget as IFlexDisplayObject);
-				this.parentApplication.initApp();
-			}
-			
 		]]>
 	</fx:Script>
 	
@@ -72,7 +46,7 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 
-	<s:Image x="15" y="219" width="284" height="195" source="assets/Post-it-note-transparent.png"/>
+	<s:Image x="0" y="209" width="340" height="231" source="assets/Post-it-note-transparent.png"/>
 	<s:Button id="fillUp" x="5" y="167" width="150" height="54" label="Fill up"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontWeight="normal"
 			  styleName="button"/>
@@ -81,15 +55,20 @@
 			  styleName="button"/>
 	<s:Label x="142" y="145" fontFamily="Arial" fontSize="12" fontStyle="italic" fontWeight="normal"
 			 text="Logged as Michel Kuhm"/>
-	<s:Label id="advice" x="91" y="243" color="#000000" fontFamily="Verdana" fontWeight="bold"
-			 text="Daily advice &#xd;&#xd;Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."/>
+	<s:Label id="advice" x="91" y="243" height="18" color="#000000" fontFamily="Verdana"
+			 fontWeight="bold" text="Daily advice &#xd;&#xd;"/>
 	<s:Image x="277" y="135" width="30" height="30" click="disconnectHandler(event)"
 			 scaleMode="letterbox" smooth="true"
 			 source="assets/Logout-01.png"/>
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
 	<s:Label x="80" y="417" width="236" height="23" color="#FDFDFD" fontSize="23" fontWeight="normal"
-			 text="Manage your account" verticalAlign="middle" click="settingsChoiceHandler(event)"/>
-	<s:Image x="16" y="402" width="65" height="51" smooth="true" source="assets/configuration.png" click="settingsChoiceHandler(event)"/>
-	
+			 text="Manage your account" verticalAlign="middle" click="popup.addView(this);popup.open(this)"/>
+	<s:Image x="16" y="402" width="65" height="51" smooth="true" source="assets/iEngrenages.png" 
+			 click="popup.addView(this);popup.open(this)" backgroundAlpha="0"/>
+	<s:Label x="91" y="269" width="152" height="130" backgroundAlpha="0" color="#000000"
+			 fontFamily="Verdana" fontWeight="normal"
+			 text="Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."
+			 textAlign="center" verticalAlign="middle"/>
+
 </s:View>

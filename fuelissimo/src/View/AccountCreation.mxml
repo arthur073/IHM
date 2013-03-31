@@ -22,6 +22,12 @@
 				this.parentApplication.showAddACar1();
 			}
 			
+			protected function loginFacebookHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -63,7 +69,7 @@
 			 text="Please fill in your information"/>
 	<s:Label x="151" y="325" text="OR&#xd;"/>
 	<s:Image x="53" y="343" width="216" height="40" smooth="true" smoothingQuality="default"
-			 source="assets/LoginWithFacebookPressed@2x.png"/>
+			 source="assets/LoginWithFacebookPressed@2x.png" click="loginFacebookHandler(event)"/>
 	<s:Button x="53" y="264" width="216" height="49" label="Sign up" click="createAccountHandler(event)"
 			  fontSize="18" styleName="login"/>
 </s:View>
