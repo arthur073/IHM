@@ -46,7 +46,7 @@
 			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
 	<s:Label x="-277" y="103" width="269" height="61" fontSize="14"
 			 text="HELP POPUP Entering your plate number and the beginning of your nameallows us to fill in your car informations automatically"/>
-	<s:Image x="4" y="2" width="232" height="125" smooth="true"
+	<s:Image x="48" y="8" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
 	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number"/>
 	<s:TextInput x="10" y="221" width="300" height="40" text="3 first letters of your name"/>
