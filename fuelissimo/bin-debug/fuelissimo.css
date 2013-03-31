@@ -8,10 +8,25 @@ global
 	symbol-color: #0D9C22;
 	backgroundColor: #6FA851;
 	text-align: left;
+	chrome-color: #2A4227;
+	color : white;
+
 }
 	
 
-s|Label#advice, s|Label#advice2 
+s|Label#advice
 {
 	backgroundAlpha : 0;
+}
+
+s|Label#advice2
+{
+	backgroundAlpha : 0;
+}
+s|Button.button
+{
+	fontSize: 25;
+	basecolor : black;
+	textShadowAlpha : 0;
+	fontWeight: normal;
 }

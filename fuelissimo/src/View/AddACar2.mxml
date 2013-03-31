@@ -9,6 +9,19 @@
 				// TODO Auto-generated method stub
 				this.parentApplication.showMain();
 			}
+			
+			protected function validateHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+			
+			protected function cancelHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -21,4 +34,20 @@
 			 verticalAlign="middle"/>
 	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/>
+	<s:Label x="43" y="134" text="Car brand"/>
+	<s:Label x="40" y="174" text="Car model"/>
+	<s:Label x="12" y="226" text="Purchase date"/>
+	<s:Label x="30" y="286" text="Car counter"/>
+	<s:Label x="29" y="329" text="Car pseudo"/>
+	<s:TextInput x="126" y="319" width="153" text="Family car"/>
+	<s:TextInput x="126" y="277" width="74" text="84.756"/>
+	<s:ToggleSwitch x="208" y="279" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
+	<s:Button x="28" y="372" width="275" height="37" label="Validate"
+			  click="validateHandler(event)"/>
+	<s:Button x="28" y="415" width="275" height="37" label="Cancel"
+			  click="cancelHandler(event)"/>
+	<s:TextInput x="126" y="124" width="143"/>
+	<s:TextInput x="127" y="166" width="141"/>
+	<s:DateSpinner x="125" y="209" height="40"/>
+	
 </s:View>

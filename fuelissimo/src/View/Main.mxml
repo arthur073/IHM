@@ -80,7 +80,7 @@
 			  styleName="button"/>
 	<s:Label x="142" y="145" fontFamily="Arial" fontSize="12" fontStyle="italic" fontWeight="normal"
 			 text="Logged as Michel Kuhm"/>
-	<s:Label id="advice" x="91" y="243" color="#000000" fontFamily="Verdana" fontWeight="bold"
+	<s:Label id="advice" x="91" y="243" fontFamily="Verdana" fontWeight="bold"
 			 text="Daily advice &#xd;&#xd;Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."/>
 	<s:Image x="277" y="135" width="30" height="30" click="disconnectHandler(event)"
 			 scaleMode="letterbox" smooth="true"
