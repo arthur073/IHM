@@ -83,7 +83,7 @@
 			  click="fillUpHandler(event)" fontSize="26"/>
 	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics"
 			  click="statisticsHandler(event)" fontSize="26"/>
-	<s:Label x="150" y="105" color="#979292" fontFamily="Arial" fontSize="12" fontStyle="italic"
+	<s:Label x="150" y="105" color="#626262" fontFamily="Arial" fontSize="12" fontStyle="italic"
 			  fontWeight="bold" text="Logged as Michel Kuhm"/>
 	<s:Label x="15" y="261" text="Daily advice :"/>
 	<s:Image x="292" y="99" width="20" height="20"

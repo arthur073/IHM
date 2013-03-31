@@ -62,4 +62,6 @@
 	</s:VGroup>
 	</s:Group>
 
+	<s:Image x="4" y="29" width="306" height="164" smooth="true" smoothingQuality="high"
+			 source="assets/Fuel Factory logo.png"/>
 </s:View>

@@ -48,5 +48,4 @@
 	<s:Button x="48" y="357" width="232" label="Save" click="saveHandler(event)"/>
 	<s:Button x="48" y="406" width="232" label="Cancel" click="cancelHandler(event)"/>
 
-
 </s:View>

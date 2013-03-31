@@ -45,7 +45,7 @@
 			  click="cancelHandler(event)"/>
 	<s:HGroup x="34" y="352" width="276" height="46">
 		<s:RadioButton label="Highway" groupName="typeRoad"/>
-		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
+		<s:RadioButton label="Mix" groupName="typeRoad"/>
 		<s:RadioButton label="City" groupName="typeRoad"/>
 	</s:HGroup>
 	<s:TextInput x="145" y="306" width="84" height="30" fontSize="14" text="45,08€" textAlign="right"/>
