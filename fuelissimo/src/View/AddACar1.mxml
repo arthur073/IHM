@@ -40,23 +40,22 @@
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
-	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Button x="167" y="362" width="136" label="Validate" click="validateHandler(event)"
-			  fontSize="18"/>
-	<s:Button x="18" y="361" width="136" label="Manual input" click="manualInputHandler(event)"
-			  fontSize="18"/>
-	<s:Button x="19" y="416" width="282" height="34.151455" label="Cancel"
-			  click="cancelHandler(event)" fontSize="18"/>
-	<s:Label x="-274" y="16" width="269" height="61" fontSize="14"
-			 text="Entering your plate number and the beginning of your nameallows us to fill in your car informations automatically"/>
+	<s:Label x="0" y="-1" width="320" height="460"/>
+	<s:Button x="62" y="341" width="196" height="40" label="Manual input"
+			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
+	<s:Label x="-277" y="103" width="269" height="61" fontSize="14"
+			 text="HELP POPUP Entering your plate number and the beginning of your nameallows us to fill in your car informations automatically"/>
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
-	<s:TextInput x="9" y="197" width="232" height="40" text="Plate number"/>
-	<s:TextInput x="10" y="250" width="300" height="40" text="3 first letters of your name"/>
-	<s:Image x="246" y="181" width="66" height="66" smooth="true" smoothingQuality="high"
+	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number"/>
+	<s:TextInput x="10" y="221" width="300" height="40" text="3 first letters of your name"/>
+	<s:Image x="246" y="153" width="66" height="66" smooth="true" smoothingQuality="high"
 			 source="assets/video_camera.png" click="takePicture(event)"/>
-	<s:Label x="10" y="161" color="#FCFCFC" fontSize="15" fontWeight="normal"
+	<s:Label x="10" y="149" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
-	<s:Button x="62" y="302" width="196" height="53" label="Validate" click="validateHandler(event)"
-			  fontSize="25" styleName="login"/>
+	<s:Button x="62" y="267" width="196" height="49" label="Validate" click="validateHandler(event)"
+			  fontSize="18" styleName="login"/>
+	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
+			  fontSize="18" styleName="button"/>
+	<s:Label x="151" y="322" text="OR&#xd;"/>
 </s:View>
