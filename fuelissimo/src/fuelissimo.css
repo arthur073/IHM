@@ -34,6 +34,7 @@ s|Button.button
 	basecolor : black;
 	textShadowAlpha : 0;
 	fontWeight: normal;
+	color: #FFFFFF;
 }
 
 s|VGroup s|TextInput

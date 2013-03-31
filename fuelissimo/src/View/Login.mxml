@@ -36,9 +36,9 @@
 	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/> -->
 	<s:Button x="10" y="329" width="300" height="49" label="Sign in" click="loginHandler(event)"
-			  styleName="login"/>
+			  fontSize="18" styleName="login"/>
 	<s:Button x="10" y="399" width="300" height="49" label="Create an account"
-			  click="createAccountHandler(event)" color="#FFFFFF"/>
+			  click="createAccountHandler(event)" fontSize="18" styleName="button"/>
 	<!--
 	<s:Label x="99" y="399" fontSize="15" text="Create an account" textDecoration="underline" mouseEnabled="true" click="createAccountHandler(event)"/>
 	-->

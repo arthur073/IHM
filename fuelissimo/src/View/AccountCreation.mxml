@@ -29,16 +29,17 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
-			 verticalAlign="middle"/>
-	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
-			 text="Manage your fuel !"/>
-	<s:TextInput x="11" y="168" text="Email"/>
-	<s:TextInput x="10" y="225" text="Password"/>
-	<s:Button x="195" y="325" width="106" height="53" label="Create"
-			  click="createAccountHandler(event)"/>
-	<s:Button x="39" y="325" width="106" height="53" label="Cancel"
-			  click="cancelHandler(event)"/>
-	<s:Label x="8" y="129" text="Account Creation"/>
+	<s:TextInput x="9" y="128" height="40" text="Email address"/>
+	<s:TextInput x="9" y="172" height="40" text="Password"/>
+	<s:TextInput x="9" y="216" height="40" text="Password again"/>
+	<s:Button x="62" y="260" width="196" height="58" label="Sign up"
+			  click="createAccountHandler(event)" styleName="button"/>
+	<s:Image x="8" y="10" width="200" height="92" smooth="true" smoothingQuality="high" 
+			 source="assets/Fuel Factory logo.png"/>
+	<s:Label x="9" y="108" color="#FCFCFC" fontSize="15" fontWeight="normal"
+			 text="Please fill in your information"/>
+	<s:Label x="151" y="325" text="OR&#xd;"/>
+	<s:Image x="53" y="348" width="216" height="39" source="assets/LoginWithFacebookPressed@2x.png"/>
+	<s:Button x="13" y="401" width="102" height="45" label="Back" click="cancelHandler(event)"
+			  fontSize="18" styleName="login"/>
 </s:View>
