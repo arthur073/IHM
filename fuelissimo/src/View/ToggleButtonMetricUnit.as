@@ -8,7 +8,7 @@ package View
 		{
 			super();
 			selectedLabel="Km";
-			unselectedLabel="Mile";
+			unselectedLabel="Miles";
 		}
 	}
 }
