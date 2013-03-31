@@ -70,8 +70,12 @@
 				this.removeAllElements();
 				this.addElement(statisticsDriveAnalysisView);			
 			}
-			public function takePicture():void {
+			public function takePicture(o:Object = null):void {
 				var takePictureView:TakePicture = new TakePicture();
+				if( o != null )
+				{
+					takePictureView.putVisible(o);
+				}
 				this.addElement(takePictureView);	
 			}
 			

@@ -58,13 +58,20 @@
 		vid.attachCamera(null);
 		vid=null;
 		cam=null;
+		if( oVisible != null )
+			oVisible.visible = true;
 		this.parentApplication.removeElement(this);
+	}
+	
+	private var oVisible:Object = null;
+	public function putVisible(o:Object):void {
+		oVisible = o;
 	}
 	
 </fx:Script>
 	<!-- Note: ensure you have the Camera permission in the app-descriptor XML for Android devices -->
 		
-	<mx:UIComponent id="uic" width="100%" height="300" y="0"/>        
+	<mx:UIComponent id="uic" width="100%" height="300" y="0" alpha="1"/>        
 	<s:Button visible="{Camera.isSupported}" x="102" y="395" label="Take picture"
 			  click="removingView()" />
 
