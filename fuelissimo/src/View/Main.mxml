@@ -71,24 +71,24 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
-	
-	<s:Button id="manage" y="385" width="310" height="71" label="Manage your account"
-			  click="settingsChoiceHandler(event)" fontSize="25" horizontalCenter="0"/>
-	<s:Label y="6" width="312" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="0" text="Fuelissimo" textAlign="center"
-			 verticalAlign="middle"/>
-	<s:Label y="68" right="18" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
-			 text="Manage your fuel !"/>
-	<s:Button id="fillUp" x="5" y="135" width="150" height="109" label="Fill up"
-			  click="fillUpHandler(event)" fontSize="26"/>
-	<s:Button id="stats" x="164" y="135" width="150" height="109" label="Statistics"
-			  click="statisticsHandler(event)" fontSize="26"/>
-	<s:Label x="133" y="90" fontFamily="Arial" fontSize="12" fontWeight="bold"
+	<s:Image x="15" y="219" width="284" height="195" source="assets/Post-it-note-transparent.png"/>
+	<s:Button id="fillUp" x="5" y="167" width="150" height="54" label="Fill up"
+			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontWeight="normal"
+			  styleName="button"/>
+	<s:Button id="stats" x="164" y="167" width="150" height="54" label="Statistics"
+			  click="statisticsHandler(event)" color="#FAFAFA" fontWeight="normal"
+			  styleName="button"/>
+	<s:Label x="142" y="145" fontFamily="Arial" fontSize="12" fontStyle="italic" fontWeight="normal"
 			 text="Logged as Michel Kuhm"/>
-	<s:Label x="14" y="252" text="Daily advice :"/>
-	<s:Image x="280" y="83" width="30" height="30"
-			 source="assets/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"
-			 click="disconnectHandler(event)"/>
-	<s:Label x="29" y="280" width="262" height="53"
-			 text="Reducing you speed by 10% &#xd;could let you save up to 15% of fuel."/>
+	<s:Label id="advice" x="91" y="243" color="#000000" fontFamily="Verdana" fontWeight="bold"
+			 text="Daily advice &#xd;&#xd;Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."/>
+	<s:Image x="277" y="135" width="30" height="30" click="disconnectHandler(event)"
+			 scaleMode="letterbox" smooth="true"
+			 source="assets/Logout-01.png"/>
+	<s:Image x="4" y="2" width="232" height="125" smooth="true"
+			 source="assets/Fuel Factory logo.png"/>
+	<s:Label x="80" y="417" width="236" height="23" color="#FDFDFD" fontSize="23" fontWeight="normal"
+			 text="Manage your account" verticalAlign="middle" click="settingsChoiceHandler(event)"/>
+	<s:Image x="16" y="402" width="65" height="51" smooth="true" source="assets/configuration.png" click="settingsChoiceHandler(event)"/>
+	
 </s:View>

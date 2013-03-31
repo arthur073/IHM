@@ -29,12 +29,14 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Button x="10" y="349" width="300" height="49" label="Login"
-			  click="loginHandler(event)"/>
+	<s:Button x="10" y="349" width="300" height="49" label="Login" click="loginHandler(event)"
+			  color="#FCFCFC" styleName="button"/>
 	<s:Button x="10" y="402" width="300" height="49" label="Create an account"
-			  click="loginHandler(event)"/>
-	<s:TextInput x="10" y="226" height="43" fontSize="18" text="Email" textAlign="left"/>
-	<s:TextInput x="10" y="271" height="43" fontSize="18" text="Password" textAlign="left"/>
+			  click="createAccountHandler(event)" color="#FFFFFF" styleName="button"/>
+	<s:TextInput x="10" y="226" height="43" color="#000000" fontSize="18" text="Email"
+				 textAlign="left"/>
+	<s:TextInput x="10" y="271" height="43" color="#000000" fontSize="18" text="Password"
+				 textAlign="left"/>
 	<s:Image x="4" y="29" width="306" height="164" smooth="true" smoothingQuality="high"
 			 source="assets/Fuel Factory logo.png"/>
 </s:View>

@@ -10,3 +10,8 @@ global
 	text-align: left;
 }
 	
+
+s|Label#advice, s|Label#advice2 
+{
+	backgroundAlpha : 0;
+}
