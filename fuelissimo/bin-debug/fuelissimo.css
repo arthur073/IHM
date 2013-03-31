@@ -12,4 +12,26 @@ global
 	content-background-alpha: 0.71;
 	chrome-color: #0C6707;
 }
+s|Button.login
+{
+	color: #222222;
+	chrome-color: #888888;
+}
 	
+
+s|Label#advice
+{
+	backgroundAlpha : 0;
+}
+
+s|Label#advice2
+{
+	backgroundAlpha : 0;
+}
+s|Button.button
+{
+	fontSize: 25;
+	basecolor : black;
+	textShadowAlpha : 0;
+	fontWeight: normal;
+}
