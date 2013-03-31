@@ -41,3 +41,8 @@ s|VGroup s|TextInput
 {	
 	color : gray;
 }
+s|Label#popup
+{
+	fontSize: 14;
+	backgroundAlpha : 0;
+}

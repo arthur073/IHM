@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Login" >
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Script>
 		<![CDATA[
+			// Code de la popup ICI
+			import components.MyPopupComponent;
+			import spark.components.SkinnablePopUpContainer;
+			import spark.events.ViewNavigatorEvent;
+			var popup:MyPopupComponent = new MyPopupComponent();
+			// FIN code de la popup
+			
 			protected function loginHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
@@ -40,12 +47,13 @@
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+		
 	</fx:Declarations>
+	
 	<s:Label x="0" y="-1" width="320" height="460"/>
 	<s:Button x="62" y="341" width="196" height="40" label="Manual input"
 			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
-	<s:Label x="-277" y="103" width="269" height="61" fontSize="14"
-			 text="HELP POPUP Entering your plate number and the beginning of your nameallows us to fill in your car informations automatically"/>
+
 	<s:Image x="48" y="8" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
 	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number"/>
@@ -59,4 +67,6 @@
 	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
 	<s:Label x="151" y="322" text="OR&#xd;"/>
+	
+	<s:Image x="10" y="103" width="44" height="44" smooth="true" source="assets/Green.png" click="popup.open(this)"/>
 </s:View>

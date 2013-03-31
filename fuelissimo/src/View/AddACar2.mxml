@@ -27,6 +27,7 @@
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+
 	</fx:Declarations>
 	
 	
@@ -50,4 +51,5 @@
 			  fontSize="18" styleName="button"/>
 	<s:Label x="10" y="113" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
+
 </s:View>
