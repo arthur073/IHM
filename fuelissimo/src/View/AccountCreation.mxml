@@ -64,6 +64,6 @@
 	<s:Label x="151" y="325" text="OR&#xd;"/>
 	<s:Image x="53" y="343" width="216" height="40" smooth="true" smoothingQuality="default"
 			 source="assets/LoginWithFacebookPressed@2x.png"/>
-	<s:Button x="53" y="264" width="216" height="53" label="Sign up" click="createAccountHandler(event)"
-			  fontSize="25" styleName="login"/>
+	<s:Button x="53" y="264" width="216" height="49" label="Sign up" click="createAccountHandler(event)"
+			  fontSize="18" styleName="login"/>
 </s:View>

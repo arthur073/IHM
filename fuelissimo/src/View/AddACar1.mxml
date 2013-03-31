@@ -7,6 +7,7 @@
 		<![CDATA[
 			// Code de la popup ICI
 			import components.MyPopupComponent;
+			
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
 			var popup:MyPopupComponent = new MyPopupComponent();
@@ -27,7 +28,7 @@
 			protected function cancelHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				this.parentApplication.showMain();
+				this.parentApplication.showAccountCreation();
 			}
 			
 			protected function manualInputHandler(event:MouseEvent):void
