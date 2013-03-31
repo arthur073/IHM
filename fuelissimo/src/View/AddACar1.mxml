@@ -13,7 +13,8 @@
 			
 			protected function takePicture(event:MouseEvent):void
 			{
-				this.parentApplication.takePicture();
+				this.visible = false;
+				this.parentApplication.takePicture(this);
 			}
 			
 			protected function cancelHandler(event:MouseEvent):void
