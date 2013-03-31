@@ -28,50 +28,10 @@
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
-	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label x="12" y="226" text="Purchase date"/>
-	<s:Label x="30" y="286" text="Car counter"/>
-	<s:Label x="29" y="329" text="Car pseudo"/>
-	<s:TextInput x="126" y="319" width="153" text="Family car"/>
-	<s:TextInput x="126" y="277" width="74" text="84.756"/>
-	<s:ToggleSwitch x="208" y="279" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
-	<s:Button x="28" y="372" width="275" height="37" label="Validate"
-			  click="validateHandler(event)"/>
-	<s:Button x="28" y="415" width="275" height="37" label="Cancel"
-			  click="cancelHandler(event)"/>
-	<s:DateSpinner x="125" y="209" height="40"/>
-	<s:Image x="4" y="2" width="232" height="125" smooth="true"
-			 source="assets/Fuel Factory logo.png"/>
-	<s:TextInput x="10" y="127" width="300" height="40" text="Car brand"/>
-	<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-			xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
+	
+	
 		
-		<fx:Script>
-			<![CDATA[
-				protected function loginHandler(event:MouseEvent):void
-				{
-					// TODO Auto-generated method stub
-					this.parentApplication.showMain();
-				}
-				
-				protected function validateHandler(event:MouseEvent):void
-				{
-					// TODO Auto-generated method stub
-					this.parentApplication.showMain();
-				}
-				
-				protected function cancelHandler(event:MouseEvent):void
-				{
-					// TODO Auto-generated method stub
-					this.parentApplication.showMain();
-				}
-				
-			]]>
-		</fx:Script>
 		
-		<fx:Declarations>
-			<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
-		</fx:Declarations>
 		<s:Label x="0" y="0" width="320" height="460"/>
 		<s:Label x="12" y="226" text="Purchase date"/>
 		<s:Label x="30" y="286" text="Car counter"/>
@@ -89,52 +49,8 @@
 		<s:TextInput x="10" y="165" width="300" height="40" text="Car brand"/>
 		<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 				xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
-			
-			<fx:Script>
-				<![CDATA[
-					protected function loginHandler(event:MouseEvent):void
-					{
-						// TODO Auto-generated method stub
-						this.parentApplication.showMain();
-					}
-					
-					protected function validateHandler(event:MouseEvent):void
-					{
-						// TODO Auto-generated method stub
-						this.parentApplication.showMain();
-					}
-					
-					protected function cancelHandler(event:MouseEvent):void
-					{
-						// TODO Auto-generated method stub
-						this.parentApplication.showMain();
-					}
-					
-				]]>
-			</fx:Script>
-			
-			<fx:Declarations>
-				<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
-			</fx:Declarations>
-			<s:Label x="0" y="0" width="320" height="460"/>
-			<s:Label x="16" y="237" text="Purchase date"/>
-			<s:Label x="16" y="286" text="Car counter"/>
-			<s:Label x="29" y="329" text="Car pseudo"/>
-			<s:TextInput x="126" y="319" width="153" text="Family car"/>
-			<s:TextInput x="126" y="277" width="74" text="84.756"/>
-			<s:ToggleSwitch x="208" y="279" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
-			<s:Button x="28" y="372" width="275" height="37" label="Validate"
-					  click="validateHandler(event)"/>
-			<s:Button x="28" y="415" width="275" height="37" label="Cancel"
-					  click="cancelHandler(event)"/>
-			<s:DateSpinner x="123" y="218" height="40"/>
-			<s:Image x="4" y="2" width="232" height="125" smooth="true"
-					 source="assets/Fuel Factory logo.png"/>
-			<s:TextInput x="10" y="127" width="300" height="40" text="Car brand"/>
-			<s:TextInput x="10" y="170" width="300" height="40" text="Car model"/>
-			
-		</s:View>
-		
-	</s:View>
+
+
 	
+		</s:View>
 </s:View>
