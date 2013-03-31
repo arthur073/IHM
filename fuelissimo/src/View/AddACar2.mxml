@@ -44,7 +44,7 @@
 		<s:Button x="28" y="415" width="275" height="37" label="Cancel"
 				  click="cancelHandler(event)"/>
 		<s:DateSpinner x="119" y="211" height="40"/>
-		<s:Image x="4" y="2" width="219" height="105" smooth="true"
+		<s:Image x="56" y="5" width="219" height="105" smooth="true"
 				 source="assets/Fuel Factory logo.png"/>
 		<s:TextInput x="10" y="163" width="300" height="40" text="Car brand"/>
 	<s:TextInput x="10" y="118" width="300" height="40" text="Car model"/>
