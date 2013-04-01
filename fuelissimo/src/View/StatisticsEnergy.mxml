@@ -45,10 +45,10 @@
 		<mx:SolidColorStroke id="s2" color="red" weight="2"/>
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label x="224" y="129" width="86" height="52" backgroundAlpha="0.7" backgroundColor="#FFFFFF"/>
-	<s:Image x="56" y="5" width="219" height="105" smooth="true"
+	<s:Label x="224" y="142" width="86" height="52" backgroundAlpha="0.7" backgroundColor="#FFFFFF"/>
+	<s:Image x="143" y="1" width="219" height="66" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
-	<s:SpinnerListContainer x="60" y="117" width="150" height="60">
+	<s:SpinnerListContainer x="60" y="137" width="150" height="60">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Family car"></fx:Object>
@@ -57,7 +57,7 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:SpinnerListContainer x="103" y="384" width="200" height="60">
+	<s:SpinnerListContainer x="103" y="393" width="200" height="60">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Energy consumption"></fx:Object>
@@ -66,9 +66,9 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Label x="10" y="184" width="300" height="189" backgroundColor="#FFFFFF" backgroundAlpha="0.7"/>
+	<s:Label x="10" y="199" width="300" height="189" backgroundColor="#FFFFFF" backgroundAlpha="0.7"/>
 	
-	<mx:AreaChart id="energyConsumption" x="10" y="184" width="300" height="189" alpha="0.7"
+	<mx:AreaChart id="energyConsumption" x="10" y="199" width="300" height="189" alpha="0.7"
 				  type="overlaid" dataProvider="{graphData}" showDataTips="true" >
 		<mx:series>
 			<mx:AreaSeries displayName="Reference" yField="Reference" form="curve" 
@@ -80,6 +80,11 @@
 			<mx:CategoryAxis categoryField="kmDone"/>
 		</mx:horizontalAxis>		
 	</mx:AreaChart>
-	<mx:Legend x="227" y="129" dataProvider="{energyConsumption}"/>
-	<s:Button x="14" y="395" label=" Back" click="backHandler(event)" color="#FFFFFF"/>
+	<mx:Legend x="227" y="143" dataProvider="{energyConsumption}"/>
+	<s:Button x="14" y="403" label=" Back" click="backHandler(event)" color="#FFFFFF"/>
+	<s:Button id="month" x="57" y="103" width="55" height="25" label="Month" fontSize="10" color="#FFFFFF"/>
+	<s:Button id="forever" x="111" y="103" width="57" height="25" label="Forever" fontSize="10" color="#FFFFFF"/>
+	<s:Button id="forever0" x="183" y="103" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF" />
+	<s:Button id="forever1" x="247" y="103" width="70" height="25" label="Km/Fill up" fontSize="10" color="#FFFFFF"/>
+	<s:Button id="today" x="3" y="103" width="55" height="25" label="Today" fontSize="10" color="#FFFFFF"/>
 </s:View>
