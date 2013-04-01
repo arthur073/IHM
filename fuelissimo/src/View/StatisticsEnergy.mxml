@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		title="Login">
 	
 	<fx:Script>
 		<![CDATA[
+						
+			import mx.collections.ArrayCollection;
+			
+			[Bindable]private var graphData:ArrayCollection = new ArrayCollection( [
+				{ kmDone: "50", Reference: 4.2, Current: 6.3 },
+				{ kmDone: "80", Reference: 4.1, Current: 6.1 },
+				{ kmDone: "120", Reference: 4.4, Current: 6.9 },
+				{ kmDone: "150", Reference: 4.0, Current: 6.7 },
+				{ kmDone: "190", Reference: 4.2, Current: 7.2 },
+				{ kmDone: "250", Reference: 4.4, Current: 6.2 },
+				{ kmDone: "400", Reference: 4.7, Current: 6.1 },
+				{ kmDone: "510", Reference: 4.1, Current: 6.4 },
+				{ kmDone: "580", Reference: 4.9, Current: 8.1 } ]);
+			
 			protected function loginHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
 				this.parentApplication.showMain();
 			}
+			
+			protected function backHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.parentApplication.showMain();
+			}
+			
 		]]>
 	</fx:Script>
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+		<mx:SolidColor id="sc1" color="blue" alpha=".3"/>
+		<mx:SolidColor id="sc2" color="red" alpha=".3"/>
+		
+		<!-- Define custom SolidColorStrokes. -->
+		<mx:SolidColorStroke id="s1" color="blue" weight="2"/>
+		<mx:SolidColorStroke id="s2" color="red" weight="2"/>
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
-			 verticalAlign="middle"/>
-	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
-			 text="Manage your fuel !"/>
+	<s:Label x="224" y="129" width="86" height="52" backgroundAlpha="0.7" backgroundColor="#FFFFFF"/>
+	<s:Image x="56" y="5" width="219" height="105" smooth="true"
+			 source="assets/Fuel Factory logo.png"/>
+	<s:SpinnerListContainer x="60" y="117" width="150" height="60">
+		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
+			<s:ArrayList>
+				<fx:Object data="Family car"></fx:Object>
+				<fx:Object data="Michel's car"></fx:Object>
+				<fx:Object data="Arthur's car"></fx:Object>
+			</s:ArrayList>
+		</s:SpinnerList>
+	</s:SpinnerListContainer>
+	<s:SpinnerListContainer x="103" y="384" width="200" height="60">
+		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
+			<s:ArrayList>
+				<fx:Object data="Energy consumption"></fx:Object>
+				<fx:Object data="Cost"></fx:Object>
+				<fx:Object data="GPS analysis"></fx:Object>
+			</s:ArrayList>
+		</s:SpinnerList>
+	</s:SpinnerListContainer>
+	<s:Label x="10" y="184" width="300" height="189" backgroundColor="#FFFFFF" backgroundAlpha="0.7"/>
+	
+	<mx:AreaChart id="energyConsumption" x="10" y="184" width="300" height="189" alpha="0.7"
+				  type="overlaid" dataProvider="{graphData}" showDataTips="true" >
+		<mx:series>
+			<mx:AreaSeries displayName="Reference" yField="Reference" form="curve" 
+						   areaStroke="{s1}" areaFill="{sc1}"/>
+			<mx:AreaSeries displayName="Current" yField="Current" form="curve" 
+						   areaStroke="{s2}" areaFill="{sc2}"/>
+		</mx:series>
+		<mx:horizontalAxis >
+			<mx:CategoryAxis categoryField="kmDone"/>
+		</mx:horizontalAxis>		
+	</mx:AreaChart>
+	<mx:Legend x="227" y="129" dataProvider="{energyConsumption}"/>
+	<s:Button x="14" y="395" label=" Back" click="backHandler(event)" color="#FFFFFF"/>
 </s:View>
