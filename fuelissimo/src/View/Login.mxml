@@ -61,12 +61,16 @@
 			<s:Label width="82" height="40" backgroundAlpha="0" paddingLeft="10" text="Email"
 					 textAlign="center" verticalAlign="middle"/>
 			<s:TextInput width="190" height="40" borderVisible="false" contentBackgroundAlpha="0"
-						 text="Required"/>
+						 text="Required" 
+						 focusIn="this.parentApplication.clearField(event, 'Required')"
+						 focusOut="this.parentApplication.fillField(event,'Required')" />
 		</s:HGroup>
 		<s:HGroup width="100%" height="40">
 			<s:Label paddingLeft="10" width="82" height="40" text="Password" verticalAlign="middle" backgroundAlpha="0"/>
-			<s:TextInput width="190" height="40" borderVisible="false" contentBackgroundAlpha="0"
-						 text="Required" textAlign="left"/>
+			<s:TextInput id="password" width="190" height="40" borderVisible="false" contentBackgroundAlpha="0"
+						 text="Required" textAlign="left" displayAsPassword="false"
+						 focusIn="password.displayAsPassword=false;this.parentApplication.clearField(event, 'Required')"
+						 focusOut="password.displayAsPassword=true;this.parentApplication.fillField(event,'Required')"/>
 		</s:HGroup>
 	</s:VGroup>
 	</s:Group>
