@@ -6,10 +6,10 @@
 	<fx:Script>
 		<![CDATA[
 			// Code de la popup ICI
-			import components.MyPopupComponent;
+			import components.PopupHelpCar1;
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
-			var popup:MyPopupComponent = new MyPopupComponent();
+			var popup:PopupHelpCar1 = new PopupHelpCar1();
 			// FIN code de la popup
 			
 			protected function loginHandler(event:MouseEvent):void
@@ -27,6 +27,7 @@
 			protected function cancelHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				this.removeAllElements();
 				this.parentApplication.showAccountCreation();
 			}
 			
