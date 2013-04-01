@@ -79,6 +79,21 @@
 				this.addElement(takePictureView);	
 			}
 			
+			public function clearField(event:Event, str:String):void
+			{
+				if (event.target.text == str) {
+					event.target.text = "";
+				}
+			}
+			
+			public function fillField(event:Event, str:String):void
+			{
+				if (event.target.text == "") {
+					event.target.text = str;
+				}
+			}
+			
+			
 			
 		]]>
 	</fx:Script>

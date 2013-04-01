@@ -7,7 +7,6 @@
 		<![CDATA[
 			// Code de la popup ICI
 			import components.MyPopupComponent;
-			
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
 			var popup:MyPopupComponent = new MyPopupComponent();
@@ -43,6 +42,7 @@
 				this.parentApplication.showAddACar2();
 			}
 			
+			
 		]]>
 	</fx:Script>
 	
@@ -57,8 +57,12 @@
 
 	<s:Image x="48" y="8" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
-	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number"/>
-	<s:TextInput x="10" y="221" width="300" height="40" text="3 first letters of your name"/>
+	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number" 
+				 focusIn="this.parentApplication.clearField(event, 'Plate number')"
+				 focusOut="this.parentApplication.fillField(event,'Plate number')"/>
+	<s:TextInput x="10" y="221" width="300" height="40" text="3 first letters of your name" 
+				 focusIn="this.parentApplication.clearField(event, '3 first letters of your name')"
+				 focusOut="this.parentApplication.fillField(event,'3 first letters of your name')"/>
 	<s:Image x="246" y="153" width="66" height="66" smooth="true" smoothingQuality="high"
 			 source="assets/video_camera.png" click="takePicture(event)"/>
 	<s:Label x="10" y="149" color="#FCFCFC" fontSize="15" fontWeight="normal"

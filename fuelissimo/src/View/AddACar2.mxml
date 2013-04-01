@@ -37,14 +37,22 @@
 		<s:Label x="10" y="247" text="Purchase date"/>
 		<s:Label x="12" y="316" text="Car counter"/>
 		<s:Label x="12" y="359" text="Car pseudo"/>
-		<s:TextInput x="126" y="349" width="153" text="Family car"/>
-		<s:TextInput x="126" y="307" width="74" text="84.756"/>
+		<s:TextInput x="126" y="349" width="153" text="Family car" 
+					 focusIn="this.parentApplication.clearField(event, 'Family car')"
+					 focusOut="this.parentApplication.fillField(event,'Family car')"/>
+		<s:TextInput x="126" y="307" width="74" text="84.756"
+					 focusIn="this.parentApplication.clearField(event, '84.756')"
+					 focusOut="this.parentApplication.fillField(event,'84.756')"/>
 		<s:ToggleSwitch x="208" y="309" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
 		<s:DateSpinner x="120" y="218" height="70"/>
 		<s:Image x="56" y="5" width="219" height="105" smooth="true"
 				 source="assets/Fuel Factory logo.png"/>
-		<s:TextInput x="10" y="172" width="300" height="40" text="Car brand"/>
-	<s:TextInput x="10" y="129" width="300" height="40" text="Car model"/>
+		<s:TextInput x="10" y="172" width="300" height="40" text="Car brand"
+					 focusIn="this.parentApplication.clearField(event, 'Car brand')"
+					 focusOut="this.parentApplication.fillField(event,'Car brand')"/>
+	<s:TextInput x="10" y="129" width="300" height="40" text="Car model" 
+				 focusIn="this.parentApplication.clearField(event, 'Car model')"
+				 focusOut="this.parentApplication.fillField(event,'Car model')"/>
 	<s:Button x="133" y="408" width="176" height="42" label="Validate" click="validateHandler(event)"
 			  fontSize="18" styleName="login"/>
 	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
