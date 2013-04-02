@@ -29,7 +29,7 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	
-	<s:Label x="0" y="0" width="320" height="460"/>
+	<s:Label x="0" y="0" width="320" height="460" />
 	<!--<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
 			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
 			 verticalAlign="middle"/>

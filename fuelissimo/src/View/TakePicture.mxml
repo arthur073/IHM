@@ -70,9 +70,28 @@
 	
 </fx:Script>
 	<!-- Note: ensure you have the Camera permission in the app-descriptor XML for Android devices -->
-		
+	
 	<mx:UIComponent id="uic" width="100%" height="300" y="0" alpha="1"/>        
-	<s:Button visible="{Camera.isSupported}" x="102" y="395" label="Take picture"
-			  click="removingView()" />
+	<s:Button x="-1" y="415" width="139" height="44" label="Cancel" click="removingView()"
+			  styleName="button"/>
+	<s:Button x="183" y="415" width="137" height="44" label="Save" click="removingView()"
+			  styleName="button"/>
+	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
+			topRightRadiusX="50">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#aaaaaa" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	
+	<s:Image x="126" y="400" width="77" height="54" click="removingView()" smooth="true"
+			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
+	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt" click="removingView()"/>
+	
 
 </s:View>

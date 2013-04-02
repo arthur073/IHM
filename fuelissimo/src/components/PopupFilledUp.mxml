@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   x="5" y="310" width="310" height="146" skinClass="skins.MyPopupSkin"
+						   alpha="0.85">
+	<fx:Script>
+		<![CDATA[
+			import View.AddACar1;
+			import View.AddACar2;
+			import View.Main;
+			
+			private var parentView:Object = null;
+			public function addView(o:Object):void
+			{
+				parentView = o;
+			}
+			
+			private function disposeView():void
+			{
+				this.parentView.removeAllElements();
+			}
+			private function deleteGrey():void
+			{
+				
+				//this.parentView.greyDemakerView2();
+			}
+		]]>
+	</fx:Script>
+	
+	<!-- Also uses the MyPopupSkin.mxml class -->
+	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
+			  click="deleteGrey();this.close();"
+	/>
+	
+</s:SkinnablePopUpContainer>

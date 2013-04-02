@@ -21,6 +21,9 @@
 			import spark.components.SkinnablePopUpContainer;
 			import spark.components.TitleWindow;
 			import spark.events.ViewNavigatorEvent;
+			import components.PopupFilledUp;
+			
+			private var popupF:PopupFilledUp = new PopupFilledUp();
 			
 			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
 			private var rm:Object = ResourceManager.getInstance(); 
@@ -70,8 +73,12 @@
 				popup.close();
 				this.removeElement(greyMaker);
 			}
+			public function greyDemakerView2(event:MouseEvent = null):void
+			{
+				//popupF.close();
+				//this.removeElement(greyMaker);
+			}
 			
-
 			
 			protected function nextHandler(event:MouseEvent):void
 			{
@@ -85,13 +92,24 @@
 				currentTip = (String)(tipsList.getItemAt(currentItem));
 			}
 			
+			public function flashAlert():void
+			{
+				// flash 
+				if (this.parentApplication.flashEnabled) 
+				{
+					//greyView();
+					popupF.open(this);
+				}
+				this.parentApplication.flashEnabled = false;
+			}
+						
 		]]>
 	</fx:Script>
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
-	<s:Label x="0" y="0" width="321" height="460"/>
+	<s:Label x="0" y="0" width="321" height="460" creationComplete="flashAlert()"/>
 
 	<s:Image x="-52" y="56" width="424" height="272" smooth="true"
 			 source="assets/Post-it-note-transparent.png"/>
