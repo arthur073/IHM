@@ -51,18 +51,13 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
-			 verticalAlign="middle"/>
-	<s:Label y="65" right="10" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
-			 text="Manage your fuel !"/>
 	<s:SpinnerListContainer x="148" y="125" width="100" height="80" >
 		<s:SpinnerList x="151" y="131" width="100%" height="110" labelField="data" selectedIndex="0">
 			<s:ArrayList>
-				<fx:Object data="Euros"></fx:Object>
-				<fx:Object data="Dollars"></fx:Object>
-				<fx:Object data="Livres"></fx:Object>
-				<fx:Object data="Yen"></fx:Object>
+				<fx:Object data="Euros €"></fx:Object>
+				<fx:Object data="Dollars $"></fx:Object>
+				<fx:Object data="Livres £"></fx:Object>
+				<fx:Object data="Yen ¥"></fx:Object>
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
@@ -71,8 +66,26 @@
 	<s:Label x="15" y="160" text="Currency :"/>
 	<s:Label x="27" y="307" text="Gps id :"/>
 	<s:TextInput x="127" y="299" width="141"/>
-	<s:Label x="280" y="302" fontFamily="_typewriter" fontSize="30" text="?" click="greyView();popup.addView(this);popup.open(this)" />
-	<s:Button x="48" y="357" width="232" label="Save" click="saveHandler(event)"/>
+	<s:Label x="280" y="302" click="greyView();popup.addView(this);popup.open(this)"
+			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
+	<s:Button x="48" y="357" width="232" label="Save" click="saveHandler(event)" chromeColor="#888888"/>
 	<s:Button x="48" y="406" width="232" label="Cancel" click="cancelHandler(event)"/>
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+			 text="Settings"/>
+	<s:Button x="-116" y="442" width="196" height="40" label="Go premium"
+			   fontSize="18" styleName="button" enabled="false" chromeColor="#888888"/>
+	<s:Label x="-167" y="425" color="#FCFCFC" fontSize="15" fontWeight="normal"
+			 text="Fed up with adverts ? Click below"/>
 
 </s:View>
