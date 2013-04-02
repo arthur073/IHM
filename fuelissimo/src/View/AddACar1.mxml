@@ -28,7 +28,7 @@
 			{
 				// TODO Auto-generated method stub
 				this.removeAllElements();
-				this.parentApplication.showAccountCreation();
+				this.parentApplication.showMain();
 			}
 			
 			protected function manualInputHandler(event:MouseEvent):void

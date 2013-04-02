@@ -84,7 +84,7 @@
 	<s:Button x="14" y="403" label=" Back" click="backHandler(event)" color="#FFFFFF"/>
 	<s:Button id="month" x="57" y="103" width="55" height="25" label="Month" fontSize="10" color="#FFFFFF"/>
 	<s:Button id="forever" x="111" y="103" width="57" height="25" label="Forever" fontSize="10" color="#FFFFFF"/>
-	<s:Button id="forever0" x="183" y="103" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF" />
+	<s:Button id="forever0" x="183" y="103" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF"  />
 	<s:Button id="forever1" x="247" y="103" width="70" height="25" label="Km/Fill up" fontSize="10" color="#FFFFFF"/>
 	<s:Button id="today" x="3" y="103" width="55" height="25" label="Today" fontSize="10" color="#FFFFFF"/>
 </s:View>

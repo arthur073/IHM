@@ -62,9 +62,19 @@
 			 source="assets/Logout-01.png"/>
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
-	<s:Label x="80" y="417" width="236" height="23" color="#FDFDFD" fontSize="23" fontWeight="normal"
-			 text="Manage your account" verticalAlign="middle" click="popup.addView(this);popup.open(this)"/>
-	<s:Image x="16" y="402" width="65" height="51" smooth="true" source="assets/iEngrenages.png" 
+	
+	<s:Rect id="settingsBack" left="234" top="390" width="200" height="200" topLeftRadiusX="150">
+		<s:filters>
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="white" alpha="0.7"/>
+		</s:fill>
+		<s:stroke>
+			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke>
+	</s:Rect>
+	<s:Image x="257" y="407" width="65" height="53" smooth="true" source="assets/iEngrenages.png" 
 			 click="popup.addView(this);popup.open(this)" backgroundAlpha="0"/>
 	<s:Label x="91" y="269" width="152" height="130" backgroundAlpha="0" color="#000000"
 			 fontFamily="Verdana" fontWeight="normal"

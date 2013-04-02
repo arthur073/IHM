@@ -19,7 +19,7 @@
 			protected function cancelHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				this.parentApplication.showMain();
+				this.parentApplication.showAddACar1();
 			}
 			
 		]]>
