@@ -53,6 +53,7 @@
 			}
 			public function greyDemakerView(event:MouseEvent = null):void
 			{
+				popup.close();
 				this.removeElement(greyMaker);
 			}
 			
