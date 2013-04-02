@@ -2,8 +2,8 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 
 @font-face {
-	src:url("../assets/script_font.ttf");
-	fontFamily: myFontFamily;
+	src:url("assets/script_font.otf");
+	fontFamily: scriptFont;
 	advancedAntiAliasing: true;
 }
 
@@ -51,4 +51,9 @@ s|Label#popup
 {
 	fontSize: 14;
 	backgroundAlpha : 0;
+}
+s|Label.scriptFont
+{
+	color: #000000;
+	fontFamily: scriptFont;
 }
