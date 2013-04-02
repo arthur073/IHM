@@ -35,32 +35,44 @@
 	</fx:Declarations>
 		
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label y="10" width="302" height="69" color="#000000" fontFamily="Arial" fontSize="50"
-			 fontWeight="bold" horizontalCenter="1" text="Fuelissimo" textAlign="center"
-			 verticalAlign="middle"/>
-	<s:Label y="65" right="10" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
-			 text="Manage your fuel !"/>
-	<s:Button x="32" y="395" width="264" height="25" label="Save" click="saveHandler(event)"/>
-	<s:Button x="32" y="427" width="264" height="25" label="Cancel"
+	<s:Button x="183" y="415" width="137" height="44" label="Save" click="saveHandler(event)"/>
+	<s:Button x="-1" y="415" width="139" height="44" label="Cancel"
 			  click="cancelHandler(event)"/>
-	<s:HGroup x="34" y="352" width="276" height="46">
+	<s:HGroup x="18" y="364" width="276" height="46">
 		<s:RadioButton label="Highway" groupName="typeRoad"/>
 		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
 		<s:RadioButton label="City" groupName="typeRoad"/>
 	</s:HGroup>
-	<s:TextInput x="145" y="306" width="84" height="30" fontSize="14" text="45,08€" textAlign="right"/>
-	<s:TextInput x="145" y="268" width="84" height="30" fontSize="14" text="1,369€" textAlign="right"/>
-	<s:TextInput x="145" y="223" width="84" height="30" fontSize="14" text="32,93 L"
+	<s:TextInput x="196" y="266" width="119" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
+	<s:TextInput x="196" y="230" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
+	<s:TextInput x="196" y="156" width="117" height="33" fontSize="18" text="32,93 L"
 				 textAlign="right"/>
-	<s:Label x="56" y="313" text="Total price :"/>
-	<s:Label x="47" y="274" text="Price per L. :"/>
-	<s:CheckBox x="238" y="222" height="30" label="Partial" fontFamily="_sans" fontSize="13"
-				fontStyle="normal" selected="false"/>
-	<s:Label x="16" y="231" text="Number of liters :"/>
-	<s:DateSpinner x="121" y="158" height="50" displayMode="date"/>
-	<s:Image x="34" y="162" width="46" height="46" smooth="true" smoothingQuality="high"
-			 source="assets/iphone-appareil-photo-icone1.png" click="photoHandler(event)"/>
-	<s:TextInput x="145" y="121" width="84" height="30" fontSize="14" text="82.543 Km"
+	<s:Label x="9" y="276" text="Total price :"/>
+	<s:Label x="9" y="328" text="Date :&#xd;"/>
+	
+	<s:Label x="9" y="240" text="Price per L :"/>
+	<s:CheckBox x="196" y="196" height="30" label="Partial" fontFamily="_sans" fontSize="16"
+				fontStyle="normal" selected="false" />
+	<s:Label x="8" y="166" text="Number of liters :"/>
+	<s:DateSpinner x="123" y="307" height="50" displayMode="date"/>
+	<s:TextInput x="196" y="120" width="118" height="33" fontSize="18" text="82.543 Km"
 				 textAlign="right"/>
-	<s:Label x="1" y="128" text="Kilometer counter :"/>
+	<s:Label x="8" y="130" text="Kilometer counter :"/>
+	<s:Image x="58" y="0" width="204" height="109" smooth="true" smoothingQuality="high" 
+			 source="assets/Fuel Factory logo.png"/>
+	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
+			topRightRadiusX="50" >
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#aaaaaa" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Image x="126" y="400" width="77" height="54" click="photoHandler(event)" smooth="true"
+			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
+	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt"/>
 </s:View>
