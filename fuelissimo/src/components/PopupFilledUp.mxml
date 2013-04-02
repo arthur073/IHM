@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 						   xmlns:s="library://ns.adobe.com/flex/spark"
-						   x="5" y="310" width="310" height="146" skinClass="skins.MyPopupSkin"
+						   x="5" y="310" width="298" height="42" skinClass="skins.MyPopupSkin"
 						   alpha="0.85">
 	<fx:Script>
 		<![CDATA[
@@ -28,8 +28,6 @@
 	</fx:Script>
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
-	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
-			  click="deleteGrey();this.close();"
-	/>
+	<s:Label x="79" y="11" fontSize="26" text="Fill up saved" backgroundAlpha="0"/>
 	
 </s:SkinnablePopUpContainer>

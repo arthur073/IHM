@@ -28,6 +28,8 @@
 			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
 			private var rm:Object = ResourceManager.getInstance(); 
 			private var greyMaker:Label = new Label();
+			private var timer:Timer = new Timer(1000, 0);
+
 
 			[Bindable] private var currentTip:String = "";
 			private var currentItem:int = 0;
@@ -108,9 +110,17 @@
 				if (this.parentApplication.flashEnabled) 
 				{
 					//greyView();
+					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					timer.start();
+					
 					popupF.open(this);
 				}
 				this.parentApplication.flashEnabled = false;
+			}
+			private function closeFlashAlert(e:TimerEvent):void
+			{
+				timer.stop();
+				popupF.close();
 			}
 						
 		]]>

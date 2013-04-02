@@ -98,7 +98,7 @@
 		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Label x="89" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
+	<s:Label x="149" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fill up form"/>
 	<s:Label x="6" y="344" text="Drive past :"/>
 	<s:CheckBox x="196" y="189" label="Partial fill up" scaleX="0.75" scaleY="0.75"/>
