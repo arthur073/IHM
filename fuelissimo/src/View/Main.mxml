@@ -74,7 +74,7 @@
 
 			  styleName="button"/>
 
-	<s:Label id="advice" x="81" y="253" height="33" fontSize="25" fontWeight="normal"
+	<s:Label id="advice" x="81" y="253" height="33" fontSize="32" fontWeight="normal"
 			 styleName="scriptFont" text="Daily advice &#xd;&#xd;"/>
 
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
@@ -105,7 +105,7 @@
 	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
 			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
 			 source="assets/_settings.png"/>
-	<s:Label x="80" y="286" width="177" height="130" backgroundAlpha="0" fontSize="22"
+	<s:Label x="80" y="286" width="177" height="130" backgroundAlpha="0" fontSize="26"
 			 fontWeight="normal" styleName="scriptFont"
 			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
 			 textAlign="left" verticalAlign="middle"/>
