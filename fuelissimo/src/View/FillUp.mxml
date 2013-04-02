@@ -35,6 +35,15 @@
 	</fx:Declarations>
 		
 	<s:Label x="0" y="0" width="320" height="460"/>
+	<s:SpinnerListContainer x="97" y="59" width="216" height="50">
+		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
+			<s:ArrayList>
+				<fx:Object data="Family car"></fx:Object>
+				<fx:Object data="Michel's car"></fx:Object>
+				<fx:Object data="Arthur's car"></fx:Object>
+			</s:ArrayList>
+		</s:SpinnerList>
+	</s:SpinnerListContainer>
 	<s:Button x="183" y="415" width="137" height="44" label="Save" click="saveHandler(event)"/>
 	<s:Button x="-1" y="415" width="139" height="44" label="Cancel"
 			  click="cancelHandler(event)"/>
@@ -58,8 +67,8 @@
 	<s:TextInput x="196" y="120" width="118" height="33" fontSize="18" text="82.543 Km"
 				 textAlign="right"/>
 	<s:Label x="8" y="130" text="Kilometer counter :"/>
-	<s:Image x="58" y="0" width="204" height="109" smooth="true" smoothingQuality="high" 
-			 source="assets/Fuel Factory logo.png"/>
+	<s:Label x="9" y="79" text="Car : "/>
+	
 	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
 			topRightRadiusX="50" >
 		<s:filters >
@@ -72,7 +81,22 @@
 			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
+	
 	<s:Image x="126" y="400" width="77" height="54" click="photoHandler(event)" smooth="true"
 			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
 	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt"/>
+	
+	<s:Rect left="0" top="0" width="320" height="45" bottomLeftRadiusX="5" 
+			bottomRightRadiusX="5" >
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label x="89" y="10" backgroundAlpha="0" color="white" fontSize="30" text="Fill up form"/>
 </s:View>
