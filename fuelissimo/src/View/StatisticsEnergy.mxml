@@ -45,10 +45,8 @@
 		<mx:SolidColorStroke id="s2" color="red" weight="2"/>
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:Label x="224" y="142" width="86" height="52" backgroundAlpha="0.7" backgroundColor="#FFFFFF"/>
-	<s:Image x="143" y="1" width="219" height="66" smooth="true"
-			 source="assets/Fuel Factory logo.png"/>
-	<s:SpinnerListContainer x="60" y="137" width="150" height="60">
+	<s:Label x="222" y="136" width="86" height="55" backgroundAlpha="0.7" backgroundColor="#FFFFFF"/>
+	<s:SpinnerListContainer x="150" y="394" width="150" height="60">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Family car"></fx:Object>
@@ -57,7 +55,7 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:SpinnerListContainer x="103" y="393" width="200" height="60">
+	<s:SpinnerListContainer x="10" y="135" width="200" height="60">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Energy consumption"></fx:Object>
@@ -80,11 +78,30 @@
 			<mx:CategoryAxis categoryField="kmDone"/>
 		</mx:horizontalAxis>		
 	</mx:AreaChart>
-	<mx:Legend x="227" y="143" dataProvider="{energyConsumption}"/>
-	<s:Button x="14" y="403" label=" Back" click="backHandler(event)" color="#FFFFFF"/>
-	<s:Button id="month" x="57" y="103" width="55" height="25" label="Month" fontSize="10" color="#FFFFFF"/>
-	<s:Button id="forever" x="111" y="103" width="57" height="25" label="Forever" fontSize="10" color="#FFFFFF"/>
-	<s:Button id="forever0" x="183" y="103" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF"  />
-	<s:Button id="forever1" x="247" y="103" width="70" height="25" label="Km/Fill up" fontSize="10" color="#FFFFFF"/>
-	<s:Button id="today" x="3" y="103" width="55" height="25" label="Today" fontSize="10" color="#FFFFFF"/>
+	<mx:Legend x="224" y="139" dataProvider="{energyConsumption}"/>
+	<s:Button x="14" y="403" width="98" label=" Back" click="backHandler(event)" color="#FFFFFF"
+			  styleName="button"/>
+	<s:Button id="forever0" x="339" y="94" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF"  />
+	<s:Button id="forever1" x="403" y="94" width="70" height="25" label="Km/Fill up" fontSize="10" color="#FFFFFF"/>
+	<s:HGroup x="10" y="94" width="200" height="43">
+		<s:RadioButton width="50"/>
+		<s:RadioButton width="50"/>
+		<s:RadioButton width="50"/>
+	</s:HGroup>
+	<s:Label x="5" y="76" text="Today" color="white"/>
+	<s:Label x="61" y="76" text="Month" color="white"/>
+	<s:Label x="114" y="76" text="Forever" color="white"/>
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+			 text="Statistics"/>
 </s:View>
