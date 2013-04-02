@@ -15,6 +15,9 @@
 		<![CDATA[
 			import View.*;
 			
+			import components.PopupFilledUp;
+			public var flashEnabled:Boolean = false;
+			
 			public function initApp():void {
 				var loginView:Login = new Login();
 				this.removeAllElements();
