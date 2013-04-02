@@ -46,7 +46,8 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 
-	<s:Image x="0" y="209" width="340" height="231" source="assets/Post-it-note-transparent.png"/>
+	<s:Image x="0" y="209" width="340" height="231" smooth="true"
+			 source="assets/Post-it-note-transparent.png"/>
 	<s:Button id="fillUp" x="5" y="167" width="150" height="54" label="Fill up"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontWeight="normal"
 			  styleName="button"/>
