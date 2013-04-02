@@ -35,8 +35,7 @@
 			 verticalAlign="middle"/>
 	<s:Label y="87" right="20" color="#000000" fontSize="15" fontStyle="italic" fontWeight="bold"
 			 text="Manage your fuel !"/> -->
-	<s:Button x="10" y="329" width="300" height="49" label="Sign in" click="loginHandler(event)"
-			  fontSize="18" styleName="login"/>
+	
 	<s:Button x="10" y="399" width="300" height="49" label="Create an account"
 			  click="createAccountHandler(event)" fontSize="18" styleName="button"/>
 	<!--
@@ -45,7 +44,7 @@
 	<!-- mise en attente mdp oublie
 	<s:Label x="92" y="436" fontSize="15" text="Forgotten password ?" textDecoration="underline" click="forgottenPasswordHandler(event)"/>
 -->
-	<s:Group x="14" y="215" width="291" height="93">
+	<s:Group x="14" y="215" width="291" height="140">
 		<s:Rect width="100%" height="100%" 
 				topLeftRadiusX="10" topLeftRadiusY="10"
 				topRightRadiusX="10" topRightRadiusY="10"
@@ -74,6 +73,8 @@
 		</s:HGroup>
 	</s:VGroup>
 	</s:Group>
+	<s:Button x="51" y="308" width="216" height="40" label="Sign in" click="loginHandler(event)"
+			  fontSize="18" styleName="login"/>
 
 	<s:Image x="5" y="26" width="306" height="164" smooth="true" smoothingQuality="high" 
 			 source="assets/Fuel Factory logo.png"/>

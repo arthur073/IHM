@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
-	<fx:Style source="fuelissimo.css"/>
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login" 
+		>
+	<fx:Style source="fuelissimo.css" />
 
 	<fx:Script>
 		<![CDATA[
@@ -71,27 +72,47 @@
 		
 	</fx:Declarations>
 	
-	<s:Label x="0" y="-1" width="320" height="460"/>
-	<s:Button x="62" y="341" width="196" height="40" label="Manual input"
+	<s:Label x="0" y="-1" width="320" height="460" creationComplete="greyView();popup.addView(this);popup.open(this)"/>
+	
+	
+	<s:Group y="114" width="308" height="140" horizontalCenter="1">
+		<s:Rect x="0" y="0" width="100%" height="160" bottomLeftRadiusX="10" bottomLeftRadiusY="10"
+				bottomRightRadiusX="10" bottomRightRadiusY="10" topLeftRadiusX="10"
+				topLeftRadiusY="10" topRightRadiusX="10" topRightRadiusY="10">
+			<s:fill>
+				<s:SolidColor color="0xFFFFFF" alpha="0.7" />
+			</s:fill>
+		</s:Rect>
+	</s:Group>
+	
+	
+	<s:Button x="62" y="331" width="196" height="40" label="Manual input"
 			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
-
-	<s:Image x="48" y="8" width="232" height="125" smooth="true"
-			 source="assets/Fuel Factory logo.png"/>
-	<s:TextInput x="9" y="169" width="232" height="40" text="Plate number" 
+	<s:TextInput x="10" y="118" width="300" height="40" text="Plate number" 
 				 focusIn="this.parentApplication.clearField(event, 'Plate number')"
 				 focusOut="this.parentApplication.fillField(event,'Plate number')"/>
-	<s:TextInput x="10" y="221" width="300" height="40" text="3 first letters of your name" 
+	<s:TextInput x="10" y="167" width="300" height="40" text="3 first letters of your name" 
 				 focusIn="this.parentApplication.clearField(event, '3 first letters of your name')"
 				 focusOut="this.parentApplication.fillField(event,'3 first letters of your name')"/>
-	<s:Image x="246" y="153" width="66" height="66" smooth="true" smoothingQuality="high"
-			 source="assets/video_camera.png" click="takePicture(event)"/>
-	<s:Label x="10" y="149" color="#FCFCFC" fontSize="15" fontWeight="normal"
+	<s:Label x="10" y="92" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
-	<s:Button x="62" y="267" width="196" height="49" label="Validate" click="validateHandler(event)"
-			  fontSize="18" styleName="login"/>
+	<s:Label x="10" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"
+			 text="Want to skip this step ? Click below"/>
+	<s:Button y="223" width="196" height="40" label="Validate" click="validateHandler(event)"
+			  fontSize="18" horizontalCenter="0" styleName="login"/>
 	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
-	<s:Label x="151" y="322" text="OR&#xd;"/>
-	
-	<s:Image x="10" y="103" width="44" height="44" smooth="true" source="assets/Green.png" click="greyView();popup.addView(this);popup.open(this)"/>
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+			 text="Add your car"/>
 </s:View>

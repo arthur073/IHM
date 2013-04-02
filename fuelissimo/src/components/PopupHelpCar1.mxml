@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 						   xmlns:s="library://ns.adobe.com/flex/spark"
-						   x="30" y="103" width="244" height="102" skinClass="skins.MyPopupSkin">
+						   x="30" y="103" width="250" height="180" skinClass="skins.MyPopupSkin">
 	
 	<fx:Script>
 		<![CDATA[
@@ -21,9 +21,9 @@
 	</fx:Script>
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
-		<s:Image x="207" y="4" width="36" height="30" backgroundAlpha="0" click="this.deleteGrey();this.close()"
-				 smooth="true" source="assets/close-xxl.png"/>
-		<s:Label id="popup" x="8" y="-6" width="209" height="110" backgroundAlpha="0" fontSize="15"
-				 text="Entering your plate number and the beginning of your name allows us to fill in your car informations automatically"
-				 textAlign="left" verticalAlign="middle"/>
+	<s:Label width="237" height="77" backgroundAlpha="0" fontSize="25" horizontalCenter="2"
+			 text="Getting Started"
+			 verticalCenter="-37"/>
+	<s:Label x="28" y="47" text="Given your name and your &#xd;plate number, we can &#xd;automatically find your car&#xd;model and brand." backgroundAlpha="0"/>
+	<s:Button x="16" y="132" width="199" height="40" label="Let's do it !" click="this.deleteGrey();this.close()" chromeColor="#888888"/>
 </s:SkinnablePopUpContainer>

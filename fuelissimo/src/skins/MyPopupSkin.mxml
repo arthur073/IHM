@@ -41,7 +41,8 @@
     <s:Group id="chrome" left="0" right="0" top="0" bottom="0" visible.closedGroup="false">
 
 		<!-- Background and border - sets one corner rounded and adds a drop shadow filter-->
-		<s:Rect left="0" right="0" top="1" bottom="0" id="background" topRightRadiusX="15">
+		<s:Rect left="0" right="0" top="1" bottom="0" id="background" topRightRadiusX="5"
+				topLeftRadiusX="5" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 			<s:filters>
 				<s:DropShadowFilter color="0x000000" blurX="20" />
 			</s:filters>

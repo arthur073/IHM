@@ -66,21 +66,17 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 
-	<s:Image x="0" y="224" width="340" height="235" smooth="true"
+	<s:Image x="-52" y="56" width="424" height="272" smooth="true"
 			 source="assets/Post-it-note-transparent.png"/>
-	<s:Button id="fillUp" x="7" y="154" width="150" height="64" label="Fill up"
-			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="25"
+	<s:Button id="fillUp" x="9" y="320" width="302" height="45" label="Save your fill up"
+			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="20"
 			  fontWeight="normal" styleName="button"/>
-	<s:Button id="stats" x="165" y="154" width="150" height="64" label="Statistics"
-			  click="statisticsHandler(event)" color="#FAFAFA" fontSize="25" fontWeight="normal"
-
+	<s:Button id="stats" x="9" y="370" width="302" height="45" label="Review your Statistics"
+			  click="statisticsHandler(event)" color="#FAFAFA" fontSize="20" fontWeight="normal"
 			  styleName="button"/>
 
-	<s:Label id="advice" x="81" y="253" height="33" fontSize="27" fontWeight="normal"
+	<s:Label id="advice" x="71" y="85" height="33" fontSize="27" fontWeight="normal"
 			 styleName="scriptFont" text="Daily advice &#xd;&#xd;"/>
-
-	<s:Image x="4" y="2" width="232" height="125" smooth="true"
-			 source="assets/Fuel Factory logo.png"/>
 	
 	<s:Rect id="settingsBack" left="242" top="389" width="200" height="200" topLeftRadiusX="200">
 		<s:filters>
@@ -93,7 +89,28 @@
 			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Rect id="settingsBack0" left="201" top="-53" width="186" height="85" bottomLeftRadiusX="50">
+	
+
+	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
+			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
+			 source="assets/_settings.png"/>
+	<s:Label x="70" y="118" width="169" height="130" backgroundAlpha="0" fontSize="23"
+			 fontWeight="normal" styleName="scriptFont"
+			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
+			 textAlign="left" verticalAlign="middle"/>
+
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Rect id="settingsBack0" left="257" top="-53" width="186" height="98" bottomLeftRadiusX="50">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
 		</s:filters>
@@ -101,20 +118,14 @@
 			<s:SolidColor color="white" alpha="0.7"/>
 		</s:fill>
 		<!--<s:stroke>
-			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
-			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
-			 source="assets/_settings.png"/>
-	<s:Label x="80" y="286" width="169" height="130" backgroundAlpha="0" fontSize="23"
-			 fontWeight="normal" styleName="scriptFont"
-			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
-			 textAlign="left" verticalAlign="middle"/>
-	<s:Label x="232" y="10" fontWeight="normal" styleName="logout" text="Logout" click="disconnectHandler(event)"/>
-
-	<s:Image x="282" y="4" width="30" height="25" click="disconnectHandler(event)"
-			 scaleMode="letterbox" smooth="true" backgroundAlpha="0"
-			 source="assets/Logout-01.png" />
+		
+		<s:Image x="279" y="9" width="30" height="25" click="disconnectHandler(event)"
+				 scaleMode="letterbox" smooth="true" backgroundAlpha="0"
+				 source="assets/Logout-01.png" />
+	<s:Label y="11" left="50" fontStyle="normal" fontWeight="normal" styleName="title"
+			 text="Fuelissimo"/>
 
 </s:View>

@@ -36,18 +36,16 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
 	
-	<s:Group x="14" y="155" width="291" height="93">
-		<s:Rect width="100%" height="100%" 
-				topLeftRadiusX="10" topLeftRadiusY="10"
-				topRightRadiusX="10" topRightRadiusY="10"
-				bottomLeftRadiusX="10" bottomLeftRadiusY="10"
-				bottomRightRadiusX="10" bottomRightRadiusY="10">
+	<s:Group y="120" width="291" height="140" horizontalCenter="-1">
+		<s:Rect width="100%" height="100%" bottomLeftRadiusX="10" bottomLeftRadiusY="10"
+				bottomRightRadiusX="10" bottomRightRadiusY="10" horizontalCenter="0"
+				topLeftRadiusX="10" topLeftRadiusY="10" topRightRadiusX="10" topRightRadiusY="10">
 			<s:fill>
 				<s:SolidColor color="0xFFFFFF" alpha="0.7" />
 			</s:fill>
 		</s:Rect>
 		
-		<s:VGroup width="100%" height="100%">
+		<s:VGroup x="0" y="0" width="100%" height="100%">
 			<s:HGroup width="100%" height="40" paddingTop="5">
 				<s:Label width="82" height="40" backgroundAlpha="0" paddingLeft="10" text="Email"
 						 textAlign="center" verticalAlign="middle"/>
@@ -63,17 +61,30 @@
 							 focusIn="this.parentApplication.clearField(event, 'Required')"
 							 focusOut="this.parentApplication.fillField(event,'Required')"/>
 			</s:HGroup>
+			
 		</s:VGroup>
 	</s:Group>
 	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
-	<s:Image x="64" y="10" width="200" height="92" smooth="true" smoothingQuality="high"
-			 source="assets/Fuel Factory logo.png"/>
-	<s:Label x="10" y="135" color="#FCFCFC" fontSize="15" fontWeight="normal"
+	<s:Label x="10" y="99" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
-	<s:Label x="151" y="325" text="OR&#xd;"/>
-	<s:Image x="53" y="343" width="216" height="40" smooth="true" smoothingQuality="default"
+	<s:Label x="10" y="299" color="#FCFCFC" fontSize="15" fontWeight="normal"
+			 text="Don't want to wait ? Click below"/>
+	<s:Image x="51" y="318" width="216" height="40" smooth="true" smoothingQuality="default"
 			 source="assets/LoginWithFacebookPressed@2x.png" click="loginFacebookHandler(event)"/>
-	<s:Button x="53" y="264" width="216" height="49" label="Sign up" click="createAccountHandler(event)"
+	<s:Button x="51" y="212" width="216" height="40" label="Sign up" click="createAccountHandler(event)"
 			  fontSize="18" styleName="login"/>
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+			 text="Account creation"/>
 </s:View>

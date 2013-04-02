@@ -34,30 +34,42 @@
 		
 		
 		<s:Label x="0" y="0" width="320" height="460"/>
-		<s:Label x="10" y="247" text="Purchase date"/>
-		<s:Label x="12" y="316" text="Car counter"/>
-		<s:Label x="12" y="359" text="Car pseudo"/>
-		<s:TextInput x="126" y="349" width="153" text="Family car" 
+		<s:Label x="10" y="228" text="Purchase date"/>
+		<s:Label x="12" y="303" text="Car counter"/>
+		<s:Label x="12" y="346" text="Car pseudo"/>
+		<s:TextInput x="126" y="336" width="184" text="Family car" 
 					 focusIn="this.parentApplication.clearField(event, 'Family car')"
 					 focusOut="this.parentApplication.fillField(event,'Family car')"/>
-		<s:TextInput x="126" y="307" width="74" text="84.756"
+		<s:TextInput x="126" y="294" width="74" text="84.756"
 					 focusIn="this.parentApplication.clearField(event, '84.756')"
-					 focusOut="this.parentApplication.fillField(event,'84.756')"/>
-		<s:ToggleSwitch x="208" y="309" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
-		<s:DateSpinner x="120" y="218" height="70"/>
-		<s:Image x="56" y="5" width="219" height="105" smooth="true"
-				 source="assets/Fuel Factory logo.png"/>
-		<s:TextInput x="10" y="172" width="300" height="40" text="Car brand"
+					 focusOut="this.parentApplication.fillField(event,'84.756')"
+			/>
+		<s:ToggleSwitch x="208" y="296" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
+		<s:DateSpinner x="120" y="199" height="70"/>
+		<s:TextInput x="10" y="143" width="300" height="40" text="Car brand"
 					 focusIn="this.parentApplication.clearField(event, 'Car brand')"
 					 focusOut="this.parentApplication.fillField(event,'Car brand')"/>
-	<s:TextInput x="10" y="129" width="300" height="40" text="Car model" 
+	<s:TextInput x="10" y="100" width="300" height="40" text="Car model" 
 				 focusIn="this.parentApplication.clearField(event, 'Car model')"
 				 focusOut="this.parentApplication.fillField(event,'Car model')"/>
-	<s:Button x="133" y="408" width="176" height="42" label="Validate" click="validateHandler(event)"
+	<s:Button x="133" y="408" width="176" height="42" label="Finish setup" click="validateHandler(event)"
 			  fontSize="18" styleName="login"/>
 	<s:Button x="6" y="408" width="119" height="42" label="Cancel" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
-	<s:Label x="10" y="113" color="#FCFCFC" fontSize="15" fontWeight="normal"
+	<s:Label x="10" y="84" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="#0C6707" alpha="1"/>
+		</s:fill>
+		<!--<s:stroke>
+		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+			 text="Add your car"/>
 
 </s:View>
