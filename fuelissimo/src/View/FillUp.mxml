@@ -35,7 +35,7 @@
 	</fx:Declarations>
 		
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:SpinnerListContainer x="97" y="59" width="216" height="50">
+	<s:SpinnerListContainer x="97" y="79" width="216" height="50">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Family car"></fx:Object>
@@ -53,25 +53,23 @@
 		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
 		<s:RadioButton label="City" groupName="typeRoad"/>
 	</s:HGroup>
-	<s:TextInput x="196" y="266" width="119" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
-	<s:TextInput x="196" y="230" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
-	<s:TextInput x="196" y="156" width="117" height="33" fontSize="18" text="32,93 L"
+	<s:TextInput x="196" y="248" width="119" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
+	<s:TextInput x="196" y="212" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
+	<s:TextInput x="196" y="176" width="117" height="33" fontSize="18" text="32,93 L"
 				 textAlign="right"/>
-	<s:Label x="9" y="276" text="Total price :"/>
-	<s:Label x="9" y="328" text="Date :&#xd;"/>
+	<s:Label x="9" y="258" text="Total price :"/>
+	<s:Label x="9" y="310" text="Date :&#xd;"/>
 	
-	<s:Label x="9" y="240" text="Price per L :"/>
-	<s:CheckBox x="196" y="196" height="30" label="Partial" fontFamily="_sans" fontSize="16"
-				fontStyle="normal" selected="false" />
-	<s:Label x="8" y="166" text="Number of liters :"/>
-	<s:DateSpinner x="123" y="307" height="50" displayMode="date"/>
-	<s:TextInput x="196" y="120" width="118" height="33" fontSize="18" text="82.543 Km"
+	<s:Label x="9" y="222" text="Price per L :"/>
+	<s:Label x="8" y="186" text="Number of liters :"/>
+	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
+	<s:TextInput x="196" y="140" width="118" height="33" fontSize="18" text="82.543 Km"
 				 textAlign="right"/>
-	<s:Label x="8" y="130" text="Kilometer counter :"/>
-	<s:Label x="9" y="79" text="Car : "/>
+	<s:Label x="8" y="150" text="Kilometer counter :"/>
+	<s:Label x="9" y="99" text="Car : "/>
 	
 	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
-			topRightRadiusX="50" >
+			topRightRadiusX="50">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
 		</s:filters>
@@ -85,7 +83,7 @@
 	
 	<s:Image x="126" y="400" width="77" height="54" click="photoHandler(event)" smooth="true"
 			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
-	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt"/>
+	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt" click="photoHandler(event)"/>
 	
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
