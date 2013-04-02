@@ -9,6 +9,7 @@
 			
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
+			
 			var popup:PopupHelpSettings = new PopupHelpSettings();
 			// FIN code de la popup
 
@@ -22,6 +23,25 @@
 			{
 				// TODO Auto-generated method stub
 				this.parentApplication.showMain();
+			}
+			
+			private var greyMaker:Label = new Label();
+
+			protected function greyView():void
+			{
+				greyMaker.x = 0;
+				greyMaker.y = 0;
+				greyMaker.width = 321;
+				greyMaker.height = 460;
+				greyMaker.setStyle('backgroundColor', '#000000');
+				greyMaker.setStyle('backgroundAlpha','0.5');
+				greyMaker.addEventListener(MouseEvent.CLICK, greyDemakerView);
+				this.addElement(greyMaker);
+			}
+			public function greyDemakerView(event:MouseEvent = null):void
+			{
+				popup.close();
+				this.removeElement(greyMaker);
 			}
 			
 		]]>
@@ -51,7 +71,7 @@
 	<s:Label x="15" y="160" text="Currency :"/>
 	<s:Label x="27" y="307" text="Gps id :"/>
 	<s:TextInput x="127" y="299" width="141"/>
-	<s:Label x="280" y="302" fontFamily="_typewriter" fontSize="30" text="?" click="popup.open(this)" />
+	<s:Label x="280" y="302" fontFamily="_typewriter" fontSize="30" text="?" click="greyView();popup.addView(this);popup.open(this)" />
 	<s:Button x="48" y="357" width="232" label="Save" click="saveHandler(event)"/>
 	<s:Button x="48" y="406" width="232" label="Cancel" click="cancelHandler(event)"/>
 

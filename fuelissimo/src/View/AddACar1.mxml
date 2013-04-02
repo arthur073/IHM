@@ -43,6 +43,25 @@
 				this.parentApplication.showAddACar2();
 			}
 			
+			private var greyMaker:Label = new Label();
+			
+			protected function greyView():void
+			{
+				greyMaker.x = 0;
+				greyMaker.y = 0;
+				greyMaker.width = 321;
+				greyMaker.height = 460;
+				greyMaker.setStyle('backgroundColor', '#000000');
+				greyMaker.setStyle('backgroundAlpha','0.5');
+				greyMaker.addEventListener(MouseEvent.CLICK, greyDemakerView);
+				this.addElement(greyMaker);
+			}
+			public function greyDemakerView(event:MouseEvent = null):void
+			{
+				popup.close();
+				this.removeElement(greyMaker);
+			}
+			
 			
 		]]>
 	</fx:Script>
@@ -74,5 +93,5 @@
 			  fontSize="18" styleName="button"/>
 	<s:Label x="151" y="322" text="OR&#xd;"/>
 	
-	<s:Image x="10" y="103" width="44" height="44" smooth="true" source="assets/Green.png" click="popup.open(this)"/>
+	<s:Image x="10" y="103" width="44" height="44" smooth="true" source="assets/Green.png" click="greyView();popup.addView(this);popup.open(this)"/>
 </s:View>

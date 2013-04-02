@@ -38,7 +38,7 @@
 				// TODO Auto-generated method stub
 				this.parentApplication.showFillUp();
 			}
-			var greyMaker:Label = new Label();
+			private var greyMaker:Label = new Label();
 
 			protected function greyView():void
 			{
@@ -111,7 +111,8 @@
 			 fontWeight="normal" styleName="scriptFont"
 			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
 			 textAlign="left" verticalAlign="middle"/>
-	<s:Label x="232" y="10" fontWeight="normal" styleName="logout" text="Logout"/>
+	<s:Label x="232" y="10" fontWeight="normal" styleName="logout" text="Logout" click="disconnectHandler(event)"/>
+
 	<s:Image x="282" y="4" width="30" height="25" click="disconnectHandler(event)"
 			 scaleMode="letterbox" smooth="true" backgroundAlpha="0"
 			 source="assets/Logout-01.png" />

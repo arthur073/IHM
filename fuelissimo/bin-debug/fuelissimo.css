@@ -70,5 +70,15 @@ s|Label.title
 	fontSize: 30;
 	fontFamily:appleFont;
 }
+s|Label.logout
+{
+	backgroundAlpha: 0;
+	color: #000000;
+	fontFamily: Arial;
+	fontSize: 15;
+	fontStyle: normal;
+	fontWeight: bold;
+	fontFamily : appleFont;
+}
 
 

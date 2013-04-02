@@ -3,8 +3,25 @@
 						   xmlns:s="library://ns.adobe.com/flex/spark"
 						   x="30" y="103" width="244" height="102" skinClass="skins.MyPopupSkin">
 	
+	<fx:Script>
+		<![CDATA[
+			
+			private var parentView:Object;
+			public function addView(o:Object):void
+			{
+				parentView = o;
+			}
+			
+			
+			private function deleteGrey():void
+			{
+				this.parentView.greyDemakerView();
+			}
+		]]>
+	</fx:Script>
+	
 	<!-- Also uses the MyPopupSkin.mxml class -->
-		<s:Image x="207" y="4" width="36" height="30" backgroundAlpha="0" click="this.close()"
+		<s:Image x="207" y="4" width="36" height="30" backgroundAlpha="0" click="this.deleteGrey();this.close()"
 				 smooth="true" source="assets/close-xxl.png"/>
 		<s:Label id="popup" x="8" y="-6" width="209" height="110" backgroundAlpha="0" fontSize="15"
 				 text="Entering your plate number and the beginning of your name allows us to fill in your car informations automatically"
