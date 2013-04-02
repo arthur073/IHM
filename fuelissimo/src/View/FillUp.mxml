@@ -98,4 +98,5 @@
 	</s:Rect>
 	<s:Label x="89" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fill up form"/>
+	<s:Label x="6" y="344" text="Drive past :"/>
 </s:View>
