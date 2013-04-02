@@ -15,6 +15,7 @@
 			import spark.components.TitleWindow;
 			import spark.events.ViewNavigatorEvent;
 			var popup:PopupSettingsChooser = new PopupSettingsChooser();
+			
 			public function initPopup():void
 			{
 				popup.addView(this);
@@ -37,6 +38,23 @@
 				// TODO Auto-generated method stub
 				this.parentApplication.showFillUp();
 			}
+			var greyMaker:Label = new Label();
+
+			protected function greyView():void
+			{
+				greyMaker.x = 0;
+				greyMaker.y = 0;
+				greyMaker.width = 321;
+				greyMaker.height = 460;
+				greyMaker.setStyle('backgroundColor', '#000000');
+				greyMaker.setStyle('backgroundAlpha','0.5');
+				this.addElement(greyMaker);
+			}
+			public function greyDemakerView():void
+			{
+				this.removeElement(greyMaker);
+			}
+			
 			
 		]]>
 	</fx:Script>
@@ -48,6 +66,7 @@
 
 	<s:Image x="0" y="209" width="340" height="231" smooth="true"
 			 source="assets/Post-it-note-transparent.png"/>
+
 	<s:Button id="fillUp" x="5" y="167" width="150" height="54" label="Fill up"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontWeight="normal"
 			  styleName="button"/>
@@ -76,7 +95,7 @@
 		</s:stroke> -->
 	</s:Rect>
 	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
-			 click="popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
+			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
 			 source="assets/_settings.png"/>
 	<s:Label x="91" y="269" width="152" height="130" backgroundAlpha="0" color="#000000"
 			 fontFamily="Verdana" fontWeight="normal"

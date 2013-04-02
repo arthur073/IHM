@@ -19,16 +19,20 @@
 			{
 				this.parentView.removeAllElements();
 			}
+			private function deleteGrey():void
+			{
+				this.parentView.greyDemakerView();
+			}
 		]]>
 	</fx:Script>
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
 		<s:Button x="10" y="51" width="290" height="34" label="General settings" chromeColor="#888888"
-				  click="this.parentApplication.showSettings();this.close();"/>
+				  click="deleteGrey();this.parentApplication.showSettings();this.close();"/>
 		<s:Button x="10" y="11" width="290" height="36" label="Add a car" chromeColor="#888888"
-				  click="this.disposeView();this.close();this.parentApplication.showAddACar1()"/>
+				  click="deleteGrey();this.disposeView();this.close();this.parentApplication.showAddACar1()"/>
 	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
-			  click="this.close();"
+			  click="deleteGrey();this.close();"
 			 />
 	
 </s:SkinnablePopUpContainer>
