@@ -2,8 +2,14 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 
 @font-face {
-	src:url("assets/script_font.otf");
+	src:url("assets/roundHand Free.ttf");
 	fontFamily: scriptFont;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("assets/segoeui.ttf");
+	fontFamily: appleFont;
 	advancedAntiAliasing: true;
 }
 
@@ -57,3 +63,12 @@ s|Label.scriptFont
 	color: #000000;
 	fontFamily: scriptFont;
 }
+s|Label.title
+{
+	backgroundAlpha: 0;
+	color: white;
+	fontSize: 30;
+	fontFamily:appleFont;
+}
+
+

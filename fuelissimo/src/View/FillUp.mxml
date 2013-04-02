@@ -87,8 +87,7 @@
 			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
 	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt"/>
 	
-	<s:Rect left="0" top="0" width="320" height="45" bottomLeftRadiusX="5" 
-			bottomRightRadiusX="5" >
+	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
 		</s:filters>
@@ -99,5 +98,6 @@
 		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Label x="89" y="10" backgroundAlpha="0" color="white" fontSize="30" text="Fill up form"/>
+	<s:Label x="89" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
+			 text="Fill up form"/>
 </s:View>
