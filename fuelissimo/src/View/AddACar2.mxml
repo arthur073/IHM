@@ -13,6 +13,7 @@
 			protected function validateHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				this.parentApplication.flashAddACarEnabled = true;
 				this.parentApplication.showMain();
 			}
 			

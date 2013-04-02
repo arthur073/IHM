@@ -125,6 +125,33 @@
 					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_Settings');
 					popupF.open(this);
 				}
+				else if (this.parentApplication.flashAddACarEnabled) 
+				{
+					//greyView();
+					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					this.parentApplication.flashAddACarEnabled = false;
+					timer.start();
+					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_AddACar');
+					popupF.open(this);
+				}
+				else if (this.parentApplication.flashSignInEnabled) 
+				{
+					//greyView();
+					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					this.parentApplication.flashSignInEnabled = false;
+					timer.start();
+					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_SignIn');
+					popupF.open(this);
+				}
+				else if (this.parentApplication.flashAccountCreatedEnabled) 
+				{
+					//greyView();
+					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					this.parentApplication.flashAccountCreatedEnabled = false;
+					timer.start();
+					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_AccountCreated');
+					popupF.open(this);
+				}
 			}
 			private function closeFlashAlert(e:TimerEvent):void
 			{

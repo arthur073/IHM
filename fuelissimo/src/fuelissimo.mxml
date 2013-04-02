@@ -18,6 +18,9 @@
 			import components.PopupFlash;
 			public var flashFilledUpEnabled:Boolean = false;
 			public var flashSettingsEnabled:Boolean = false;
+			public var flashAddACarEnabled:Boolean = false;
+			public var flashSignInEnabled:Boolean = false;
+			public var flashAccountCreatedEnabled:Boolean = false;
 			
 			public function initApp():void {
 				var loginView:Login = new Login();

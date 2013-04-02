@@ -19,6 +19,7 @@
 			protected function createAccountHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				this.parentApplication.flashAccountCreatedEnabled = true;
 				this.parentApplication.showAddACar1();
 			}
 			
