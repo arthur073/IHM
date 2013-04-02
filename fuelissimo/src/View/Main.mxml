@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Main">
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Main"
+		creationComplete="currentTip = (String)(tipsList.getItemAt(currentItem));">
+	
+	<fx:Metadata>
+		[ResourceBundle("LocalizedStrings")]
+	</fx:Metadata>
 	
 	<fx:Script>
 		<![CDATA[
 			import components.PopupHelpCar1;
 			import components.PopupSettingsChooser;
 			
+			import mx.collections.ArrayList;
 			import mx.core.IFlexDisplayObject;
 			import mx.events.CloseEvent;
 			import mx.managers.PopUpManager;
+			import mx.resources.ResourceManager;
 			
 			import spark.components.SkinnablePopUpContainer;
 			import spark.components.TitleWindow;
 			import spark.events.ViewNavigatorEvent;
-			var popup:PopupSettingsChooser = new PopupSettingsChooser();
 			
+			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
+			private var rm:Object = ResourceManager.getInstance(); 
+			private var greyMaker:Label = new Label();
+
+			[Bindable] private var currentTip:String = "";
+			private var currentItem:int = 0;
+			
+			private var tipsList:ArrayList = new ArrayList([
+				"Main_Tip1", "Main_Tip2", "Main_Tip3"
+			]);
+					
 			public function initPopup():void
 			{
 				popup.addView(this);
@@ -29,16 +46,13 @@
 			
 			protected function statisticsHandler(event:MouseEvent):void
 			{
-				// TODO Auto-generated method stub
 				this.parentApplication.showStatisticsEnergy();
 			}
 			
 			protected function fillUpHandler(event:MouseEvent):void
 			{
-				// TODO Auto-generated method stub
 				this.parentApplication.showFillUp();
 			}
-			private var greyMaker:Label = new Label();
 
 			protected function greyView():void
 			{
@@ -57,6 +71,19 @@
 				this.removeElement(greyMaker);
 			}
 			
+
+			
+			protected function nextHandler(event:MouseEvent):void
+			{
+				currentItem = (currentItem + 1) % tipsList.length;
+				currentTip = (String)(tipsList.getItemAt(currentItem));
+			}
+			
+			protected function previousHandler(event:MouseEvent):void
+			{
+				currentItem = (currentItem - 1) % tipsList.length;
+				currentTip = (String)(tipsList.getItemAt(currentItem));
+			}
 			
 		]]>
 	</fx:Script>
@@ -96,7 +123,7 @@
 			 source="assets/_settings.png"/>
 	<s:Label x="70" y="118" width="169" height="130" backgroundAlpha="0" fontSize="18"
 			 fontWeight="normal" styleName="Helvetica"
-			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
+			 text="{resourceManager.getString('LocalizedStrings',currentTip)}"
 			 textAlign="left" verticalAlign="middle"/>
 
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
@@ -127,5 +154,9 @@
 				 source="assets/Logout-01.png" />
 	<s:Label y="11" left="50" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fuelissimo"/>
+	<s:Image x="212" y="250" width="32" height="32" smooth="true" source="assets/btn-next.png" 
+			 alpha="1" styleName="postItNext" click="nextHandler(event)"/>
+	<s:Image x="50" y="250" width="32" height="32"  smooth="true" source="assets/btn-prev.png" 
+			 alpha="1" styleName="postItNext" click="previousHandler(event)"/>
 
 </s:View>

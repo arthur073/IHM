@@ -81,5 +81,9 @@ s|Label.logout
 	fontFamily : appleFont;
 }
 
+s|Image.postItNext 
+{
+	backgroundAlpha: 0;
+}
 
 
