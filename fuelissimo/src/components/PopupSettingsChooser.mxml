@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 						   xmlns:s="library://ns.adobe.com/flex/spark"
-						   x="10" y="103" width="300" height="208" skinClass="skins.MyPopupSkin">
+						   x="5" y="310" width="310" height="146" skinClass="skins.MyPopupSkin"
+						   alpha="0.85">
 	<fx:Script>
 		<![CDATA[
 			import View.AddACar1;
@@ -22,23 +23,12 @@
 	</fx:Script>
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
-	<s:Rect left="0" right="-11" top="1" bottom="94" id="background" topRightRadiusX="15">
-		<s:filters>
-			<s:DropShadowFilter color="0x000000" blurX="20" />
-		</s:filters>
-		<s:fill> 
-			<s:SolidColor color="white"/>
-		</s:fill>
-		<s:stroke>
-			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
-		</s:stroke>
-	</s:Rect>
-
-		<s:Image x="273" y="5" width="36" height="30" backgroundAlpha="0" click="this.close()"
-				 smooth="true" source="assets/close-xxl.png"/>
-		<s:Button x="148" y="40" width="153" height="44" label="General settings" chromeColor="#888888"
+		<s:Button x="10" y="51" width="290" height="34" label="General settings" chromeColor="#888888"
 				  click="this.parentApplication.showSettings();this.close();"/>
-		<s:Button x="10" y="40" width="130" height="44" label="Add a car" chromeColor="#888888"
+		<s:Button x="10" y="11" width="290" height="36" label="Add a car" chromeColor="#888888"
 				  click="this.disposeView();this.close();this.parentApplication.showAddACar1()"/>
+	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
+			  click="this.close();"
+			 />
 	
 </s:SkinnablePopUpContainer>
