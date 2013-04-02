@@ -64,19 +64,20 @@
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
 	
-	<s:Rect id="settingsBack" left="234" top="390" width="200" height="200" topLeftRadiusX="150">
+	<s:Rect id="settingsBack" left="242" top="389" width="200" height="200" topLeftRadiusX="200">
 		<s:filters>
 			<s:DropShadowFilter color="0x000000" blurX="20" />
 		</s:filters>
 		<s:fill> 
 			<s:SolidColor color="white" alpha="0.7"/>
 		</s:fill>
-		<s:stroke>
+		<!--<s:stroke>
 			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
-		</s:stroke>
+		</s:stroke> -->
 	</s:Rect>
-	<s:Image x="257" y="407" width="65" height="53" smooth="true" source="assets/iEngrenages.png" 
-			 click="popup.addView(this);popup.open(this)" backgroundAlpha="0"/>
+	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
+			 click="popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
+			 source="assets/_settings.png"/>
 	<s:Label x="91" y="269" width="152" height="130" backgroundAlpha="0" color="#000000"
 			 fontFamily="Verdana" fontWeight="normal"
 			 text="Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."
