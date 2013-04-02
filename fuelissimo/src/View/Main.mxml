@@ -9,6 +9,7 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import components.PopupFilledUp;
 			import components.PopupHelpCar1;
 			import components.PopupSettingsChooser;
 			
@@ -21,7 +22,6 @@
 			import spark.components.SkinnablePopUpContainer;
 			import spark.components.TitleWindow;
 			import spark.events.ViewNavigatorEvent;
-			import components.PopupFilledUp;
 			
 			private var popupF:PopupFilledUp = new PopupFilledUp();
 			
@@ -35,6 +35,14 @@
 			private var tipsList:ArrayList = new ArrayList([
 				"Main_Tip1", "Main_Tip2", "Main_Tip3"
 			]);
+			
+			///
+			///SOLUTION TEMPORAIRE EN ATTENDANT DE PERSISTER DES DONNEES
+			//
+			[Bindable]private static var newFillUp:Boolean = false;
+			///
+			//
+			//
 					
 			public function initPopup():void
 			{
@@ -49,11 +57,13 @@
 			
 			protected function statisticsHandler(event:MouseEvent):void
 			{
+				newFillUp = false;
 				this.parentApplication.showStatisticsEnergy();
 			}
 			
 			protected function fillUpHandler(event:MouseEvent):void
 			{
+				newFillUp = true;
 				this.parentApplication.showFillUp();
 			}
 
@@ -176,5 +186,7 @@
 			 alpha="1" styleName="postItNext" click="nextHandler(event)"/>
 	<s:Image x="50" y="250" width="32" height="32"  smooth="true" source="assets/btn-prev.png" 
 			 alpha="1" styleName="postItNext" click="previousHandler(event)"/>
+	<s:Image x="36" y="381" width="20" height="20" source="assets/8939-Tatice-Etoile.png" backgroundAlpha="0"
+			 visible="{newFillUp}"/>
 
 </s:View>
