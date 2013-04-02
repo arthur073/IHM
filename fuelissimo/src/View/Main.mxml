@@ -48,9 +48,10 @@
 				greyMaker.height = 460;
 				greyMaker.setStyle('backgroundColor', '#000000');
 				greyMaker.setStyle('backgroundAlpha','0.5');
+				greyMaker.addEventListener(MouseEvent.CLICK, greyDemakerView);
 				this.addElement(greyMaker);
 			}
-			public function greyDemakerView():void
+			public function greyDemakerView(event:MouseEvent = null):void
 			{
 				this.removeElement(greyMaker);
 			}

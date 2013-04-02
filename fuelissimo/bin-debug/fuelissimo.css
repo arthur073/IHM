@@ -2,7 +2,7 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 
 @font-face {
-	src:url("assets/script_font.ttf");
+	src:url("assets/script_font.otf");
 	fontFamily: scriptFont;
 	advancedAntiAliasing: true;
 }
