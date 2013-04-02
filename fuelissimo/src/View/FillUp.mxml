@@ -44,9 +44,10 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Button x="183" y="415" width="137" height="44" label="Save" click="saveHandler(event)"/>
-	<s:Button x="-1" y="415" width="139" height="44" label="Cancel"
-			  click="cancelHandler(event)"/>
+	<s:Button x="183" y="415" width="137" height="44" label="Save" click="saveHandler(event)"
+			  styleName="button"/>
+	<s:Button x="-1" y="415" width="139" height="44" label="Cancel" click="cancelHandler(event)"
+			  styleName="button"/>
 	<s:HGroup x="18" y="364" width="276" height="46">
 		<s:RadioButton label="Highway" groupName="typeRoad"/>
 		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
