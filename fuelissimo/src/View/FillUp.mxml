@@ -37,7 +37,7 @@
 	</fx:Declarations>
 		
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:SpinnerListContainer x="97" y="79" width="216" height="50">
+	<s:SpinnerListContainer x="97" y="60" width="216" height="50">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Family car"></fx:Object>
@@ -55,20 +55,20 @@
 		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
 		<s:RadioButton label="City" groupName="typeRoad"/>
 	</s:HGroup>
-	<s:TextInput x="196" y="248" width="119" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
-	<s:TextInput x="196" y="212" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
-	<s:TextInput x="196" y="176" width="117" height="33" fontSize="18" text="32,93 L"
+	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
+	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
+	<s:TextInput x="196" y="153" width="117" height="33" fontSize="18" text="32,93 L"
 				 textAlign="right"/>
-	<s:Label x="9" y="258" text="Total price :"/>
+	<s:Label x="9" y="260" text="Total price :"/>
 	<s:Label x="9" y="310" text="Date :&#xd;"/>
 	
-	<s:Label x="9" y="222" text="Price per L :"/>
-	<s:Label x="8" y="186" text="Number of liters :"/>
+	<s:Label x="9" y="225" text="Price per L :"/>
+	<s:Label x="8" y="161" text="Number of liters :"/>
 	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
-	<s:TextInput x="196" y="140" width="118" height="33" fontSize="18" text="82.543 Km"
+	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text="82.543 Km"
 				 textAlign="right"/>
-	<s:Label x="8" y="150" text="Kilometer counter :"/>
-	<s:Label x="9" y="99" text="Car : "/>
+	<s:Label x="8" y="127" text="Kilometer counter :"/>
+	<s:Label x="9" y="80" text="Car : "/>
 	
 	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
 			topRightRadiusX="50">
@@ -101,4 +101,5 @@
 	<s:Label x="89" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fill up form"/>
 	<s:Label x="6" y="344" text="Drive past :"/>
+	<s:CheckBox x="196" y="189" label="Partial fill up" scaleX="0.75" scaleY="0.75"/>
 </s:View>
