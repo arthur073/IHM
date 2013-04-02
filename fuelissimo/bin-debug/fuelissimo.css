@@ -1,6 +1,12 @@
 /* CSS file */
 @namespace s "library://ns.adobe.com/flex/spark";
 
+@font-face {
+	src:url("../assets/script_font.ttf");
+	fontFamily: myFontFamily;
+	advancedAntiAliasing: true;
+}
+
 
 global
 {
