@@ -9,7 +9,7 @@
 	
 	<fx:Script>
 		<![CDATA[
-			import components.PopupFilledUp;
+			import components.PopupFlash;
 			import components.PopupHelpCar1;
 			import components.PopupSettingsChooser;
 			
@@ -23,7 +23,7 @@
 			import spark.components.TitleWindow;
 			import spark.events.ViewNavigatorEvent;
 			
-			private var popupF:PopupFilledUp = new PopupFilledUp();
+			private var popupF:PopupFlash = new PopupFlash();
 			
 			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
 			private var rm:Object = ResourceManager.getInstance(); 
@@ -107,15 +107,24 @@
 			public function flashAlert():void
 			{
 				// flash 
-				if (this.parentApplication.flashEnabled) 
+				if (this.parentApplication.flashFilledUpEnabled) 
 				{
 					//greyView();
 					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					this.parentApplication.flashFilledUpEnabled = false;
 					timer.start();
-					
+					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_FilledUp');
 					popupF.open(this);
 				}
-				this.parentApplication.flashEnabled = false;
+				else if (this.parentApplication.flashSettingsEnabled) 
+				{
+					//greyView();
+					timer.addEventListener(TimerEvent.TIMER, closeFlashAlert);
+					this.parentApplication.flashSettingsEnabled = false;
+					timer.start();
+					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_Settings');
+					popupF.open(this);
+				}
 			}
 			private function closeFlashAlert(e:TimerEvent):void
 			{

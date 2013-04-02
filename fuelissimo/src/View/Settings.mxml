@@ -16,6 +16,7 @@
 			protected function saveHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				this.parentApplication.flashSettingsEnabled = true;
 				this.parentApplication.showMain();
 			}
 			
@@ -43,6 +44,7 @@
 				popup.close();
 				this.removeElement(greyMaker);
 			}
+			
 			
 		]]>
 	</fx:Script>

@@ -23,7 +23,7 @@
 			protected function saveHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				this.parentApplication.flashEnabled = true;
+				this.parentApplication.flashFilledUpEnabled = true;
 				this.parentApplication.showMain();
 			}
 			

@@ -15,8 +15,9 @@
 		<![CDATA[
 			import View.*;
 			
-			import components.PopupFilledUp;
-			public var flashEnabled:Boolean = false;
+			import components.PopupFlash;
+			public var flashFilledUpEnabled:Boolean = false;
+			public var flashSettingsEnabled:Boolean = false;
 			
 			public function initApp():void {
 				var loginView:Login = new Login();
