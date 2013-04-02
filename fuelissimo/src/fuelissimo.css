@@ -2,8 +2,8 @@
 @namespace s "library://ns.adobe.com/flex/spark";
 
 @font-face {
-	src:url("assets/roundHand Free.ttf");
-	fontFamily: scriptFont;
+	src:url("assets/Helvetica.dfont");
+	fontFamily: Helvetica;
 	advancedAntiAliasing: true;
 }
 
@@ -80,5 +80,6 @@ s|Label.logout
 	fontWeight: bold;
 	fontFamily : appleFont;
 }
+
 
 

@@ -90,10 +90,13 @@
 			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
 	<s:TextInput x="10" y="118" width="300" height="40" text="Plate number" 
 				 focusIn="this.parentApplication.clearField(event, 'Plate number')"
-				 focusOut="this.parentApplication.fillField(event,'Plate number')"/>
+				 focusOut="this.parentApplication.fillField(event,'Plate number')"
+				 focusColor="#FF0000"
+				 />
 	<s:TextInput x="10" y="167" width="300" height="40" text="3 first letters of your name" 
 				 focusIn="this.parentApplication.clearField(event, '3 first letters of your name')"
-				 focusOut="this.parentApplication.fillField(event,'3 first letters of your name')"/>
+				 focusOut="this.parentApplication.fillField(event,'3 first letters of your name')"
+				 />
 	<s:Label x="10" y="92" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
 	<s:Label x="10" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"

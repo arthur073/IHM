@@ -56,10 +56,13 @@
 			public function greyDemakerView(event:MouseEvent = null):void
 			{
 				popup.close();
-				popupF.close();
 				this.removeElement(greyMaker);
 			}
-			
+			public function greyDemakerView2(event:MouseEvent = null):void
+			{
+				//popupF.close();
+				//this.removeElement(greyMaker);
+			}
 			
 
 			public function flashAlert():void
@@ -67,7 +70,7 @@
 				// flash 
 				if (this.parentApplication.flashEnabled) 
 				{
-					greyView();
+					//greyView();
 					popupF.open(this);
 				}
 				this.parentApplication.flashEnabled = false;
@@ -90,8 +93,8 @@
 			  click="statisticsHandler(event)" color="#FAFAFA" fontSize="20" fontWeight="normal"
 			  styleName="button"/>
 
-	<s:Label id="advice" x="71" y="85" height="33" fontSize="27" fontWeight="normal"
-			 styleName="scriptFont" text="Daily advice &#xd;&#xd;"/>
+	<s:Label id="advice" x="71" y="85" height="33" fontSize="27" fontWeight="bold"
+			 styleName="Helvetica" text="Daily advice &#xd;&#xd;"/>
 	
 	<s:Rect id="settingsBack" left="242" top="389" width="200" height="200" topLeftRadiusX="200">
 		<s:filters>
@@ -109,8 +112,8 @@
 	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
 			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
 			 source="assets/_settings.png"/>
-	<s:Label x="70" y="118" width="169" height="130" backgroundAlpha="0" fontSize="23"
-			 fontWeight="normal" styleName="scriptFont"
+	<s:Label x="70" y="118" width="169" height="130" backgroundAlpha="0" fontSize="18"
+			 fontWeight="normal" styleName="Helvetica"
 			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
 			 textAlign="left" verticalAlign="middle"/>
 

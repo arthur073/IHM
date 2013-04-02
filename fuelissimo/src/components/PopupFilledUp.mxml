@@ -21,7 +21,8 @@
 			}
 			private function deleteGrey():void
 			{
-				this.parentView.greyDemakerView();
+				
+				//this.parentView.greyDemakerView2();
 			}
 		]]>
 	</fx:Script>
@@ -29,6 +30,6 @@
 	<!-- Also uses the MyPopupSkin.mxml class -->
 	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
 			  click="deleteGrey();this.close();"
-			 />
+	/>
 	
 </s:SkinnablePopUpContainer>

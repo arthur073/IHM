@@ -81,4 +81,12 @@ s|Label.logout
 	fontFamily : appleFont;
 }
 
+.ExtendedTextInput {
+	skinClass: ClassReference("AHTextInputSkin");
+	focusColor: "0xa2d2ff";
+	color: "0x808080";
+	fontSize: "12";
+	selectionColor: "0xa2d2ff";
+}
+
 
