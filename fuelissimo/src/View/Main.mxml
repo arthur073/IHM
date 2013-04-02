@@ -64,22 +64,19 @@
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="321" height="460"/>
 
-	<s:Image x="0" y="209" width="340" height="231" smooth="true"
+	<s:Image x="0" y="224" width="340" height="235" smooth="true"
 			 source="assets/Post-it-note-transparent.png"/>
+	<s:Button id="fillUp" x="7" y="154" width="150" height="64" label="Fill up"
+			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="25"
+			  fontWeight="normal" styleName="button"/>
+	<s:Button id="stats" x="165" y="154" width="150" height="64" label="Statistics"
+			  click="statisticsHandler(event)" color="#FAFAFA" fontSize="25" fontWeight="normal"
 
-	<s:Button id="fillUp" x="5" y="167" width="150" height="54" label="Fill up"
-			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontWeight="normal"
 			  styleName="button"/>
-	<s:Button id="stats" x="164" y="167" width="150" height="54" label="Statistics"
-			  click="statisticsHandler(event)" color="#FAFAFA" fontWeight="normal"
-			  styleName="button"/>
-	<s:Label x="142" y="145" fontFamily="Arial" fontSize="12" fontStyle="italic" fontWeight="normal"
-			 text="Logged as Michel Kuhm"/>
-	<s:Label id="advice" x="91" y="243" height="18" color="#000000" fontFamily="Verdana"
-			 fontWeight="bold" text="Daily advice &#xd;&#xd;"/>
-	<s:Image x="277" y="135" width="30" height="30" click="disconnectHandler(event)"
-			 scaleMode="letterbox" smooth="true"
-			 source="assets/Logout-01.png"/>
+
+	<s:Label id="advice" x="81" y="253" height="33" fontSize="25" fontWeight="normal"
+			 styleName="scriptFont" text="Daily advice &#xd;&#xd;"/>
+
 	<s:Image x="4" y="2" width="232" height="125" smooth="true"
 			 source="assets/Fuel Factory logo.png"/>
 	
@@ -94,12 +91,28 @@
 			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
+	<s:Rect id="settingsBack0" left="201" top="-53" width="186" height="85" bottomLeftRadiusX="50">
+		<s:filters >
+			<s:DropShadowFilter color="0x000000" blurX="20" />
+		</s:filters>
+		<s:fill> 
+			<s:SolidColor color="white" alpha="0.7"/>
+		</s:fill>
+		<!--<s:stroke>
+			<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
+		</s:stroke> -->
+	</s:Rect>
 	<s:Image x="277" y="418" width="36" height="36" backgroundAlpha="0"
 			 click="greyView();popup.addView(this);popup.open(this)" smooth="true" smoothingQuality="high"
 			 source="assets/_settings.png"/>
-	<s:Label x="91" y="269" width="152" height="130" backgroundAlpha="0" color="#000000"
-			 fontFamily="Verdana" fontWeight="normal"
-			 text="Reducing your&#xd;speed by 10%&#xd;could let you &#xd;save up to &#xd;15% of fuel."
-			 textAlign="center" verticalAlign="middle"/>
+	<s:Label x="80" y="286" width="177" height="130" backgroundAlpha="0" fontSize="22"
+			 fontWeight="normal" styleName="scriptFont"
+			 text="Reducing your speed by 10% could let you save up to 15% of fuel."
+			 textAlign="left" verticalAlign="middle"/>
+	<s:Label x="227" y="10" backgroundAlpha="0" color="#000000" fontFamily="Arial" fontSize="15"
+			 fontStyle="normal" fontWeight="bold" text="Logout"/>
+	<s:Image x="282" y="4" width="30" height="25" click="disconnectHandler(event)"
+			 scaleMode="letterbox" smooth="true" backgroundAlpha="0"
+			 source="assets/Logout-01.png" />
 
 </s:View>
