@@ -7,8 +7,8 @@ package View
 		public function ToggleButtonGasUnit()
 		{
 			super();
-			selectedLabel="Liter";
-			unselectedLabel="Gallon";
+			selectedLabel=resourceManager.getString('LocalizedStrings', 'Toggle_Liter');
+			unselectedLabel=resourceManager.getString('LocalizedStrings', 'Toggle_Gallon');
 		}
 	}
 }

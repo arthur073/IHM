@@ -60,9 +60,9 @@
 	<s:SpinnerListContainer x="10" y="135" width="200" height="60">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
-				<fx:Object data="Energy consumption"></fx:Object>
-				<fx:Object data="Cost"></fx:Object>
-				<fx:Object data="GPS analysis"></fx:Object>
+				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_EnergyConsumption')}"></fx:Object>
+				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_Cost')}"></fx:Object>
+				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_GpsAnalysis')}"></fx:Object>
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
@@ -71,9 +71,9 @@
 	<mx:AreaChart id="energyConsumption" x="10" y="199" width="300" height="189" alpha="0.7"
 				  type="overlaid" dataProvider="{graphData}" showDataTips="true" >
 		<mx:series>
-			<mx:AreaSeries displayName="Reference" yField="Reference" form="curve" 
+			<mx:AreaSeries displayName="{resourceManager.getString('LocalizedStrings', 'Stats_Reference')}" yField="Reference" form="curve" 
 						   areaStroke="{s1}" areaFill="{sc1}"/>
-			<mx:AreaSeries displayName="Current" yField="Current" form="curve" 
+			<mx:AreaSeries displayName="{resourceManager.getString('LocalizedStrings', 'Stats_Current')}" yField="Current" form="curve" 
 						   areaStroke="{s2}" areaFill="{sc2}"/>
 		</mx:series>
 		<mx:horizontalAxis >
@@ -83,17 +83,17 @@
 	<mx:Legend x="224" y="139" dataProvider="{energyConsumption}"/>
 	<s:Button x="14" y="403" width="98" label=" Back" click="backHandler(event)" color="#FFFFFF"
 			  styleName="button"/>
-	<s:Button id="forever0" x="339" y="94" width="65" height="25" label="L/100 km" fontSize="10" color="#FFFFFF"  />
-	<s:Button id="forever1" x="403" y="94" width="70" height="25" label="Km/Fill up" fontSize="10" color="#FFFFFF"/>
+	<s:Button id="forever0" x="339" y="94" width="65" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_LitersPerDistance')}" fontSize="10" color="#FFFFFF"  />
+	<s:Button id="forever1" x="403" y="94" width="70" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_DistancePerFillUp')}" fontSize="10" color="#FFFFFF"/>
 	<s:HGroup x="10" y="94" width="200" height="43">
 		
 		<s:RadioButton width="50" groupName="timeRange"/>
 		<s:RadioButton width="50" groupName="timeRange" selected="true"/>
 		<s:RadioButton width="50" groupName="timeRange"/>
 	</s:HGroup>
-	<s:Label x="5" y="76" text="Today" color="white"/>
-	<s:Label x="61" y="76" text="Month" color="white"/>
-	<s:Label x="114" y="76" text="Forever" color="white"/>
+	<s:Label x="5" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Today')}" color="white"/>
+	<s:Label x="61" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Month')}" color="white"/>
+	<s:Label x="114" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Forever')}" color="white"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />

@@ -63,15 +63,17 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Label x="21" y="208" text="Gas unit :"/>
+	<s:Label x="21" y="208" text="{resourceManager.getString('LocalizedStrings', 'Settings_GasUnit')}"/>
 	<s:ToggleSwitch x="180" y="200" width="120" skinClass="View.ToggleButtonGasUnit"/>
-	<s:Label x="20" y="135" text="Currency :"/>
-	<s:Label x="27" y="257" text="Gps id :"/>
+	<s:Label x="20" y="135" text="{resourceManager.getString('LocalizedStrings', 'Settings_Currency')}"/>
+	<s:Label x="27" y="257" text="{resourceManager.getString('LocalizedStrings', 'Settings_GpsId')}"/>
 	<s:TextInput x="180" y="247" width="88"/>
 	<s:Label x="278" y="252" width="22" click="greyView();popup.addView(this);popup.open(this)"
 			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
-	<s:Button x="170" y="407" width="140" label="Save" click="saveHandler(event)" styleName="button"/>
-	<s:Button x="14" y="407" width="140" label="Cancel" click="cancelHandler(event)"  chromeColor="#888888"/>
+	<s:Button x="170" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Save')}"
+			  click="saveHandler(event)" styleName="button"/>
+	<s:Button x="14" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}"
+			  click="cancelHandler(event)"  chromeColor="#888888"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
@@ -84,7 +86,7 @@
 		</s:stroke> -->
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="Settings"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'Settings_Title')}"/>
 	<s:Button x="100" y="327" width="200" height="40" label="Go premium"
 			   fontSize="18" styleName="button" enabled="false" chromeColor="#888888"/>
 	<s:Label x="23" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"
