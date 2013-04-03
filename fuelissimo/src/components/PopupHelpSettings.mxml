@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 						   xmlns:s="library://ns.adobe.com/flex/spark"
-						   x="30" y="103" width="244" height="102" skinClass="skins.MyPopupSkin">
+						   x="30" y="103" width="244" height="144" skinClass="skins.MyPopupSkin">
 	
 	<fx:Script>
 		<![CDATA[
@@ -22,7 +22,7 @@
 	<!-- Also uses the MyPopupSkin.mxml class -->
 		<s:Image x="202" y="9" width="36" height="30" backgroundAlpha="0" click="this.deleteGrey();this.close()"
 				 smooth="true" source="assets/close-xxl.png"/>
-		<s:Label id="popup" x="8" y="-6" width="209" height="110" backgroundAlpha="0" fontSize="15"
+		<s:Label id="popup" x="8" y="2" width="196" height="140" backgroundAlpha="0" fontSize="15"
 				 text="{resourceManager.getString('LocalizedStrings', 'Popup_HelpSettings_Label')}"
 				 textAlign="left" verticalAlign="middle"/>
 </s:SkinnablePopUpContainer>

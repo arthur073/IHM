@@ -10,7 +10,10 @@
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
 			
-			var popup:PopupHelpSettings = new PopupHelpSettings();
+			public static var FRENCH:String="Français";
+			public static var ENGLISH:String="English";
+
+			private var popup:PopupHelpSettings = new PopupHelpSettings();
 			// FIN code de la popup
 
 			protected function saveHandler(event:MouseEvent):void
@@ -45,6 +48,17 @@
 				this.removeElement(greyMaker);
 			}
 			
+			private function changeLanguage(selected:int):void
+			{
+				if( selected == 1 )
+				{
+					resourceManager.localeChain = ["fr_FR"];
+				}
+				else
+				{
+					resourceManager.localeChain = ["en_US"];
+				}
+			}
 			
 		]]>
 	</fx:Script>
@@ -73,7 +87,7 @@
 	<s:Label x="278" y="252" width="22" click="greyView();popup.addView(this);popup.open(this)"
 			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
 	<s:Button x="170" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Save')}"
-			  click="saveHandler(event)" styleName="button"/>
+			  click="changeLanguage(spinnerLang.selectedIndex);saveHandler(event)" styleName="button"/>
 	<s:Button x="14" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}"
 			  click="cancelHandler(event)"  chromeColor="#888888"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
@@ -87,11 +101,10 @@
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
 			 text="{resourceManager.getString('LocalizedStrings', 'Settings_Title')}"/>
 	<s:SpinnerListContainer x="151" y="304" width="150" height="67" >
-		<s:SpinnerList width="151" height="110" labelField="data" selectedIndex="0">
+		<s:SpinnerList id="spinnerLang" width="151" height="110" labelField="data" selectedIndex="0" >
 			<s:ArrayList>
-				<fx:Object data="English"></fx:Object>
-				<fx:Object data="Français"></fx:Object>
-
+				<fx:Object data="{ENGLISH}"></fx:Object>
+				<fx:Object data="{FRENCH}"></fx:Object>
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>

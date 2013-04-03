@@ -3,7 +3,7 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
 			   width="320" height="444" applicationDPI="160"
-			   creationComplete="initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
+			   creationComplete="init();initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
@@ -25,6 +25,9 @@
 			public var flashAccountCreatedEnabled:Boolean = false;
 			
 		
+			private function init():void {
+				resourceManager.localeChain = ["en_US"];
+			}
 			
 			public function initApp():void {
 				var loginView:Login = new Login();

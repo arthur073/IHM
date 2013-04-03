@@ -28,7 +28,7 @@
 		]]>
 	</fx:Script>
 	
-	<s:Label x="0" y="21" width="100%" backgroundAlpha="0" fontSize="22" text="{text}"
+	<s:Label x="0" y="21" width="100%" backgroundAlpha="0" fontSize="20" text="{text}"
 			 textAlign="center"/>
 	
 </s:SkinnablePopUpContainer>

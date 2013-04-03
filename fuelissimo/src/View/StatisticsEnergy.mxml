@@ -81,15 +81,15 @@
 		</mx:horizontalAxis>		
 	</mx:AreaChart>
 	<mx:Legend x="224" y="139" dataProvider="{energyConsumption}"/>
-	<s:Button x="14" y="403" width="98" label=" Back" click="backHandler(event)" color="#FFFFFF"
+	<s:Button x="14" y="403" width="98" label="{resourceManager.getString('LocalizedStrings', 'General_Back')}" click="backHandler(event)" color="#FFFFFF"
 			  styleName="button"/>
 	<s:Button id="forever0" x="339" y="94" width="65" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_LitersPerDistance')}" fontSize="10" color="#FFFFFF"  />
 	<s:Button id="forever1" x="403" y="94" width="70" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_DistancePerFillUp')}" fontSize="10" color="#FFFFFF"/>
 	<s:HGroup x="10" y="94" width="200" height="43">
 		
-		<s:RadioButton width="50" groupName="timeRange"/>
-		<s:RadioButton width="50" groupName="timeRange" selected="true"/>
-		<s:RadioButton width="50" groupName="timeRange"/>
+		<s:RadioButton width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton width="50" groupName="timeRange" selected="true" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"/>
 	</s:HGroup>
 	<s:Label x="5" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Today')}" color="white"/>
 	<s:Label x="61" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Month')}" color="white"/>

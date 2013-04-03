@@ -86,7 +86,7 @@
 			 text="{resourceManager.getString('LocalizedStrings', 'AccountCreation_DontWait')}"/>
 	<s:Image x="51" y="318" width="216" height="40" smooth="true" smoothingQuality="default"
 			 source="assets/LoginWithFacebookPressed@2x.png" click="loginFacebookHandler(event)"/>
-	<s:Button x="20" y="212" width="280" height="40" label="Sign up" click="createAccountHandler(event)"
+	<s:Button x="20" y="212" width="280" height="40" label="{resourceManager.getString('LocalizedStrings', 'AccountCreation_SignUp')}" click="createAccountHandler(event)"
 			  fontSize="18" styleName="login"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
