@@ -106,5 +106,5 @@
 		</s:stroke> -->
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="Statistics"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'Stats_Title')}"/>
 </s:View>
