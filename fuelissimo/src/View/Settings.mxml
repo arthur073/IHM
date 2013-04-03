@@ -79,11 +79,11 @@
 	</s:SpinnerListContainer>
 
 	<s:Label x="20" y="208" text="{resourceManager.getString('LocalizedStrings', 'Settings_GasUnit')}"/>
-	<s:ToggleSwitch x="180" y="200" width="120" skinClass="View.ToggleButtonGasUnit"/>
+	<s:ToggleSwitch x="150" y="200" width="150" skinClass="View.ToggleButtonGasUnit"/>
 	<s:Label x="20" y="135" text="{resourceManager.getString('LocalizedStrings', 'Settings_Currency')}"/>
 	<s:Label x="20" y="255" text="{resourceManager.getString('LocalizedStrings', 'Settings_GpsId')}"/>
 	<s:Label x="20" y="329" text="{resourceManager.getString('LocalizedStrings', 'Settings_Lang')}"/>
-	<s:TextInput x="180" y="247" width="88"/>
+	<s:TextInput x="150" y="247" width="118"/>
 	<s:Label x="278" y="252" width="22" click="greyView();popup.addView(this);popup.open(this)"
 			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
 	<s:Button x="170" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Save')}"
