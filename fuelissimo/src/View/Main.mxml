@@ -100,7 +100,7 @@
 			
 			protected function previousHandler(event:MouseEvent):void
 			{
-				currentItem = (currentItem - 1) % tipsList.length;
+				currentItem = (currentItem - 1 + tipsList.length) % tipsList.length;
 				currentTip = (String)(tipsList.getItemAt(currentItem));
 			}
 			
