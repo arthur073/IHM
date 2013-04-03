@@ -3,7 +3,8 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
 			   width="320" height="444" applicationDPI="160"
-			   creationComplete="init();initApp()" xmlns:mx="library://ns.adobe.com/flex/mx">
+			   initialize="init();initApp()" xmlns:mx="library://ns.adobe.com/flex/mx"
+			   frameRate="4">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>

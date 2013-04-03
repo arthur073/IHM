@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="Login"
-		creationComplete="initView()">
+		creationComplete="initView()" cacheAsBitmap="true">
 	
 	<fx:Script>
 		<![CDATA[
@@ -92,6 +92,6 @@
 			  label="{resourceManager.getString('LocalizedStrings', 'Login_SignIn')}" click="loginHandler(event)"
 			  fontSize="18" styleName="login"/>
 
-	<s:Image x="5" y="26" width="306" height="164" smooth="true" smoothingQuality="high" 
-			 source="assets/Fuel Factory logo.png"/>
+	<s:Image x="5" y="26" width="306" height="164" smooth="true" smoothingQuality="default" 
+			 source="assets/Fuel Factory logo.png" cacheAsBitmap="true"/>
 </s:View>
