@@ -16,11 +16,17 @@
 			import View.*;
 			
 			import components.PopupFlash;
+			
+			import mx.events.FlexEvent;
+			
+			import spark.effects.*;
 			public var flashFilledUpEnabled:Boolean = false;
 			public var flashSettingsEnabled:Boolean = false;
 			public var flashAddACarEnabled:Boolean = false;
 			public var flashSignInEnabled:Boolean = false;
 			public var flashAccountCreatedEnabled:Boolean = false;
+			
+		
 			
 			public function initApp():void {
 				var loginView:Login = new Login();
