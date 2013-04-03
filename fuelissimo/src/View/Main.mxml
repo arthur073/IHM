@@ -28,7 +28,7 @@
 			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
 			private var rm:Object = ResourceManager.getInstance(); 
 			private var greyMaker:Label = new Label();
-			private var timer:Timer = new Timer(1000, 0);
+			private var timer:Timer = new Timer(1500, 0);
 
 
 			[Bindable] private var currentTip:String = "";
