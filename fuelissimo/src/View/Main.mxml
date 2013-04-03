@@ -169,15 +169,17 @@
 
 	<s:Image x="-52" y="56" width="424" height="272" smooth="true"
 			 source="assets/Post-it-note-transparent.png"/>
-	<s:Button id="fillUp" x="9" y="320" width="302" height="45" label="Save your fill up"
+	<s:Button id="fillUp" x="9" y="320" width="302" height="45" 
+			  label="{resourceManager.getString('LocalizedStrings', 'Main_SaveFillUp')}"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="20"
 			  fontWeight="normal" styleName="button"/>
-	<s:Button id="stats" x="9" y="370" width="302" height="45" label="Review your Statistics"
+	<s:Button id="stats" x="9" y="370" width="302" height="45" 
+			  label="{resourceManager.getString('LocalizedStrings', 'Main_ReviewStats')}"
 			  click="statisticsHandler(event)" color="#FAFAFA" fontSize="20" fontWeight="normal"
 			  styleName="button"/>
 
 	<s:Label id="advice" x="71" y="85" height="33" fontSize="27" fontWeight="bold"
-			 styleName="Helvetica" text="Daily advice &#xd;&#xd;"/>
+			 styleName="Helvetica" text="{resourceManager.getString('LocalizedStrings', 'Main_DailyAdvice')}"/>
 	
 	<s:Rect id="settingsBack" left="242" top="389" width="200" height="200" topLeftRadiusX="200">
 		<s:filters>

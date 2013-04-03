@@ -63,16 +63,19 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Label x="21" y="208" text="Gas unit :"/>
-	<s:ToggleSwitch x="149" y="200" width="151" skinClass="View.ToggleButtonGasUnit" />
-	<s:Label x="21" y="331" text="Language :"/>
-	<s:Label x="20" y="135" text="Currency :"/>
-	<s:Label x="27" y="257" text="Gps id :"/>
-	<s:TextInput x="150" y="247" width="118"/>
+
+	<s:Label x="20" y="208" text="{resourceManager.getString('LocalizedStrings', 'Settings_GasUnit')}"/>
+	<s:ToggleSwitch x="180" y="200" width="120" skinClass="View.ToggleButtonGasUnit"/>
+	<s:Label x="20" y="135" text="{resourceManager.getString('LocalizedStrings', 'Settings_Currency')}"/>
+	<s:Label x="20" y="255" text="{resourceManager.getString('LocalizedStrings', 'Settings_GpsId')}"/>
+	<s:Label x="20" y="329" text="{resourceManager.getString('LocalizedStrings', 'Settings_Lang')}"/>
+	<s:TextInput x="180" y="247" width="88"/>
 	<s:Label x="278" y="252" width="22" click="greyView();popup.addView(this);popup.open(this)"
 			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
-	<s:Button x="170" y="407" width="140" label="Save" click="saveHandler(event)" styleName="button"/>
-	<s:Button x="14" y="407" width="140" label="Cancel" click="cancelHandler(event)"  chromeColor="#888888"/>
+	<s:Button x="170" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Save')}"
+			  click="saveHandler(event)" styleName="button"/>
+	<s:Button x="14" y="407" width="140" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}"
+			  click="cancelHandler(event)"  chromeColor="#888888"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
@@ -82,7 +85,7 @@
 		</s:fill>
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="Settings"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'Settings_Title')}"/>
 	<s:SpinnerListContainer x="151" y="304" width="150" height="67" >
 		<s:SpinnerList width="151" height="110" labelField="data" selectedIndex="0">
 			<s:ArrayList>
@@ -92,5 +95,4 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-
 </s:View>

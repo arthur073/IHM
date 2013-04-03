@@ -46,28 +46,28 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Button x="183" y="415" width="137" height="44" label="Save" click="saveHandler(event)"
+	<s:Button x="183" y="415" width="137" height="44" label="{resourceManager.getString('LocalizedStrings', 'General_Save')}" click="saveHandler(event)"
 			  styleName="button"/>
-	<s:Button x="-1" y="415" width="139" height="44" label="Cancel" click="cancelHandler(event)"
+	<s:Button x="-1" y="415" width="139" height="44" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" click="cancelHandler(event)"
 			  styleName="button"/>
 	<s:HGroup x="18" y="364" width="276" height="46">
-		<s:RadioButton label="Highway" groupName="typeRoad" chromeColor="#888888" symbolColor="black"/>
-		<s:RadioButton label="Mix" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
-		<s:RadioButton label="City" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
+		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_Highway')}" groupName="typeRoad" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_Mix')}" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_City')}" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
 	</s:HGroup>
 	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
 	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
 	<s:TextInput x="196" y="153" width="117" height="33" fontSize="18" text="32,93 L"
 				 textAlign="right"/>
-	<s:Label x="9" y="260" text="Total price :"/>
-	<s:Label x="9" y="310" text="Date :&#xd;"/>
+	<s:Label x="9" y="260" text="{resourceManager.getString('LocalizedStrings', 'FillUp_TotalPrice')}"/>
+	<s:Label x="9" y="310" text="{resourceManager.getString('LocalizedStrings', 'FillUp_Date')}"/>
 	
-	<s:Label x="9" y="225" text="Price per L :"/>
-	<s:Label x="8" y="161" text="Number of liters :"/>
+	<s:Label x="9" y="225" text="{resourceManager.getString('LocalizedStrings', 'FillUp_PricePerUnit')}"/>
+	<s:Label x="8" y="161" text="{resourceManager.getString('LocalizedStrings', 'FillUp_LitersNumber')}"/>
 	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
 	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text="82.543 Km"
 				 textAlign="right"/>
-	<s:Label x="8" y="127" text="Kilometer counter :"/>
+	<s:Label x="8" y="127" text="{resourceManager.getString('LocalizedStrings', 'FillUp_KmCounter')}"/>
 	<s:Label x="9" y="80" text="Car : "/>
 	
 	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
@@ -85,7 +85,7 @@
 	
 	<s:Image x="126" y="400" width="77" height="54" click="photoHandler(event)" smooth="true"
 			 smoothingQuality="high" source="assets/video_camera.png" backgroundAlpha="0"/>
-	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="Picture receipt" click="photoHandler(event)"/>
+	<s:Label x="125" y="445" backgroundAlpha="0" fontSize="12" text="{resourceManager.getString('LocalizedStrings', 'TakePicture_TakePicture')}" click="photoHandler(event)"/>
 	
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
@@ -100,6 +100,6 @@
 	</s:Rect>
 	<s:Label x="149" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fill up form"/>
-	<s:Label x="6" y="344" text="Drive past :"/>
-	<s:CheckBox x="196" y="189" label="Partial fill up" scaleX="0.75" scaleY="0.75" chromeColor="#888888" symbolColor="black"/>
+	<s:Label x="6" y="344" text="{resourceManager.getString('LocalizedStrings', 'FillUp_DrivePast')}"/>
+	<s:CheckBox x="196" y="189" label="{resourceManager.getString('LocalizedStrings', 'FillUp_Partial')}" scaleX="0.75" scaleY="0.75" chromeColor="#888888" symbolColor="black"/>
 </s:View>
