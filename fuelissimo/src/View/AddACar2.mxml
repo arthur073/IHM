@@ -53,10 +53,10 @@
 	<s:TextInput x="10" y="100" width="300" height="40" text="Car model" 
 				 focusIn="this.parentApplication.clearField(event, 'Car model')"
 				 focusOut="this.parentApplication.fillField(event,'Car model')"/>
-	<s:Button x="133" y="408" width="176" height="42" label="Finish setup" click="validateHandler(event)"
-			  fontSize="18" styleName="login"/>
-	<s:Button x="6" y="408" width="119" height="42" label="Cancel" click="cancelHandler(event)"
-			  fontSize="18" styleName="button"/>
+	<s:Button x="133" y="408" width="176" height="42" label="Finish setup"
+			  click="validateHandler(event)" fontSize="18" styleName="button"/>
+	<s:Button x="6" y="408" width="119" height="42" label="Cancel" chromeColor="#888888"
+			  click="cancelHandler(event)" fontSize="18"/>
 	<s:Label x="10" y="84" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="Please fill in your information"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
