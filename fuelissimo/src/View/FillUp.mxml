@@ -51,9 +51,9 @@
 	<s:Button x="-1" y="415" width="139" height="44" label="Cancel" click="cancelHandler(event)"
 			  styleName="button"/>
 	<s:HGroup x="18" y="364" width="276" height="46">
-		<s:RadioButton label="Highway" groupName="typeRoad"/>
-		<s:RadioButton label="Mix" groupName="typeRoad" selected="true"/>
-		<s:RadioButton label="City" groupName="typeRoad"/>
+		<s:RadioButton label="Highway" groupName="typeRoad" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton label="Mix" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
+		<s:RadioButton label="City" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
 	</s:HGroup>
 	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
 	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
@@ -101,5 +101,5 @@
 	<s:Label x="149" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fill up form"/>
 	<s:Label x="6" y="344" text="Drive past :"/>
-	<s:CheckBox x="196" y="189" label="Partial fill up" scaleX="0.75" scaleY="0.75"/>
+	<s:CheckBox x="196" y="189" label="Partial fill up" scaleX="0.75" scaleY="0.75" chromeColor="#888888" symbolColor="black"/>
 </s:View>
