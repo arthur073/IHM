@@ -38,7 +38,7 @@
 	
 	protected function onCamera():void
 	{
-		if (numCams == 2)
+		if (numCams > 1)
 		{
 			cam = Camera.getCamera("1");
 		}
