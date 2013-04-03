@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="Login" 
-		>
+		creationComplete="initView()">
 	<fx:Style source="fuelissimo.css" />
 
 	<fx:Script>
 		<![CDATA[
 			// Code de la popup ICI
 			import components.PopupHelpCar1;
+			
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
-			var popup:PopupHelpCar1 = new PopupHelpCar1();
+			private var popup:PopupHelpCar1 = new PopupHelpCar1();
+			[Bindable] private var labelPlateNb:String = "";
+			[Bindable] private var labelFirstNameLetters:String = "";
 			// FIN code de la popup
 			
 			protected function loginHandler(event:MouseEvent):void
@@ -63,6 +66,11 @@
 				this.removeElement(greyMaker);
 			}
 			
+			private function initView():void
+			{
+				labelPlateNb = resourceManager.getString('LocalizedStrings', 'AddACar1_PlateNb');
+				labelFirstNameLetters = resourceManager.getString('LocalizedStrings', 'AddACar1_FirstNameLetters');
+			}
 			
 		]]>
 	</fx:Script>
@@ -86,24 +94,25 @@
 	</s:Group>
 	
 	
-	<s:Button x="62" y="331" width="196" height="40" label="Manual input"
+	<s:Button x="62" y="331" width="196" height="40" label="{resourceManager.getString('LocalizedStrings', 'General_ManualInput')}"
 			  click="manualInputHandler(event)" fontSize="18" styleName="button"/>
-	<s:TextInput x="10" y="118" width="300" height="40" text="Plate number" 
-				 focusIn="this.parentApplication.clearField(event, 'Plate number')"
-				 focusOut="this.parentApplication.fillField(event,'Plate number')"
+	<s:TextInput x="10" y="118" width="300" height="40" text="{labelPlateNb}" 
+				 focusIn="this.parentApplication.clearField(event, labelPlateNb)"
+				 focusOut="this.parentApplication.fillField(event,labelPlateNb)"
 				 focusColor="#FF0000"
 				 />
-	<s:TextInput x="10" y="167" width="300" height="40" text="3 first letters of your name" 
-				 focusIn="this.parentApplication.clearField(event, '3 first letters of your name')"
-				 focusOut="this.parentApplication.fillField(event,'3 first letters of your name')"
+	<s:TextInput x="10" y="167" width="300" height="40" 
+				 text="{labelFirstNameLetters}"
+				 focusIn="this.parentApplication.clearField(event, labelFirstNameLetters)"
+				 focusOut="this.parentApplication.fillField(event,labelFirstNameLetters)"
 				 />
 	<s:Label x="10" y="92" color="#FCFCFC" fontSize="15" fontWeight="normal"
-			 text="Please fill in your information"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'General_FillIn')}"/>
 	<s:Label x="10" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"
-			 text="Want to skip this step ? Click below"/>
-	<s:Button y="223" width="196" height="40" label="Validate" click="validateHandler(event)"
+			 text="{resourceManager.getString('LocalizedStrings', 'AddACar1_ManualFill')}"/>
+	<s:Button y="223" width="196" height="40" label="{resourceManager.getString('LocalizedStrings', 'General_Validate')}" click="validateHandler(event)"
 			  fontSize="18" horizontalCenter="0" styleName="login"/>
-	<s:Button x="6" y="408" width="119" height="42" label="Back" click="cancelHandler(event)"
+	<s:Button x="6" y="408" width="119" height="42" label="{resourceManager.getString('LocalizedStrings', 'General_Back')}" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
@@ -117,5 +126,5 @@
 		</s:stroke> -->
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="Add your car"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'AddACar_AddVehicle')}"/>
 </s:View>

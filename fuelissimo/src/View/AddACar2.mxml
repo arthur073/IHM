@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
-		xmlns:s="library://ns.adobe.com/flex/spark" title="Login">
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Login"
+		creationComplete="initView()">
 	
 	<fx:Script>
 		<![CDATA[
+			
+			[Bindable] private var labelCarModel:String = "";
+			[Bindable] private var labelCarBrand:String = "";
+			
 			protected function loginHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
@@ -23,6 +28,12 @@
 				this.parentApplication.showAddACar1();
 			}
 			
+			private function initView():void
+			{
+				labelCarBrand = resourceManager.getString('LocalizedStrings', 'AddACar2_CarBrand');
+				labelCarModel = resourceManager.getString('LocalizedStrings', 'AddACar2_CarModel');
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -35,9 +46,9 @@
 		
 		
 		<s:Label x="0" y="0" width="320" height="460"/>
-		<s:Label x="10" y="228" text="Purchase date"/>
-		<s:Label x="12" y="303" text="Car counter"/>
-		<s:Label x="12" y="346" text="Car pseudo"/>
+		<s:Label x="10" y="228" text="{resourceManager.getString('LocalizedStrings', 'AddACar2_PurchaseDate')}"/>
+		<s:Label x="12" y="303" text="{resourceManager.getString('LocalizedStrings', 'AddACar2_CarCounter')}"/>
+		<s:Label x="12" y="346" text="{resourceManager.getString('LocalizedStrings', 'AddACar2_CarPseudo')}"/>
 		<s:TextInput x="126" y="336" width="184" text="Family car" 
 					 focusIn="this.parentApplication.clearField(event, 'Family car')"
 					 focusOut="this.parentApplication.fillField(event,'Family car')"/>
@@ -47,18 +58,20 @@
 			/>
 		<s:ToggleSwitch x="208" y="296" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
 		<s:DateSpinner x="120" y="199" height="70"/>
-		<s:TextInput x="10" y="143" width="300" height="40" text="Car brand"
-					 focusIn="this.parentApplication.clearField(event, 'Car brand')"
-					 focusOut="this.parentApplication.fillField(event,'Car brand')"/>
-	<s:TextInput x="10" y="100" width="300" height="40" text="Car model" 
-				 focusIn="this.parentApplication.clearField(event, 'Car model')"
-				 focusOut="this.parentApplication.fillField(event,'Car model')"/>
-	<s:Button x="133" y="408" width="176" height="42" label="Finish setup" click="validateHandler(event)"
+		<s:TextInput x="10" y="143" width="300" height="40" text="{labelCarBrand}"
+					 focusIn="this.parentApplication.clearField(event, labelCarBrand)"
+					 focusOut="this.parentApplication.fillField(event,labelCarBrand)"/>
+	<s:TextInput x="10" y="100" width="300" height="40" text="{labelCarModel}" 
+				 focusIn="this.parentApplication.clearField(event, labelCarModel)"
+				 focusOut="this.parentApplication.fillField(event,labelCarModel)"/>
+	<s:Button x="133" y="408" width="176" height="42" 
+			  label="{resourceManager.getString('LocalizedStrings', 'AddACar2_FinishSetup')}" click="validateHandler(event)"
 			  fontSize="18" styleName="login"/>
-	<s:Button x="6" y="408" width="119" height="42" label="Cancel" click="cancelHandler(event)"
+	<s:Button x="6" y="408" width="119" height="42" 
+			  label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
 	<s:Label x="10" y="84" color="#FCFCFC" fontSize="15" fontWeight="normal"
-			 text="Please fill in your information"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'General_FillIn')}"/>
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
 			<s:DropShadowFilter color="0x000000" blurX="20" />
@@ -71,6 +84,6 @@
 		</s:stroke> -->
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="Add your car"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'AddACar_AddVehicle')}"/>
 
 </s:View>

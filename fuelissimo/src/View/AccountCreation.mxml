@@ -81,7 +81,7 @@
 			  label="{resourceManager.getString('LocalizedStrings', 'General_Back')}" click="cancelHandler(event)"
 			  fontSize="18" styleName="button"/>
 	<s:Label x="10" y="99" color="#FCFCFC" fontSize="15" fontWeight="normal"
-			 text="{resourceManager.getString('LocalizedStrings', 'AccountCreation_FillIn')}"/>
+			 text="{resourceManager.getString('LocalizedStrings', 'General_FillIn')}"/>
 	<s:Label x="10" y="299" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="{resourceManager.getString('LocalizedStrings', 'AccountCreation_DontWait')}"/>
 	<s:Image x="51" y="318" width="216" height="40" smooth="true" smoothingQuality="default"
