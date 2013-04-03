@@ -23,6 +23,7 @@ global
 	content-background-color: #FEFEFE;
 	content-background-alpha: 0.71;
 	chrome-color: #0C6707;
+	focus-color: #0C6707;
 }
 s|Button.login
 {
