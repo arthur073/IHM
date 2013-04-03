@@ -53,8 +53,8 @@
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
 	</fx:Declarations>
 	<s:Label x="0" y="0" width="320" height="460"/>
-	<s:SpinnerListContainer x="180" y="99" width="120" height="81" >
-		<s:SpinnerList width="100%" height="110" labelField="data" selectedIndex="0">
+	<s:SpinnerListContainer x="150" y="99" width="150" height="81" >
+		<s:SpinnerList width="151" height="110" labelField="data" selectedIndex="0">
 			<s:ArrayList>
 				<fx:Object data="Euros €"></fx:Object>
 				<fx:Object data="Dollars $"></fx:Object>
@@ -64,10 +64,11 @@
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
 	<s:Label x="21" y="208" text="Gas unit :"/>
-	<s:ToggleSwitch x="180" y="200" width="120" skinClass="View.ToggleButtonGasUnit"/>
+	<s:ToggleSwitch x="149" y="200" width="151" skinClass="View.ToggleButtonGasUnit" />
+	<s:Label x="21" y="331" text="Language :"/>
 	<s:Label x="20" y="135" text="Currency :"/>
 	<s:Label x="27" y="257" text="Gps id :"/>
-	<s:TextInput x="180" y="247" width="88"/>
+	<s:TextInput x="150" y="247" width="118"/>
 	<s:Label x="278" y="252" width="22" click="greyView();popup.addView(this);popup.open(this)"
 			 fontFamily="_typewriter" fontSize="35" fontWeight="bold" text="?"/>
 	<s:Button x="170" y="407" width="140" label="Save" click="saveHandler(event)" styleName="button"/>
@@ -79,15 +80,17 @@
 		<s:fill> 
 			<s:SolidColor color="#0C6707" alpha="1"/>
 		</s:fill>
-		<!--<s:stroke>
-		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
-		</s:stroke> -->
 	</s:Rect>
 	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
 			 text="Settings"/>
-	<s:Button x="100" y="327" width="200" height="40" label="Go premium"
-			   fontSize="18" styleName="button" enabled="false" chromeColor="#888888"/>
-	<s:Label x="23" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"
-			 text="Fed up with adverts ? Click below"/>
+	<s:SpinnerListContainer x="151" y="304" width="150" height="67" >
+		<s:SpinnerList width="151" height="110" labelField="data" selectedIndex="0">
+			<s:ArrayList>
+				<fx:Object data="English"></fx:Object>
+				<fx:Object data="Français"></fx:Object>
+
+			</s:ArrayList>
+		</s:SpinnerList>
+	</s:SpinnerListContainer>
 
 </s:View>
