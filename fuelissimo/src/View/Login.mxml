@@ -76,7 +76,7 @@
 		</s:HGroup>
 	</s:VGroup>
 	</s:Group>
-	<s:Button x="51" y="308" width="216" height="40" label="Sign in" click="loginHandler(event)"
+	<s:Button x="20" y="308" width="280" height="40" label="Sign in" click="loginHandler(event)"
 			  fontSize="18" styleName="login"/>
 
 	<s:Image x="5" y="26" width="306" height="164" smooth="true" smoothingQuality="high" 
