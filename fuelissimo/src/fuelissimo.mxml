@@ -14,7 +14,9 @@
 	<fx:Script>
 		<![CDATA[
 			import View.*;
+			
 			import components.PopupFlash;
+			
 			import mx.events.FlexEvent;
 			
 			import spark.effects.*;
@@ -24,68 +26,92 @@
 			public var flashSignInEnabled:Boolean = false;
 			public var flashAccountCreatedEnabled:Boolean = false;
 			
-		
+			private var loginView:Login = null;
+			private var mainView:Main = null;
+			private var settingsView:Settings = null;
+			private var accountCreationView:AccountCreation = null;
+			private var forgottenPasswordView:ForgottenPassword = null;
+			private var addCar1View:AddACar1 = null;
+			private var addCar2View:AddACar2 = null;
+			private var statisticsCostView:StatisticsCost = null;
+			private var statisticsEnergyView:StatisticsEnergy = null;
+			private var fillUpView:FillUp = null;
+			private var statisticsDriveAnalysisView:StatisticsDriveAnalysis = null;
+			private var takePictureView:TakePicture = null;
+
 			private function init():void {
 				resourceManager.localeChain = ["en_US"];
 			}
 			
 			public function initApp():void {
-				var loginView:Login = new Login();
+				if( loginView == null )
+					loginView = new Login();
 				this.removeAllElements();
 				this.addElement(loginView);
 			}
 			public function showMain():void {
-				var mainView:Main = new Main();
+				if( mainView == null )
+					mainView = new Main();
 				this.removeAllElements();
 				this.addElement(mainView);
 			}
 			public function showSettings():void {
-				var settingsView:Settings = new Settings();
+				if( settingsView == null )
+					settingsView = new Settings();
 				this.removeAllElements();
 				this.addElement(settingsView);			
 			}
 			public function showAccountCreation():void {
-				var accountCreationView:AccountCreation = new AccountCreation();
+				if( accountCreationView == null)
+					accountCreationView = new AccountCreation();
 				this.removeAllElements();
 				this.addElement(accountCreationView);			
 			}
 			public function showForgottenPassword():void {
-				var forgottenPasswordView:ForgottenPassword = new ForgottenPassword();
+				if( forgottenPasswordView == null)
+					forgottenPasswordView = new ForgottenPassword();
 				this.removeAllElements();
 				this.addElement(forgottenPasswordView);			
 			}
 			public function showAddACar1():void {
-				var addCar1View:AddACar1 = new AddACar1();
+				if( addCar1View == null)
+					addCar1View = new AddACar1();
 				this.removeAllElements();
 				this.addElement(addCar1View);			
 			}
 			public function showAddACar2():void {
-				var addCar2View:AddACar2 = new AddACar2();
+				if( addCar2View == null)
+					addCar2View = new AddACar2();
 				this.removeAllElements();
 				this.addElement(addCar2View);			
 			}
 			public function showFillUp():void {
-				var fillUpView:FillUp = new FillUp();
+				if( fillUpView == null)
+					fillUpView = new FillUp();
 				this.removeAllElements();
 				this.addElement(fillUpView);			
 			}
 			public function showStatisticsCost():void {
-				var statisticsCostView:StatisticsCost = new StatisticsCost();
+				if( statisticsCostView == null)
+					statisticsCostView = new StatisticsCost();
 				this.removeAllElements();
 				this.addElement(statisticsCostView);			
 			}
 			public function showStatisticsEnergy():void {
-				var statisticsEnergyView:StatisticsEnergy = new StatisticsEnergy();
+				if( statisticsEnergyView == null)
+					statisticsEnergyView = new StatisticsEnergy();
 				this.removeAllElements();
 				this.addElement(statisticsEnergyView);			
 			}
 			public function showStatisticsDriveAnalysis():void {
-				var statisticsDriveAnalysisView:StatisticsDriveAnalysis = new StatisticsDriveAnalysis();
+				if( statisticsDriveAnalysisView == null)
+					statisticsDriveAnalysisView = new StatisticsDriveAnalysis();
 				this.removeAllElements();
 				this.addElement(statisticsDriveAnalysisView);			
 			}
 			public function takePicture(o:Object = null):void {
-				var takePictureView:TakePicture = new TakePicture();
+				if( takePictureView == null)
+					takePictureView = new TakePicture();
 				if( o != null )
 				{
 					takePictureView.putVisible(o);

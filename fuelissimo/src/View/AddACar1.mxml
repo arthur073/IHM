@@ -99,13 +99,13 @@
 	<s:TextInput x="10" y="118" width="300" height="40" text="{labelPlateNb}" 
 				 focusIn="this.parentApplication.clearField(event, labelPlateNb)"
 				 focusOut="this.parentApplication.fillField(event,labelPlateNb)"
-				 focusColor="#FF0000"
+				 focusColor="#FF0000" softKeyboardType="default"
 				 />
 	<s:TextInput x="10" y="167" width="300" height="40" 
 				 text="{labelFirstNameLetters}"
 				 focusIn="this.parentApplication.clearField(event, labelFirstNameLetters)"
 				 focusOut="this.parentApplication.fillField(event,labelFirstNameLetters)"
-				 />
+				 softKeyboardType="default"/>
 	<s:Label x="10" y="92" color="#FCFCFC" fontSize="15" fontWeight="normal"
 			 text="{resourceManager.getString('LocalizedStrings', 'General_FillIn')}"/>
 	<s:Label x="10" y="312" color="#FCFCFC" fontSize="15" fontWeight="normal"

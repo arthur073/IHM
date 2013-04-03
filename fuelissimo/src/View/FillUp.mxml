@@ -55,10 +55,12 @@
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_Mix')}" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_City')}" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
 	</s:HGroup>
-	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" text="45,08 €" textAlign="right"/>
-	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" text="1,369 €" textAlign="right"/>
+	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" 
+				 text="45,08 €" textAlign="right" softKeyboardType="number"/>
+	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" 
+				 text="1,369 €" textAlign="right" softKeyboardType="number"/>
 	<s:TextInput x="196" y="153" width="117" height="33" fontSize="18" text="32,93 L"
-				 textAlign="right"/>
+				 textAlign="right" softKeyboardType="number"/>
 	<s:Label x="9" y="260" text="{resourceManager.getString('LocalizedStrings', 'FillUp_TotalPrice')}"/>
 	<s:Label x="9" y="310" text="{resourceManager.getString('LocalizedStrings', 'FillUp_Date')}"/>
 	
@@ -66,7 +68,7 @@
 	<s:Label x="8" y="161" text="{resourceManager.getString('LocalizedStrings', 'FillUp_LitersNumber')}"/>
 	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
 	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text="82.543 Km"
-				 textAlign="right"/>
+				 textAlign="right" softKeyboardType="number"/>
 	<s:Label x="8" y="127" text="{resourceManager.getString('LocalizedStrings', 'FillUp_KmCounter')}"/>
 	<s:Label x="9" y="80" text="Car : "/>
 	
