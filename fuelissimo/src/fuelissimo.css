@@ -1,19 +1,6 @@
 /* CSS file */
 @namespace s "library://ns.adobe.com/flex/spark";
 
-@font-face {
-	src:url("assets/Helvetica.dfont");
-	fontFamily: Helvetica;
-	advancedAntiAliasing: true;
-}
-
-@font-face {
-	src:url("assets/segoeui.ttf");
-	fontFamily: appleFont;
-	advancedAntiAliasing: true;
-}
-
-
 global
 {
 	selection-color: #889786;
