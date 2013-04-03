@@ -22,8 +22,8 @@
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
 	<s:Label width="237" height="77" backgroundAlpha="0" fontSize="25" horizontalCenter="2"
-			 text="Getting Started"
+			 text="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1_Started')}"
 			 verticalCenter="-37"/>
-	<s:Label x="28" y="47" text="Given your name and your &#xd;plate number, we can &#xd;automatically find your car&#xd;model and brand." backgroundAlpha="0"/>
-	<s:Button x="16" y="132" width="199" height="40" label="Let's do it !" click="this.deleteGrey();this.close()" chromeColor="#888888"/>
+	<s:Label x="28" y="47" text="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1')}" backgroundAlpha="0"/>
+	<s:Button x="16" y="132" width="199" height="40" label="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1_DoIt')}" click="this.deleteGrey();this.close()" chromeColor="#888888"/>
 </s:SkinnablePopUpContainer>

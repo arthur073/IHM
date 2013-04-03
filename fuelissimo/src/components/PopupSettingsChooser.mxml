@@ -27,11 +27,11 @@
 	</fx:Script>
 	
 	<!-- Also uses the MyPopupSkin.mxml class -->
-		<s:Button x="10" y="51" width="290" height="34" label="General settings" chromeColor="#888888"
+		<s:Button x="10" y="51" width="290" height="34" label="{resourceManager.getString('LocalizedStrings', 'Popup_SettingsChooser_General')}" chromeColor="#888888"
 				  click="deleteGrey();this.parentApplication.showSettings();this.close();"/>
-		<s:Button x="10" y="11" width="290" height="36" label="Add a car" chromeColor="#888888"
+		<s:Button x="10" y="11" width="290" height="36" label="{resourceManager.getString('LocalizedStrings', 'Popup_SettingsChooser_AddCar')}" chromeColor="#888888"
 				  click="deleteGrey();this.disposeView();this.close();this.parentApplication.showAddACar1()"/>
-	<s:Button x="10" y="102" width="290" height="36" label="Cancel" chromeColor="#999999"
+	<s:Button x="10" y="102" width="290" height="36" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" chromeColor="#999999"
 			  click="deleteGrey();this.close();"
 			 />
 	
