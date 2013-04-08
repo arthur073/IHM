@@ -9,6 +9,8 @@
 	</fx:Declarations>
 
 <fx:Script>
+	
+	import spark.components.VideoDisplay;
 	import mx.utils.ObjectUtil;
 	
 	import spark.events.ViewNavigatorEvent;
@@ -46,7 +48,7 @@
 		{
 			cam = Camera.getCamera("0");
 		}
-	cam.setMode(width, height, 10);
+	cam.setMode(width, height, 24);
 	vid = new Video(this.parent.width,this.parent.height);
 	vid.attachCamera(cam);
 	uic.addChild(vid);

@@ -238,7 +238,7 @@
 		afin d’accéder aux API SystemIdleMode d’AIR.-->
 			    <!--<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>-->
 			    <!--<uses-permission android:name="android.permission.WAKE_LOCK"/>-->
-			    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
+			   	<uses-permission android:name="android.permission.CAMERA"/>
 			    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>-->
 			    <!--Les autorisations ACCESS_NETWORK_STATE et ACCESS_WIFI_STATE doivent être
 		permutées afin d’utiliser les API NetworkInfo d’AIR.-->

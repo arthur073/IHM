@@ -2,8 +2,8 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
-			   width="320" height="444" applicationDPI="160"
-			   initialize="init();initApp()" xmlns:mx="library://ns.adobe.com/flex/mx"
+			   applicationDPI="160"
+			   initialize="init()" xmlns:mx="library://ns.adobe.com/flex/mx"
 			   frameRate="4">
 	<fx:Style source="fuelissimo.css"/>
 
@@ -20,6 +20,9 @@
 			
 			import mx.events.FlexEvent;
 			
+			import spark.components.BusyIndicator;
+			import spark.components.Image;
+			import spark.components.Label;
 			import spark.effects.*;
 			public var flashFilledUpEnabled:Boolean = false;
 			public var flashSettingsEnabled:Boolean = false;
@@ -39,11 +42,43 @@
 			private var fillUpView:FillUp = null;
 			private var statisticsDriveAnalysisView:StatisticsDriveAnalysis = null;
 			private var takePictureView:TakePicture = null;
+			private var timer:Timer = new Timer(2000, 0);
+
 
 			private function init():void {
 				resourceManager.localeChain = ["en_US"];
+				
+				var img:Image = new Image();
+				img.source = "assets/Fuel Factory Logo.png";	
+				img.width = this.width;
+				img.height = this.height;
+				this.addElement(img);
+				
+				var lbl:Label = new Label();
+				lbl.x = 0;
+				lbl.y = 0;
+				lbl.width = this.width;
+				lbl.height = this.height;
+				lbl.setStyle('backgroundColor', '#000000');
+				lbl.alpha = 0.5;
+				this.addElement(lbl);
+				
+				var busy:BusyIndicator = new BusyIndicator();
+				busy.width = 30;
+				busy.height = 30;
+				busy.x = (this.width/2) - (busy.width/2);
+				busy.y = (this.height/2) -(busy.height/2);
+				busy.setStyle('symbolColor','#FFFFFF');
+				this.addElement(busy);
+				
+				timer.addEventListener(TimerEvent.TIMER, closeSplashScreen);
+				timer.start();
 			}
-			
+			private function closeSplashScreen(e:TimerEvent):void {
+				timer.stop();
+				this.removeAllElements();
+				initApp();
+			}	
 			public function initApp():void {
 				if( loginView == null )
 					loginView = new Login();
