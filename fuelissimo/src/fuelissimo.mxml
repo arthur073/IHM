@@ -3,8 +3,10 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
 			   applicationDPI="160"
-			   preinitialize="init()" xmlns:mx="library://ns.adobe.com/flex/mx"
-			   frameRate="4" initialize="closeSplashScreen()">
+			   splashScreenImage="@Embed('assets/Fuel Factory logo.png')"
+			   splashScreenScaleMode="letterbox"
+			   preinitialize="" xmlns:mx="library://ns.adobe.com/flex/mx"
+			   frameRate="4" initialize="">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
