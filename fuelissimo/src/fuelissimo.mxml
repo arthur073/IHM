@@ -3,8 +3,8 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
 			   applicationDPI="160"
-			   initialize="init()" xmlns:mx="library://ns.adobe.com/flex/mx"
-			   frameRate="4">
+			   preinitialize="init()" xmlns:mx="library://ns.adobe.com/flex/mx"
+			   frameRate="4" initialize="closeSplashScreen()">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
@@ -71,11 +71,11 @@
 				busy.setStyle('symbolColor','#FFFFFF');
 				this.addElement(busy);
 				
-				timer.addEventListener(TimerEvent.TIMER, closeSplashScreen);
-				timer.start();
+				//timer.addEventListener(TimerEvent.TIMER, closeSplashScreen);
+				//timer.start();
 			}
-			private function closeSplashScreen(e:TimerEvent):void {
-				timer.stop();
+			private function closeSplashScreen(/*e:TimerEvent*/):void {
+				//timer.stop();
 				this.removeAllElements();
 				initApp();
 			}	
