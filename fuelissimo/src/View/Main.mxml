@@ -168,7 +168,7 @@
 	<s:Label x="0" y="0" width="321" height="460" creationComplete="flashAlert()"/>
 
 	<s:Image x="-52" y="56" width="424" height="272" smooth="true"
-			 source="assets/Post-it-note-transparent.png"/>
+			 source="assets/Post-it-note-transparent.png" />
 	<s:Button id="fillUp" x="9" y="320" width="302" height="45" 
 			  label="{resourceManager.getString('LocalizedStrings', 'Main_SaveFillUp')}"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="20"
