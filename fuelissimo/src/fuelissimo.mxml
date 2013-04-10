@@ -6,7 +6,7 @@
 			   splashScreenImage="@Embed('assets/Fuel Factory logo.png')"
 			   splashScreenScaleMode="letterbox"
 			   preinitialize="" xmlns:mx="library://ns.adobe.com/flex/mx"
-			   frameRate="4" initialize="">
+			   frameRate="4" initialize="initApp()">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
@@ -44,8 +44,6 @@
 			private var fillUpView:FillUp = null;
 			private var statisticsDriveAnalysisView:StatisticsDriveAnalysis = null;
 			private var takePictureView:TakePicture = null;
-			private var timer:Timer = new Timer(2000, 0);
-
 
 			private function init():void {
 				resourceManager.localeChain = ["en_US"];
@@ -73,14 +71,7 @@
 				busy.setStyle('symbolColor','#FFFFFF');
 				this.addElement(busy);
 				
-				//timer.addEventListener(TimerEvent.TIMER, closeSplashScreen);
-				//timer.start();
 			}
-			private function closeSplashScreen(/*e:TimerEvent*/):void {
-				//timer.stop();
-				this.removeAllElements();
-				initApp();
-			}	
 			public function initApp():void {
 				if( loginView == null )
 					loginView = new Login();
