@@ -5,7 +5,7 @@
 			   applicationDPI="160"
 			   splashScreenImage="@Embed('assets/Fuel Factory logo.png')"
 			   splashScreenScaleMode="letterbox"
-			   preinitialize="" xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   frameRate="4" initialize="initApp()">
 	<fx:Style source="fuelissimo.css"/>
 
