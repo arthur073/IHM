@@ -70,6 +70,7 @@
 			{
 				labelPlateNb = resourceManager.getString('LocalizedStrings', 'AddACar1_PlateNb');
 				labelFirstNameLetters = resourceManager.getString('LocalizedStrings', 'AddACar1_FirstNameLetters');
+				titleLabel.text += " 1/2";
 			}
 			
 		]]>
@@ -125,6 +126,6 @@
 		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
+	<s:Label id="titleLabel" y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
 			 text="{resourceManager.getString('LocalizedStrings', 'AddACar_AddVehicle')}"/>
 </s:View>
