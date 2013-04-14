@@ -6,7 +6,7 @@
 			   splashScreenImage="@Embed('assets/Fuel Factory logo.png')"
 			   splashScreenScaleMode="letterbox"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
-			   frameRate="4" initialize="initApp()">
+			   frameRate="4" initialize="init();initApp()">
 	<fx:Style source="fuelissimo.css"/>
 
 	<fx:Declarations>
@@ -48,29 +48,7 @@
 			private function init():void {
 				resourceManager.localeChain = ["en_US"];
 				
-				var img:Image = new Image();
-				img.source = "assets/Fuel Factory Logo.png";	
-				img.width = this.width;
-				img.height = this.height;
-				this.addElement(img);
-				
-				var lbl:Label = new Label();
-				lbl.x = 0;
-				lbl.y = 0;
-				lbl.width = this.width;
-				lbl.height = this.height;
-				lbl.setStyle('backgroundColor', '#000000');
-				lbl.alpha = 0.5;
-				this.addElement(lbl);
-				
-				var busy:BusyIndicator = new BusyIndicator();
-				busy.width = 30;
-				busy.height = 30;
-				busy.x = (this.width/2) - (busy.width/2);
-				busy.y = (this.height/2) -(busy.height/2);
-				busy.setStyle('symbolColor','#FFFFFF');
-				this.addElement(busy);
-				
+	
 			}
 			public function initApp():void {
 				if( loginView == null )
