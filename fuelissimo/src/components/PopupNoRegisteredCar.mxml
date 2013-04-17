@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   x="5" y="0" width="310" height="146" skinClass="skins.MyPopupSkin"
+						   alpha="0.9" creationComplete="init()">
+	<fx:Script>
+		<![CDATA[
+			import View.AddACar1;
+			import View.AddACar2;
+			import View.Main;
+			
+			private var parentView:Object = null;
+			
+			private function init():void
+			{
+				y = this.parent.height /2 - 73;
+			}
+			public function addView(o:Object):void
+			{
+				parentView = o;
+			}
+			
+			private function disposeView():void
+			{
+				this.parentView.removeAllElements();
+			}
+			private function deleteGrey():void
+			{
+				((Main)(this.owner)).greyDemakerView();
+			}
+		]]>
+	</fx:Script>
+	
+	<!-- Also uses the MyPopupSkin.mxml class -->
+		<s:Button x="161" y="104" width="139" height="36" label="{resourceManager.getString('LocalizedStrings', 'Popup_SettingsChooser_AddCar')}" chromeColor="#888888"
+				  click="this.close();this.parentApplication.showAddACar1()"/>
+	<s:Button x="10" y="104" width="143" height="36" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" chromeColor="#999999"
+			  click="this.close();deleteGrey()"
+			 />
+	<s:Label x="10" y="10" width="290" height="86" text="{resourceManager.getString('LocalizedStrings', 'Popup_NoCar')}" backgroundAlpha="0"/>
+	
+</s:SkinnablePopUpContainer>

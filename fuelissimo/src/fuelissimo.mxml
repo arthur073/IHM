@@ -19,6 +19,7 @@
 			import View.*;
 			
 			import components.PopupFlash;
+			import components.PopupNoRegisteredCar;
 			
 			import mx.events.FlexEvent;
 			
@@ -31,6 +32,7 @@
 			public var flashAddACarEnabled:Boolean = false;
 			public var flashSignInEnabled:Boolean = false;
 			public var flashAccountCreatedEnabled:Boolean = false;
+			public var flashNoRegisteredCar:Boolean = false;
 			
 			private var loginView:Login = null;
 			private var mainView:Main = new Main();
@@ -60,6 +62,7 @@
 				mainView = new Main();
 				this.removeAllElements();
 				this.addElement(mainView);
+				mainView.flashAlert();
 			}
 			public function showSettings():void {
 				if( settingsView == null )
@@ -80,7 +83,7 @@
 				this.addElement(forgottenPasswordView);			
 			}
 			public function showAddACar1():void {
-				if( addCar1View == null)
+				//if( addCar1View == null)
 					addCar1View = new AddACar1();
 				this.removeAllElements();
 				this.addElement(addCar1View);			

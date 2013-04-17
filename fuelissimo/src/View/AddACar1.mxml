@@ -25,6 +25,7 @@
 			protected function cancelHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
+				this.parentApplication.flashNoRegisteredCar = true;
 				this.removeAllElements();
 				this.parentApplication.showMain();
 			}

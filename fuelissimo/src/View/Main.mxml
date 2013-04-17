@@ -11,6 +11,7 @@
 		<![CDATA[
 			import components.PopupFlash;
 			import components.PopupHelpCar1;
+			import components.PopupNoRegisteredCar;
 			import components.PopupSettingsChooser;
 			
 			import mx.collections.ArrayList;
@@ -24,8 +25,9 @@
 			import spark.events.ViewNavigatorEvent;
 			
 			private var popupF:PopupFlash = new PopupFlash();
-			
+			private var noCar:PopupNoRegisteredCar = new PopupNoRegisteredCar();
 			private var popup:PopupSettingsChooser = new PopupSettingsChooser();
+			
 			private var rm:Object = ResourceManager.getInstance(); 
 			private var greyMaker:Label = new Label();
 			private var timer:Timer = new Timer(1500, 0);
@@ -69,7 +71,7 @@
 				this.parentApplication.showFillUp();
 			}
 
-			protected function greyView():void
+			public function greyView():void
 			{
 				greyMaker.x = 0;
 				greyMaker.y = 0;
@@ -83,6 +85,7 @@
 			public function greyDemakerView(event:MouseEvent = null):void
 			{
 				popup.close();
+				noCar.visible = false;
 				this.removeElement(greyMaker);
 			}
 			public function greyDemakerView2(event:MouseEvent = null):void
@@ -151,6 +154,13 @@
 					timer.start();
 					popupF.text=resourceManager.getString('LocalizedStrings', 'Main_Popup_AccountCreated');
 					popupF.open(this);
+				}
+				else if ( this.parentApplication.flashNoRegisteredCar )
+				{
+					this.parentApplication.flashNoRegisteredCar = false;
+					greyView();
+					noCar.open(this);
+					//this.addElement(noCar);
 				}
 			}
 			private function closeFlashAlert(e:TimerEvent):void
