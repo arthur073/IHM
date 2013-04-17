@@ -6,6 +6,7 @@
 	
 	<fx:Script>
 		<![CDATA[    
+			import flashx.textLayout.formats.Float;
 			
 			protected function photoHandler(event:MouseEvent):void
 			{
@@ -28,6 +29,29 @@
 			}
 			
 		
+			protected function totalPrice_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+			protected function pricePerL_focusOutHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				//champs remplis
+				if( nbLiters.text.length != 0 && pricePerL.text.length != 0 )
+				{
+					//champs remplis de nb
+					if( (nbLiters.text.match("(([1-9][0-9]*\.?[0-9]*)|(\.[0-9]+))([Ee][+-]?[0-9]+)?") )
+						&& (pricePerL.text.match("(([1-9][0-9]*\.?[0-9]*)|(\.[0-9]+))([Ee][+-]?[0-9]+)?") ) )
+						{
+							var nbLitres:Number = Number(nbLiters.text);
+							var prixParL:Number = Number(pricePerL.text);
+							totalPrice.text = String(nbLitres*prixParL);
+						}
+				}
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -55,11 +79,11 @@
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_Mix')}" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_City')}" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
 	</s:HGroup>
-	<s:TextInput x="196" y="250" width="117" height="33" fontSize="18" 
-				 text="45,08 €" textAlign="right" softKeyboardType="number"/>
-	<s:TextInput x="196" y="215" width="117" height="33" fontSize="18" 
-				 text="1,369 €" textAlign="right" softKeyboardType="number"/>
-	<s:TextInput x="196" y="153" width="117" height="33" fontSize="18" text="32,93 L"
+	<s:TextInput id="totalPrice" x="196" y="250" width="117" height="33" fontSize="18" 
+				 text="" textAlign="right" softKeyboardType="number" focusOut="totalPrice_focusOutHandler(event)"/>
+	<s:TextInput id="pricePerL" x="196" y="215" width="117" height="33" fontSize="18" 
+				 text="" textAlign="right" softKeyboardType="number" focusOut="pricePerL_focusOutHandler(event)"/>
+	<s:TextInput id="nbLiters" x="196" y="153" width="117" height="33" fontSize="18" text=""
 				 textAlign="right" softKeyboardType="number"/>
 	<s:Label x="9" y="260" text="{resourceManager.getString('LocalizedStrings', 'FillUp_TotalPrice')}"/>
 	<s:Label x="9" y="310" text="{resourceManager.getString('LocalizedStrings', 'FillUp_Date')}"/>
@@ -67,7 +91,7 @@
 	<s:Label x="9" y="225" text="{resourceManager.getString('LocalizedStrings', 'FillUp_PricePerUnit')}"/>
 	<s:Label x="8" y="161" text="{resourceManager.getString('LocalizedStrings', 'FillUp_LitersNumber')}"/>
 	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
-	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text="82.543 Km"
+	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text=""
 				 textAlign="right" softKeyboardType="number"/>
 	<s:Label x="8" y="127" text="{resourceManager.getString('LocalizedStrings', 'FillUp_KmCounter')}"/>
 	<s:Label x="9" y="80" text="Car : "/>
