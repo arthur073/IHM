@@ -33,7 +33,7 @@
 			public var flashAccountCreatedEnabled:Boolean = false;
 			
 			private var loginView:Login = null;
-			private var mainView:Main = null;
+			private var mainView:Main = new Main();
 			private var settingsView:Settings = null;
 			private var accountCreationView:AccountCreation = null;
 			private var forgottenPasswordView:ForgottenPassword = null;
@@ -57,8 +57,7 @@
 				this.addElement(loginView);
 			}
 			public function showMain():void {
-				if( mainView == null )
-					mainView = new Main();
+				mainView = new Main();
 				this.removeAllElements();
 				this.addElement(mainView);
 			}

@@ -54,11 +54,9 @@
 					 focusIn="this.parentApplication.clearField(event, 'Family car')"
 					 focusOut="this.parentApplication.fillField(event,'Family car')"
 					 softKeyboardType="default"/>
-		<s:TextInput x="126" y="294" width="74" text="84.756"
-					 focusIn="this.parentApplication.clearField(event, '84.756')"
-					 focusOut="this.parentApplication.fillField(event,'84.756')"
-					 softKeyboardType="number"
-			/>
+		<s:TextInput x="126" y="294" width="74" text=""  softKeyboardType="number" />
+					 <!--focusIn="this.parentApplication.clearField(event, '84.756')"
+					 focusOut="this.parentApplication.fillField(event,'84.756')"-->
 		<s:ToggleSwitch x="208" y="296" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
 		<s:DateSpinner x="120" y="199" height="70"/>
 		<s:TextInput x="10" y="143" width="300" height="40" text="{labelCarBrand}"

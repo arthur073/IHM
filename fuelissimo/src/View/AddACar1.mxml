@@ -16,12 +16,6 @@
 			[Bindable] private var labelFirstNameLetters:String = "";
 			// FIN code de la popup
 			
-			protected function loginHandler(event:MouseEvent):void
-			{
-				// TODO Auto-generated method stub
-				this.parentApplication.showMain();
-			}
-			
 			protected function takePicture(event:MouseEvent):void
 			{
 				this.visible = false;
@@ -64,6 +58,8 @@
 			{
 				popup.close();
 				this.removeElement(greyMaker);
+				labelPlateNb = resourceManager.getString('LocalizedStrings', 'AddACar1_PlateNb');
+				labelFirstNameLetters = resourceManager.getString('LocalizedStrings', 'AddACar1_FirstNameLetters');
 			}
 			
 			private function initView():void
@@ -100,7 +96,7 @@
 	<s:TextInput x="10" y="118" width="300" height="40" text="{labelPlateNb}" 
 				 focusIn="this.parentApplication.clearField(event, labelPlateNb)"
 				 focusOut="this.parentApplication.fillField(event,labelPlateNb)"
-				 focusColor="#FF0000" softKeyboardType="default"
+				 softKeyboardType="default"
 				 />
 	<s:TextInput x="10" y="167" width="300" height="40" 
 				 text="{labelFirstNameLetters}"
