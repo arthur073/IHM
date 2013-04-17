@@ -159,6 +159,20 @@
 				popupF.close();
 			}
 						
+			protected function swipeHandler(event:TransformGestureEvent):void
+			{
+				// Swipe was to the right
+				if (event.offsetX == 1 ) {
+					currentItem = (currentItem - 1 + tipsList.length) % tipsList.length;
+					currentTip = (String)(tipsList.getItemAt(currentItem));
+				}
+					// Swipe was to the left
+				else if (event.offsetX == -1 ) {
+					currentItem = (currentItem + 1) % tipsList.length;
+					currentTip = (String)(tipsList.getItemAt(currentItem));
+				}
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -168,7 +182,7 @@
 	<s:Label x="0" y="0" width="321" height="460" creationComplete="flashAlert()"/>
 
 	<s:Image x="-52" y="56" width="424" height="272" smooth="true"
-			 source="assets/Post-it-note-transparent.png" />
+			 source="assets/Post-it-note-transparent.png"  gestureSwipe="swipeHandler(event)"/>
 	<s:Button id="fillUp" x="9" y="320" width="302" height="45" 
 			  label="{resourceManager.getString('LocalizedStrings', 'Main_SaveFillUp')}"
 			  click="fillUpHandler(event)" color="#FFFFFF" fontFamily="Arial" fontSize="20"
@@ -200,7 +214,7 @@
 	<s:Label x="70" y="118" width="169" height="130" backgroundAlpha="0" fontSize="18"
 			 fontWeight="normal" styleName="Helvetica"
 			 text="{resourceManager.getString('LocalizedStrings',currentTip)}"
-			 textAlign="left" verticalAlign="middle"/>
+			 textAlign="left" verticalAlign="middle"  gestureSwipe="swipeHandler(event)"/>
 
 	<s:Rect x="1" y="0" width="318" height="45" bottomLeftRadiusX="5" bottomRightRadiusX="5">
 		<s:filters >
@@ -227,7 +241,7 @@
 		
 		<s:Image x="279" y="9" width="30" height="25" click="disconnectHandler(event)"
 				 scaleMode="letterbox" smooth="true" backgroundAlpha="0"
-				 source="assets/Logout-01.png" />
+				 source="assets/Logout-01.png"/>
 	<s:Label y="11" left="50" fontStyle="normal" fontWeight="normal" styleName="title"
 			 text="Fuelissimo"/>
 	<s:Image x="212" y="250" width="32" height="32" smooth="true" source="assets/btn-next.png" 
