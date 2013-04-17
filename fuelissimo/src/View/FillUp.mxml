@@ -31,8 +31,21 @@
 		
 			protected function totalPrice_focusOutHandler(event:FocusEvent):void
 			{
-				// TODO Auto-generated method stub
-				
+				//champs remplis
+				if( nbLiters.text.length != 0 && totalPrice.text.length != 0 )
+				{
+					//champs remplis de nb
+					if( (nbLiters.text.match("(([1-9][0-9]*\.?[0-9]*)|(\.[0-9]+))([Ee][+-]?[0-9]+)?") )
+						&& (totalPrice.text.match("(([1-9][0-9]*\.?[0-9]*)|(\.[0-9]+))([Ee][+-]?[0-9]+)?") ) )
+					{
+						var nbLitres:Number = Number(nbLiters.text);
+						var prixTotal:Number = Number(totalPrice.text);
+						if( nbLitres != 0 )
+						{
+							pricePerL.text = String(prixTotal/nbLitres);
+						}
+					}
+				}
 			}
 			
 			protected function pricePerL_focusOutHandler(event:FocusEvent):void
