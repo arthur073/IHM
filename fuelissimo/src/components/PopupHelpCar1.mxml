@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 						   xmlns:s="library://ns.adobe.com/flex/spark"
-						   x="30" y="103" width="250" height="180" skinClass="skins.MyPopupSkin">
+						   x="30" y="103" width="250" height="180" skinClass="skins.MyPopupSkin" creationComplete="activateButton();">
 	
 	<fx:Script>
 		<![CDATA[
@@ -12,6 +12,18 @@
 				parentView = o;
 			}
 			
+			private var myTimer:Timer;
+			private function activateButton():void
+			{
+				closeButtonPopup.enabled = false;
+				myTimer = new Timer(1000, 1);
+				myTimer.addEventListener(TimerEvent.TIMER_COMPLETE, activateButton2);
+				myTimer.start();
+			}
+			private function activateButton2(event:Event):void
+			{
+				closeButtonPopup.enabled = true;	
+			}
 			
 			private function deleteGrey():void
 			{
@@ -25,5 +37,5 @@
 			 text="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1_Started')}"
 			 verticalCenter="-37"/>
 	<s:Label x="28" y="47" text="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1')}" backgroundAlpha="0"/>
-	<s:Button x="16" y="132" width="199" height="40" label="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1_DoIt')}" click="this.deleteGrey();this.close()" chromeColor="#888888"/>
+	<s:Button id="closeButtonPopup" x="16" y="132" width="199" height="40" label="{resourceManager.getString('LocalizedStrings', 'Popup_HelpCar1_DoIt')}" click="this.deleteGrey();this.close()" chromeColor="#888888"/>
 </s:SkinnablePopUpContainer>

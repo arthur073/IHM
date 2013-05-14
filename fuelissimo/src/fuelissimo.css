@@ -57,6 +57,7 @@ s|Label.title
 	color: white;
 	fontSize: 30;
 	fontFamily:appleFont;
+	horizontalAlign:center;
 }
 s|Label.logout
 {

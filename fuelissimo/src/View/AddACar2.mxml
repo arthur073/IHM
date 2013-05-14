@@ -59,11 +59,11 @@
 					 focusOut="this.parentApplication.fillField(event,'84.756')"-->
 		<s:ToggleSwitch x="208" y="296" selected="true" skinClass="View.ToggleButtonMetricUnit"/>
 		<s:DateSpinner x="120" y="199" height="70"/>
-		<s:TextInput x="10" y="143" width="300" height="40" text="{labelCarBrand}"
+		<s:TextInput x="10" y="100" width="300" height="40" text="{labelCarBrand}"
 					 focusIn="this.parentApplication.clearField(event, labelCarBrand)"
 					 focusOut="this.parentApplication.fillField(event,labelCarBrand)"
 					 softKeyboardType="default"/>
-	<s:TextInput x="10" y="100" width="300" height="40" text="{labelCarModel}" 
+	<s:TextInput x="10" y="143" width="300" height="40" text="{labelCarModel}" 
 				 focusIn="this.parentApplication.clearField(event, labelCarModel)"
 				 focusOut="this.parentApplication.fillField(event,labelCarModel)"
 				 softKeyboardType="default"/>

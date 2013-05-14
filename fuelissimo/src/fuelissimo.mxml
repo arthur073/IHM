@@ -41,10 +41,8 @@
 			private var forgottenPasswordView:ForgottenPassword = null;
 			private var addCar1View:AddACar1 = null;
 			private var addCar2View:AddACar2 = null;
-			private var statisticsCostView:StatisticsCost = null;
 			private var statisticsEnergyView:StatisticsEnergy = null;
 			private var fillUpView:FillUp = null;
-			private var statisticsDriveAnalysisView:StatisticsDriveAnalysis = null;
 			private var takePictureView:TakePicture = null;
 
 			private function init():void {
@@ -100,23 +98,11 @@
 				this.removeAllElements();
 				this.addElement(fillUpView);			
 			}
-			public function showStatisticsCost():void {
-				if( statisticsCostView == null)
-					statisticsCostView = new StatisticsCost();
-				this.removeAllElements();
-				this.addElement(statisticsCostView);			
-			}
 			public function showStatisticsEnergy():void {
 				if( statisticsEnergyView == null)
 					statisticsEnergyView = new StatisticsEnergy();
 				this.removeAllElements();
 				this.addElement(statisticsEnergyView);			
-			}
-			public function showStatisticsDriveAnalysis():void {
-				if( statisticsDriveAnalysisView == null)
-					statisticsDriveAnalysisView = new StatisticsDriveAnalysis();
-				this.removeAllElements();
-				this.addElement(statisticsDriveAnalysisView);			
 			}
 			public function takePicture(o:Object = null):void {
 				if( takePictureView == null)

@@ -105,6 +105,7 @@
 		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="0" styleName="title"
-			 text="{resourceManager.getString('LocalizedStrings', 'Stats_Title')}"/>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="-134" styleName="title"
+			 text="{resourceManager.getString('LocalizedStrings', 'Stats_Title')}"
+			 textAlign="center" verticalAlign="middle"/>
 </s:View>

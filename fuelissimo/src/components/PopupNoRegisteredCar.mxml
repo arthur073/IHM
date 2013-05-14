@@ -24,8 +24,8 @@
 			{
 				this.parentView.removeAllElements();
 			}
-			private function deleteGrey():void
-			{
+			
+			public function deleteGrey():void {
 				((Main)(this.owner)).greyDemakerView();
 			}
 		]]>
@@ -34,7 +34,7 @@
 	<!-- Also uses the MyPopupSkin.mxml class -->
 		<s:Button x="161" y="104" width="139" height="36" label="{resourceManager.getString('LocalizedStrings', 'Popup_SettingsChooser_AddCar')}" chromeColor="#888888"
 				  click="this.close();this.parentApplication.showAddACar1()"/>
-	<s:Button x="10" y="104" width="143" height="36" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" chromeColor="#999999"
+	<s:Button id="closeButton" x="10" y="104" width="143" height="36" label="{resourceManager.getString('LocalizedStrings', 'General_Cancel')}" chromeColor="#999999"
 			  click="this.close();deleteGrey()"
 			 />
 	<s:Label x="10" y="10" width="290" height="86" text="{resourceManager.getString('LocalizedStrings', 'Popup_NoCar')}" backgroundAlpha="0"/>

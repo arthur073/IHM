@@ -42,7 +42,7 @@
 						var prixTotal:Number = Number(totalPrice.text);
 						if( nbLitres != 0 )
 						{
-							pricePerL.text = String(prixTotal/nbLitres);
+							pricePerL.text = (prixTotal/nbLitres).toFixed(2);
 						}
 					}
 				}
@@ -74,6 +74,7 @@
 	</fx:Declarations>
 		
 	<s:Label x="0" y="0" width="320" height="460"/>
+
 	<s:SpinnerListContainer x="97" y="60" width="216" height="50">
 		<s:SpinnerList height="100%" width="100%" labelField="data" selectedIndex="0">
 			<s:ArrayList>
@@ -92,22 +93,22 @@
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_Mix')}" groupName="typeRoad" selected="true" chromeColor="#888888" symbolColor="black"/>
 		<s:RadioButton label="{resourceManager.getString('LocalizedStrings', 'FillUp_City')}" groupName="typeRoad" chromeColor="#888888" focusColor="green" symbolColor="black"/>
 	</s:HGroup>
-	<s:TextInput id="totalPrice" x="196" y="250" width="117" height="33" fontSize="18" 
+	<s:TextInput id="totalPrice" x="196" y="215" width="117" height="33" fontSize="18" 
 				 text="" textAlign="right" softKeyboardType="number" focusOut="totalPrice_focusOutHandler(event)"/>
-	<s:TextInput id="pricePerL" x="196" y="215" width="117" height="33" fontSize="18" 
+	<s:TextInput id="pricePerL" x="196" y="250" width="117" height="33" fontSize="18" 
 				 text="" textAlign="right" softKeyboardType="number" focusOut="pricePerL_focusOutHandler(event)"/>
 	<s:TextInput id="nbLiters" x="196" y="153" width="117" height="33" fontSize="18" text=""
 				 textAlign="right" softKeyboardType="number"/>
-	<s:Label x="9" y="260" text="{resourceManager.getString('LocalizedStrings', 'FillUp_TotalPrice')}"/>
+	<s:Label x="9" y="225" text="{resourceManager.getString('LocalizedStrings', 'FillUp_TotalPrice')}"/>
 	<s:Label x="9" y="310" text="{resourceManager.getString('LocalizedStrings', 'FillUp_Date')}"/>
 	
-	<s:Label x="9" y="225" text="{resourceManager.getString('LocalizedStrings', 'FillUp_PricePerUnit')}"/>
+	<s:Label x="9" y="260" text="{resourceManager.getString('LocalizedStrings', 'FillUp_PricePerUnit')}"/>
 	<s:Label x="8" y="161" text="{resourceManager.getString('LocalizedStrings', 'FillUp_LitersNumber')}"/>
 	<s:DateSpinner x="123" y="289" height="50" displayMode="date"/>
 	<s:TextInput x="196" y="117" width="117" height="33" fontSize="18" text=""
 				 textAlign="right" softKeyboardType="number"/>
 	<s:Label x="8" y="127" text="{resourceManager.getString('LocalizedStrings', 'FillUp_KmCounter')}"/>
-	<s:Label x="9" y="80" text="Car : "/>
+	<s:Label x="9" y="80" text="{resourceManager.getString('LocalizedStrings', 'FillUp_Car')}"/>
 	
 	<s:Rect left="120" top="403" width="88" height="56" topLeftRadiusX="50" 
 			topRightRadiusX="50">
@@ -137,8 +138,10 @@
 		<s:SolidColorStroke  weight="2" color="#323232" joints="bevel" alpha=".5"/>   
 		</s:stroke> -->
 	</s:Rect>
-	<s:Label x="149" y="10" fontStyle="normal" fontWeight="normal" styleName="title"
-			 text="Fill up form"/>
+	<s:Label y="11" fontStyle="normal" fontWeight="normal" horizontalCenter="-133" styleName="title"
+			 text="{resourceManager.getString('LocalizedStrings', 'FillUp_Form')}"
+			 textAlign="center" verticalAlign="middle"/>
 	<s:Label x="6" y="344" text="{resourceManager.getString('LocalizedStrings', 'FillUp_DrivePast')}"/>
 	<s:CheckBox x="196" y="189" label="{resourceManager.getString('LocalizedStrings', 'FillUp_Partial')}" scaleX="0.75" scaleY="0.75" chromeColor="#888888" symbolColor="black"/>
+
 </s:View>
