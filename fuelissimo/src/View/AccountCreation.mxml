@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="Login"
-		creationComplete="initView()" >
+		creationComplete="initView()">
 	
 	<fx:Script>
 		<![CDATA[
@@ -71,7 +71,7 @@
 						 verticalAlign="middle" backgroundAlpha="0"/>
 				<s:TextInput id="password" width="190" height="40" borderVisible="false" contentBackgroundAlpha="0"
 							 text="{resourceManager.getString('LocalizedStrings', 'General_Required')}" textAlign="left" 
-							 focusIn="this.parentApplication.clearField(event, 'Required')"
+							 focusIn="this.parentApplication.clearField(event, 'Required')" displayAsPassword="true"
 							 focusOut="this.parentApplication.fillField(event,'Required')"
 							 softKeyboardType="default"/>
 			</s:HGroup>

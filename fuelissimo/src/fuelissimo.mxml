@@ -18,7 +18,7 @@
 		<![CDATA[
 			import View.*;
 			
-			import components.PopupFlash;
+			import components.PopupFlash; 
 			import components.PopupNoRegisteredCar;
 			
 			import mx.events.FlexEvent;
