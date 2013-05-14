@@ -38,7 +38,7 @@
 	}
 	
 	
-	protected function onCamera():void
+	public function onCamera():void
 	{
 		if (numCams > 1)
 		{
@@ -48,7 +48,7 @@
 		{
 			cam = Camera.getCamera("0");
 		}
-	cam.setMode(width, height, 24);
+	cam.setMode(720, 1280, 24);
 	vid = new Video(this.parent.width,this.parent.height);
 	vid.attachCamera(cam);
 	uic.addChild(vid);
@@ -57,6 +57,7 @@
 	
 	protected function removingView():void
 	{
+		uic.removeChild(vid);
 		vid.attachCamera(null);
 		vid=null;
 		cam=null;
@@ -68,6 +69,7 @@
 	private var oVisible:Object = null;
 	public function putVisible(o:Object):void {
 		oVisible = o;
+		this.visible = true;
 	}
 	
 </fx:Script>

@@ -105,8 +105,7 @@
 				this.addElement(statisticsEnergyView);			
 			}
 			public function takePicture(o:Object = null):void {
-				if( takePictureView == null)
-					takePictureView = new TakePicture();
+				takePictureView = new TakePicture();
 				if( o != null )
 				{
 					takePictureView.putVisible(o);
