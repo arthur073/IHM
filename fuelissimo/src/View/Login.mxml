@@ -9,7 +9,7 @@
 			
 			[Bindable]private var labelRequired:String = "";
 			
-			private var visibleRectPassword:Rectangle = new Rectangle();
+			[Bindable]private var visibleRectPassword:Rectangle = new Rectangle();
 			
 			protected function loginHandler(event:MouseEvent):void
 			{
