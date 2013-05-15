@@ -10,8 +10,8 @@
 			import spark.components.SkinnablePopUpContainer;
 			import spark.events.ViewNavigatorEvent;
 			
-			public static var FRENCH:String="Français";
-			public static var ENGLISH:String="English";
+			public static const FRENCH:String="Français";
+			public static const ENGLISH:String="English";
 
 			private var popup:PopupHelpSettings = new PopupHelpSettings();
 			// FIN code de la popup
