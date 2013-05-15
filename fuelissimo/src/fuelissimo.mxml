@@ -2,8 +2,8 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:views="View.*"
-			   applicationDPI="160"
 			   splashScreenImage="@Embed('assets/Fuel Factory logo.png')"
+			   applicationDPI="160"
 			   splashScreenScaleMode="letterbox"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   frameRate="4" initialize="init();initApp()">
@@ -18,7 +18,7 @@
 		<![CDATA[
 			import View.*;
 			
-			import components.PopupFlash; 
+			import components.PopupFlash;
 			import components.PopupNoRegisteredCar;
 			
 			import mx.events.FlexEvent;
@@ -46,11 +46,10 @@
 			private var takePictureView:TakePicture = null;
 
 			private function init():void {
-				resourceManager.localeChain = ["en_US"];
-				
-	
+				resourceManager.localeChain = ["en_US"];	
 			}
 			public function initApp():void {
+
 				if( loginView == null )
 					loginView = new Login();
 				this.removeAllElements();
