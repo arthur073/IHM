@@ -10,9 +10,9 @@
 
 <fx:Script>
 	
-	import spark.components.VideoDisplay;
 	import mx.utils.ObjectUtil;
 	
+	import spark.components.VideoDisplay;
 	import spark.events.ViewNavigatorEvent;
 	protected var cam:Camera;
 	
@@ -22,6 +22,8 @@
 	protected var vid:Video;
 	
 	protected var array:Array;
+	
+	protected var myCam:CameraUI;
 	
 	protected function view1_viewActivateHandler(event:ViewNavigatorEvent):void
 	{
@@ -37,7 +39,6 @@
 		null;
 	}
 	
-	
 	public function onCamera():void
 	{
 		if (numCams > 1)
@@ -48,12 +49,12 @@
 		{
 			cam = Camera.getCamera("0");
 		}
-	cam.setMode(720, 1280, 24);
-	vid = new Video(this.parent.width,this.parent.height);
-	vid.attachCamera(cam);
-	uic.addChild(vid);
+		cam.setMode(720, 1280, 24);
+		vid = new Video(this.parent.width,this.parent.height);
+
+		vid.attachCamera(cam);
+		uic.addChild(vid);
 	}
-	
 	
 	protected function removingView():void
 	{
