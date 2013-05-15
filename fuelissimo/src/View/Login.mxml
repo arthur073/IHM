@@ -5,8 +5,11 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import flash.sampler.NewObjectSample;
 			
 			[Bindable]private var labelRequired:String = "";
+			
+			private var visibleRectPassword:Rectangle = new Rectangle();
 			
 			protected function loginHandler(event:MouseEvent):void
 			{
@@ -29,6 +32,10 @@
 			private function initView():void
 			{
 				labelRequired = resourceManager.getString('LocalizedStrings', 'General_Required');
+				visibleRectPassword.x = 0;
+				visibleRectPassword.y = 100;
+				visibleRectPassword.width = this.width;
+				visibleRectPassword.height = this.height-100;
 			}
 			
 		]]>
@@ -73,7 +80,7 @@
 						 text="{resourceManager.getString('LocalizedStrings', 'General_Required')}" 
 						 focusIn="this.parentApplication.clearField(event, 'Required')"
 						 focusOut="this.parentApplication.fillField(event,'Required')"
-						 softKeyboardType="email"/>
+						 softKeyboardType="email" softKeyboardInputAreaOfInterest="{visibleRectPassword}"/>
 		</s:HGroup>
 		<s:HGroup width="100%" height="40">
 			<s:Label paddingTop="5" paddingLeft="10" width="82" height="40" 
