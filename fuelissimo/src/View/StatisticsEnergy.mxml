@@ -6,8 +6,8 @@
 	
 	<fx:Script>
 		<![CDATA[
-						
 			import mx.collections.ArrayCollection;
+			import mx.events.StateChangeEvent;
 			
 			[Bindable]private var graphData:ArrayCollection = new ArrayCollection( [
 				{ kmDone: "50", Reference: 4.2, Current: 6.3 },
@@ -30,6 +30,27 @@
 			{
 				// TODO Auto-generated method stub
 				this.parentApplication.showMain();
+			}
+			private function changeTimeGraph(event:MouseEvent):void
+			{
+				if( todayTime.selected )
+				{
+					todayGraph.setVisible(true);
+					monthGraph.setVisible(false);
+					foreverGraph.setVisible(false);
+				} 
+				else if( monthTime.selected )
+				{
+					todayGraph.setVisible(false);
+					monthGraph.setVisible(true);
+					foreverGraph.setVisible(false);
+				}
+				else
+				{
+					todayGraph.setVisible(false);
+					monthGraph.setVisible(false);
+					foreverGraph.setVisible(true);
+				}
 			}
 			
 		]]>
@@ -62,7 +83,7 @@
 			<s:ArrayList>
 				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_EnergyConsumption')}"></fx:Object>
 				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_Cost')}"></fx:Object>
-				<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_GpsAnalysis')}"></fx:Object>
+				<!--<fx:Object data="{resourceManager.getString('LocalizedStrings', 'Stats_GpsAnalysis')}"></fx:Object>-->
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
@@ -94,11 +115,13 @@
 			  styleName="button"/>
 	<s:Button id="forever0" x="339" y="94" width="65" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_LitersPerDistance')}" fontSize="10" color="#FFFFFF"  />
 	<s:Button id="forever1" x="403" y="94" width="70" height="25" label="{resourceManager.getString('LocalizedStrings', 'Stats_DistancePerFillUp')}" fontSize="10" color="#FFFFFF"/>
-	<s:HGroup x="10" y="94" width="200" height="43">
-		
-		<s:RadioButton width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"/>
-		<s:RadioButton width="50" groupName="timeRange" selected="true" chromeColor="#888888" symbolColor="black"/>
-		<s:RadioButton width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"/>
+	<s:HGroup id="groupTime" x="10" y="94" width="200" height="43">	
+		<s:RadioButton id="todayTime" width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"
+					   click="changeTimeGraph(event)"/>
+		<s:RadioButton id="monthTime" width="50" groupName="timeRange" selected="true" chromeColor="#888888" symbolColor="black"
+					   click="changeTimeGraph(event)"/>
+		<s:RadioButton id="foreverTime" width="50" groupName="timeRange" chromeColor="#888888" symbolColor="black"
+					   click="changeTimeGraph(event)"/>
 	</s:HGroup>
 	<s:Label x="5" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Today')}" color="white"/>
 	<s:Label x="61" y="76" text="{resourceManager.getString('LocalizedStrings', 'Stats_Month')}" color="white"/>
