@@ -37,12 +37,12 @@
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
-		<mx:SolidColor id="sc1" color="blue" alpha=".3"/>
-		<mx:SolidColor id="sc2" color="red" alpha=".3"/>
+		<mx:SolidColor id="sc1" color="gray" alpha=".3"/>
+		<mx:SolidColor id="sc2" color="black" alpha=".6"/>
 		
 		<!-- Define custom SolidColorStrokes. -->
-		<mx:SolidColorStroke id="s1" color="blue" weight="2"/>
-		<mx:SolidColorStroke id="s2" color="red" weight="2"/>
+		<mx:SolidColorStroke id="s1" color="gray" weight="2"/>
+		<mx:SolidColorStroke id="s2" color="black" weight="2"/>
 		<s:RadioButtonGroup id="timeRange"/>
 
 	</fx:Declarations>
@@ -66,9 +66,18 @@
 			</s:ArrayList>
 		</s:SpinnerList>
 	</s:SpinnerListContainer>
-	<s:Label x="10" y="199" width="300" height="189" backgroundColor="#FFFFFF" backgroundAlpha="0.7"/>
+	<!--<s:Label x="10" y="180" width="300" height="189" backgroundColor="#FFFFFF" backgroundAlpha="0.7"/>-->
+	<s:Image id="todayGraph" x="10" y="190" width="300" height="200" backgroundAlpha="0"
+			 smooth="true" smoothingQuality="high"
+			 source="assets/todayConsumption.png" visible="false"/>
+	<s:Image id="foreverGraph" x="10" y="190" width="300" height="200" backgroundAlpha="0"
+			 smooth="true" smoothingQuality="high"
+			 source="assets/foreverConsumption.png" visible="false"/>
+	<s:Image id="monthGraph" x="10" y="190" width="300" height="200" backgroundAlpha="0"
+			 smooth="true" smoothingQuality="high"
+			 source="assets/monthConsumption.png"/>
 	
-	<mx:AreaChart id="energyConsumption" x="10" y="199" width="300" height="189" alpha="0.7"
+	<mx:AreaChart visible="false" id="energyConsumption" x="10" y="199" width="300" height="189" alpha="0.7"
 				  type="overlaid" dataProvider="{graphData}" showDataTips="true" >
 		<mx:series>
 			<mx:AreaSeries displayName="{resourceManager.getString('LocalizedStrings', 'Stats_Reference')}" yField="Reference" form="curve" 
